@@ -17,8 +17,6 @@ export const escolar = {
         "En una escuela primaria pública, un docente de educación física lleva meses ganándose la confianza de los estudiantes con privilegios especiales: los deja salir antes, les regala dulces, los llama a quedarse después de clase. Nadie lo cuestiona.",
         "Una estudiante comienza a mostrar señales de alerta: pesadillas, negativa a ir a la escuela, cambios bruscos de humor. Su maestra de grupo lo nota, pero el protocolo escolar es difuso y el miedo a equivocarse paraliza la respuesta.",
       ],
-      dato: "En México, 4 de cada 10 casos de abuso sexual infantil ocurren en entornos escolares o por figuras de autoridad cercanas. Solo el 12% se denuncia formalmente.",
-      sublabelDato: "Dato de Contexto Nacional",
       pregunta: "¿Cuál es la primera reacción del sistema escolar?",
       opciones: [
         { id: "a", titulo: "Activar el protocolo", desc: "La directora decide reportar el caso al departamento de orientación y notifica a los padres de familia." },
@@ -34,8 +32,6 @@ export const escolar = {
           "El protocolo se activó, pero nadie parece conocerlo a fondo. Orientación convoca a los padres, pero el maestro sigue frente a grupo mientras se 'investiga internamente'. La niña siente que el sistema la expone sin protegerla.",
           "La supervisión escolar exige 'no alarmar a la comunidad' y pide discreción. Los padres, desconcertados, no saben si denunciar en la fiscalía o esperar la resolución interna.",
         ],
-        dato: "Menos del 30% de las escuelas públicas en México tienen protocolos de actuación ante violencia sexual actualizados y con personal capacitado para aplicarlos.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Qué camino toman los padres?",
         opciones: [
           { id: "a", titulo: "Denuncia en fiscalía", desc: "Deciden no esperar a la escuela y presentan denuncia formal ante la Fiscalía Especializada." },
@@ -49,8 +45,6 @@ export const escolar = {
           "La dirección citó al docente. Él lo negó todo y amenazó con demandar por difamación. La conversación fue a puerta cerrada, sin testigos, sin registro. La estudiante nunca fue escuchada formalmente.",
           "Ahora el maestro está alerta. Cambia su comportamiento públicamente y se gana simpatías del resto del personal. La narrativa empieza a voltear hacia la familia: '¿por qué esperaron tanto para hablar?'.",
         ],
-        dato: "Cuando los casos de abuso son manejados internamente sin protocolo, el 68% de los agresores permanece en funciones durante la investigación.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cómo responde la familia ante esta situación?",
         opciones: [
           { id: "a", titulo: "Exigir intervención externa", desc: "La familia denuncia ante la Supervisión de Zona y exige la suspensión inmediata del docente." },
@@ -64,8 +58,6 @@ export const escolar = {
           "Pasaron tres semanas. El docente sigue dando clases. La estudiante desarrolla crisis de ansiedad cada mañana antes de entrar a la escuela. Su rendimiento cae al mínimo. Nadie ha hablado con ella.",
           "Otros padres empiezan a notar cambios en sus propios hijos. Un rumor circula en el grupo de WhatsApp de la escuela. La dirección pide 'no difundir información no verificada'.",
         ],
-        dato: "Cada semana de inacción en un caso de abuso sexual escolar aumenta un 40% la probabilidad de que el agresor repita la conducta con otra víctima.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Qué detona finalmente la acción?",
         opciones: [
           { id: "a", titulo: "Otra víctima habla", desc: "Una segunda estudiante revela a su madre lo ocurrido, lo que obliga a la escuela a actuar." },
@@ -83,8 +75,6 @@ export const escolar = {
           "La fiscalía abrió carpeta de investigación. Pero los tiempos institucionales son lentos: citas que se cancelan, peritos que no aparecen, formularios que se pierden. La familia lleva meses en un proceso que prometía ser ágil.",
           "El docente fue suspendido preventivamente, pero con goce de sueldo. La estudiante tuvo que cambiar de escuela 'para su protección'. Ella siente que quien fue castigada fue ella.",
         ],
-        dato: "En México, el tiempo promedio entre la denuncia y la sentencia en casos de abuso sexual infantil es de 3 a 7 años. Solo el 1% termina en condena.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cuál es el siguiente paso para la familia?",
         opciones: [
           { id: "a", titulo: "Persistir con acompañamiento", desc: "Se unen a una red de apoyo legal y psicológico para no abandonar el proceso." },
@@ -98,8 +88,6 @@ export const escolar = {
           "La organización civil tomó el caso. Asignaron una abogada especializada en derechos de infancia y una psicóloga para acompañar a la familia. Por primera vez, alguien les explica el proceso sin abrumarlos.",
           "Con asesoría, la familia presenta denuncia formal. La organización documenta también las fallas del protocolo escolar. El caso ya no es solo de una niña: es evidencia de un sistema que falló.",
         ],
-        dato: "Las familias acompañadas por organizaciones civiles especializadas tienen 3 veces más probabilidades de sostener una denuncia hasta su resolución.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cómo concluye esta etapa?",
         opciones: [
           { id: "a", titulo: "El docente es imputado", desc: "Con la evidencia documentada, la fiscalía logra vincular al docente a proceso." },
@@ -113,8 +101,6 @@ export const escolar = {
           "La escuela cerró el caso internamente. El docente fue 'reubicado' a otro plantel. Nadie fue sancionado formalmente. La familia recibió una disculpa de palabra en una reunión privada.",
           "La estudiante sigue cargando lo ocurrido. Sin proceso, sin reconocimiento, sin justicia. La escuela continúa operando igual. Y el docente frente a otro grupo.",
         ],
-        dato: "El 74% de los casos de abuso sexual escolar resueltos internamente no incluyen medidas de no repetición ni sanciones formales para los responsables.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Qué queda después del silencio?",
         opciones: [
           { id: "a", titulo: "La familia no se rinde", desc: "Meses después, con más fuerza, deciden denunciar ante la fiscalía y la CNDH." },
@@ -129,8 +115,6 @@ export const escolar = {
           "La Supervisión de Zona intervino. Por primera vez, alguien externo a la escuela tomó nota formal del caso. El docente fue suspendido sin goce de sueldo mientras se investiga.",
           "Pero la maquinaria burocrática es lenta. La familia necesita sostener la presión para que el expediente no se archive. Cada semana que pasa, el riesgo de que el caso sea minimizado crece.",
         ],
-        dato: "Solo el 22% de las denuncias ante supervisiones escolares derivan en una investigación formal ante la Secretaría de Educación.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cómo sostiene la familia la presión?",
         opciones: [
           { id: "a", titulo: "Con apoyo legal", desc: "Contratan a una abogada para acompañar el proceso administrativo y penal en paralelo." },
@@ -144,8 +128,6 @@ export const escolar = {
           "La estudiante está en una escuela nueva. El ambiente es diferente, más tranquilo. Pero lleva consigo lo que pasó. Los recuerdos no cambian de escuela.",
           "La familia busca atención psicológica, pero el sistema público tiene listas de espera de meses. La atención privada es costosa. El daño emocional avanza sin el apoyo necesario.",
         ],
-        dato: "En México, solo 1 de cada 5 niñas y niños víctimas de abuso sexual recibe atención psicológica especializada tras el evento.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Qué hace la familia para acceder a apoyo?",
         opciones: [
           { id: "a", titulo: "Buscar organizaciones civiles", desc: "Localizan una organización que ofrece terapia gratuita para infancias víctimas de violencia." },
@@ -159,8 +141,6 @@ export const escolar = {
           "La versión oficial prevaleció. El docente siguió en su puesto. La familia fue señalada discretamente como 'conflictiva'. La estudiante escucha comentarios en los pasillos.",
           "El silencio institucional tiene peso. La familia empieza a dudar de su propia memoria. El sistema no los venció con argumentos, sino con el agotamiento.",
         ],
-        dato: "El agotamiento emocional y burocrático es la principal razón por la que las familias abandonan los procesos de denuncia por abuso sexual escolar en México.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Qué les queda a la familia?",
         opciones: [
           { id: "a", titulo: "Recuperar la narrativa", desc: "Deciden documentar todo y buscar a un periodista de investigación para visibilizar el caso." },
@@ -175,8 +155,6 @@ export const escolar = {
           "La segunda víctima habló. Su testimonio coincide en detalles con el de la primera estudiante. La escuela ya no puede contener el caso internamente. La Supervisión de Zona interviene de oficio.",
           "Dos familias, una misma historia. Ahora la pregunta no es si algo pasó, sino por qué tardó tanto en ser atendido.",
         ],
-        dato: "En el 60% de los casos de abuso sexual escolar documentados, existía al menos una denuncia o señal de alerta previa que fue ignorada.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cómo avanzan juntas las familias?",
         opciones: [
           { id: "a", titulo: "Denuncia conjunta", desc: "Presentan una denuncia penal conjunta con el acompañamiento de una organización especializada." },
@@ -190,8 +168,6 @@ export const escolar = {
           "El medio publicó la nota. La Secretaría de Educación emitió un comunicado en 24 horas. Se anunció una 'investigación interna urgente'. El docente fue suspendido ese mismo día.",
           "Pero la familia no buscaba titulares. Buscaba justicia. La exposición mediática trae presión, pero también vulnerabilidad. El nombre de la escuela, el barrio, los detalles filtran información que la niña no eligió compartir.",
         ],
-        dato: "La exposición mediática sin protocolos de confidencialidad puede revictimizar a niñas y niños en casos de abuso sexual. El 45% de las familias reporta daños adicionales por cobertura inadecuada.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cómo navega la familia la atención pública?",
         opciones: [
           { id: "a", titulo: "Limitar la exposición", desc: "Deciden no dar más declaraciones y canalizan todo a través de un abogado que protege la identidad de la niña." },
@@ -205,8 +181,6 @@ export const escolar = {
           "La estudiante lo contó ella sola. Sin que nadie la presionara, sin que nadie le creyera del todo al principio. La orientadora la escuchó, tomó notas, y esta vez siguió el protocolo.",
           "Es la primera vez que alguien del sistema escolar actúa correctamente. Pero el camino que queda por delante sigue siendo largo y difícil.",
         ],
-        dato: "Las niñas y niños que logran hablar por iniciativa propia tienen mayores probabilidades de sostener el proceso de denuncia, pero requieren acompañamiento profesional continuo.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Qué sigue después de que ella habló?",
         opciones: [
           { id: "a", titulo: "Activación del protocolo real", desc: "La orientadora sigue los pasos correctos: notificación a padres, reporte a dirección y contacto con la fiscalía." },
@@ -229,8 +203,6 @@ export const escolar = {
         "En una secundaria técnica, un grupo de estudiantes mayores sistemáticamente hace comentarios sobre el cuerpo de una compañera más joven. Sucede en el pasillo, en el recreo, frente a docentes que miran hacia otro lado.",
         "La estudiante comienza a ir al baño a la hora del recreo para evitar los pasillos. Cambió su ropa para 'no llamar la atención'. Nadie en la escuela ha intervenido formalmente.",
       ],
-      dato: "El 65% de las y los estudiantes de secundaria en México reporta haber presenciado o vivido acoso sexual dentro de la escuela. Solo el 8% lo reportó a un docente o autoridad.",
-      sublabelDato: "Dato de Contexto Nacional",
       pregunta: "¿Cuál es la primera respuesta del entorno escolar?",
       opciones: [
         { id: "a", titulo: "Una maestra interviene", desc: "Una docente que presenció un incidente decide hablar con la directora y con los padres de los involucrados." },
@@ -246,8 +218,6 @@ export const escolar = {
           "La directora recibió el reporte. Llamó a los estudiantes acosadores a su oficina y les dio 'una llamada de atención'. No se notificó formalmente a sus padres, no se abrió expediente.",
           "La maestra que reportó siente que hizo lo correcto pero que el sistema anuló su acción. La estudiante acosada lo sabe: si la escuela no actuó con la maestra, no actuará con ella.",
         ],
-        dato: "En el 70% de los casos de acoso escolar reportados por docentes, la respuesta institucional se limita a una conversación informal sin consecuencias formales.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Qué hace la maestra ante la inacción?",
         opciones: [
           { id: "a", titulo: "Escalar el reporte", desc: "Documenta el caso por escrito y lo escala a la Supervisión de Zona exigiendo respuesta formal." },
@@ -261,8 +231,6 @@ export const escolar = {
           "Las compañeras forman un escudo humano cotidiano. El acoso disminuye en los espacios visibles, pero los acosadores buscan momentos donde la estudiante esté sola: salida de la escuela, transporte.",
           "La carga de proteger a su amiga empieza a pesar sobre el grupo. Una de ellas fue insultada por un acosador. La escuela sigue sin intervenir formalmente.",
         ],
-        dato: "La solidaridad entre pares reduce el acoso visible en un 40%, pero sin intervención institucional, los episodios migran a espacios sin supervisión.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Qué pasa cuando la solidaridad no es suficiente?",
         opciones: [
           { id: "a", titulo: "Las amigas reportan juntas", desc: "El grupo de compañeras presenta una queja colectiva ante la dirección con fechas y descripciones." },
@@ -276,8 +244,6 @@ export const escolar = {
           "El acoso escaló. Ya no son solo comentarios: son fotografías tomadas sin consentimiento en los pasillos, notas en el escritorio, mensajes por redes sociales. La estudiante dejó de participar en clases.",
           "Un docente que presenció un episodio dijo a la clase: 'ya dejen de pelear'. Nadie lo corrigió. La escuela sigue funcionando como si nada pasara.",
         ],
-        dato: "Cuando el acoso sexual escolar se normaliza, el 80% de las víctimas desarrolla síntomas de ansiedad o depresión antes de que la escuela tome alguna medida.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Qué quiebra el silencio institucional?",
         opciones: [
           { id: "a", titulo: "La familia exige respuesta", desc: "Los padres van a la escuela con un registro escrito de todos los episodios y exigen una reunión formal." },
@@ -294,8 +260,6 @@ export const escolar = {
           "La Supervisión de Zona abrió un expediente formal. Los acosadores y sus familias fueron citados. Por primera vez, la escuela tuvo que explicar por qué no actuó antes.",
           "La estudiante siente algo nuevo: que el sistema reconoce lo que vivió. No es justicia completa, pero es un comienzo real.",
         ],
-        dato: "Los expedientes formales ante supervisiones zonales tienen una tasa de resolución del 55% cuando incluyen documentación de los hechos por escrito.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cómo concluye el proceso?",
         opciones: [
           { id: "a", titulo: "Sanción a los acosadores", desc: "Los estudiantes reciben una suspensión formal y sus familias firman un acta de compromiso." },
@@ -309,8 +273,6 @@ export const escolar = {
           "Los padres, ya orientados, presentaron una queja formal ante la dirección con copia a la Supervisión de Zona. La escuela no pudo ignorarlos: había registro escrito.",
           "La maestra y la familia trabajan juntos. La estudiante lo siente: hay adultos que la creen y actúan. Eso cambia algo importante en ella.",
         ],
-        dato: "Las quejas formales presentadas por familias con acompañamiento docente tienen el doble de probabilidad de derivar en medidas correctivas reales.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cuál es el resultado?",
         opciones: [
           { id: "a", titulo: "Cambios estructurales", desc: "La queja obliga a la escuela a implementar un comité de convivencia escolar activo." },
@@ -324,8 +286,6 @@ export const escolar = {
           "El espacio que la maestra creó se convirtió en referencia. Otros estudiantes comenzaron a acercarse. Ella escucha, orienta, documenta casos con permiso de los involucrados.",
           "La dirección lo nota y no sabe cómo reaccionar. El cambio no vino de arriba, vino del interior de un aula.",
         ],
-        dato: "Los programas de aula segura reducen en un 50% los episodios de acoso reportados en escuelas donde docentes reciben formación en perspectiva de género.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Qué sigue para este espacio?",
         opciones: [
           { id: "a", titulo: "La dirección lo institucionaliza", desc: "Ante los resultados visibles, la dirección decide adoptar el modelo a nivel escuela." },
@@ -339,8 +299,6 @@ export const escolar = {
           "La queja colectiva impactó diferente a una individual. La dirección no pudo minimizarla. Se convocó a una reunión con todos los padres involucrados.",
           "La estudiante acosada lo vio: sus amigas hablaron por ella y con ella. Por primera vez, los acosadores tuvieron que mirar a la cara las consecuencias de sus actos.",
         ],
-        dato: "Las quejas colectivas ante instituciones educativas tienen una tasa de atención 3 veces mayor que las quejas individuales.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cuál es el desenlace?",
         opciones: [
           { id: "a", titulo: "Sanciones y protocolo", desc: "La escuela aplica sanciones y se compromete a actualizar su reglamento en 30 días." },
@@ -354,8 +312,6 @@ export const escolar = {
           "La maestra escuchó todo. Con calma, sin juzgar, tomó notas. Les dijo que lo que describían era acoso sexual y que tenía un nombre y consecuencias legales.",
           "Con su orientación, el grupo y la familia de la estudiante construyeron una queja documentada. La maestra ofreció ser testigo formal si era necesario.",
         ],
-        dato: "La presencia de un adulto aliado y capacitado dentro de la escuela es el factor más determinante para que una víctima de acoso sostenga un proceso de denuncia.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cómo termina esta historia?",
         opciones: [
           { id: "a", titulo: "Con justicia real", desc: "Los acosadores son sancionados formalmente y la escuela implementa un protocolo nuevo." },
@@ -369,8 +325,6 @@ export const escolar = {
           "El grupo se separó. La estudiante quedó sin su red de apoyo justo cuando más la necesitaba. Los acosadores lo notaron.",
           "Pero algo quedó: ella misma había visto que había personas dispuestas a acompañarla. Eso no desaparece del todo.",
         ],
-        dato: "El aislamiento social durante episodios de acoso escolar aumenta en un 60% el riesgo de consecuencias emocionales severas a largo plazo.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cómo se reconstruye el camino?",
         opciones: [
           { id: "a", titulo: "Con apoyo profesional", desc: "La familia busca orientación psicológica para la estudiante y apoyo legal para documentar el caso." },
@@ -384,8 +338,6 @@ export const escolar = {
           "La familia llegó con fechas, descripciones, fotos de mensajes, nombres. La dirección no pudo ignorarlos. Por primera vez en meses, la escuela tuvo que dar respuestas.",
           "El registro meticuloso de la familia se convirtió en el expediente que la institución no quiso construir. Ahora era evidencia.",
         ],
-        dato: "Las familias que documentan sistemáticamente los episodios de acoso antes de presentar una queja tienen el doble de probabilidad de obtener una respuesta institucional concreta.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cuál es el resultado de la queja?",
         opciones: [
           { id: "a", titulo: "Sanciones formales", desc: "Los acosadores son suspendidos y sus familias reciben una citación formal con acta." },
@@ -399,8 +351,6 @@ export const escolar = {
           "El reporte del docente llegó a la Supervisión de Zona sin pasar por la dirección. Eso fue inusual. Y efectivo.",
           "La dirección fue convocada a explicar por qué no había actuado. El docente que reportó se convirtió en testigo clave del proceso.",
         ],
-        dato: "Los reportes directos a supervisiones escolares, cuando incluyen documentación de hechos presenciados por docentes, tienen una tasa de atención del 78%.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cómo avanza el caso?",
         opciones: [
           { id: "a", titulo: "Con investigación formal", desc: "La Supervisión abre un proceso formal que incluye entrevistas a estudiantes, padres y personal docente." },
@@ -414,8 +364,6 @@ export const escolar = {
           "Cuando ella habló, el salón quedó en silencio. Algunos compañeros bajaron la mirada. Otros la miraron con algo nuevo: reconocimiento.",
           "La maestra, que estaba presente, tomó la decisión más importante de su carrera ese día: creerle, documentar, actuar.",
         ],
-        dato: "Los testimonios directos de víctimas ante grupos o autoridades, cuando son recibidos con protocolos adecuados, tienen el mayor impacto en la respuesta institucional.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Qué pasa después de que ella habló?",
         opciones: [
           { id: "a", titulo: "La escuela actúa de inmediato", desc: "La maestra activa el protocolo ese mismo día y la dirección convoca a una reunión urgente." },
@@ -438,8 +386,6 @@ export const escolar = {
         "Un subdirector de bachillerato utiliza su posición para hacer comentarios inapropiados a estudiantes que piden permisos, constancias o revisiones de calificaciones. Siempre a solas, siempre con la puerta entreabierta.",
         "Varias estudiantes han aprendido a ir acompañadas a su oficina o a evitarlo por completo. Ninguna ha hablado formalmente. El miedo a no graduarse, a perder una beca, a no ser creída, pesa más.",
       ],
-      dato: "El hostigamiento sexual por parte de figuras de autoridad escolar afecta al 28% de las estudiantes de nivel medio superior en México. El 91% no lo denuncia.",
-      sublabelDato: "Dato de Contexto Nacional",
       pregunta: "¿Qué detona la primera acción?",
       opciones: [
         { id: "a", titulo: "Una estudiante habla", desc: "Una estudiante decide contarle a su tutora lo que ocurrió en la última visita a la subdirección." },
@@ -455,8 +401,6 @@ export const escolar = {
           "La tutora la creyó. Pero cuando lo llevó a la dirección, la respuesta fue pedir 'más pruebas'. La estudiante no tiene grabaciones, no tiene testigos directos. Solo su palabra contra la de un funcionario con 15 años en la institución.",
           "Le sugirieron 'evitar situaciones incómodas' y 'ser más cuidadosa'. La tutora está frustrada. La estudiante se arrepiente de haber hablado.",
         ],
-        dato: "El 83% de las denuncias por hostigamiento sexual en instituciones educativas son archivadas por 'falta de pruebas' en la etapa de investigación preliminar.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cómo responde la tutora ante el bloqueo institucional?",
         opciones: [
           { id: "a", titulo: "Busca asesoría jurídica", desc: "Contacta a una abogada especializada para orientar a la estudiante sobre sus derechos y opciones." },
@@ -470,8 +414,6 @@ export const escolar = {
           "El reporte del docente llegó a la dirección. Era inusual: un testimonio adulto, con fecha, descripción y firma. La dirección no pudo ignorarlo como ignoraba los rumores.",
           "El subdirector fue convocado a una reunión privada. Negó todo. Pero el expediente ya existía. Y el docente que reportó se mantuvo firme.",
         ],
-        dato: "Los reportes formales de docentes como testigos en casos de hostigamiento tienen una tasa de seguimiento institucional 4 veces mayor que los reportes de estudiantes solos.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cómo avanza el caso?",
         opciones: [
           { id: "a", titulo: "Más testimonios se suman", desc: "Otras estudiantes, al saber que hay un reporte formal, deciden agregar sus propios testimonios." },
@@ -485,8 +427,6 @@ export const escolar = {
           "Seis estudiantes. Seis historias distintas, con el mismo nombre al centro. Cuando se sentaron juntas y compararon, el patrón fue innegable: mismas palabras, mismos momentos, mismo lugar.",
           "Decidieron no ir a la dirección primero. Fueron directamente a la Supervisión de Zona con un documento firmado por todas.",
         ],
-        dato: "Las denuncias colectivas por hostigamiento sexual en instituciones tienen 5 veces más probabilidad de derivar en una investigación formal que las denuncias individuales.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cuál es la respuesta institucional?",
         opciones: [
           { id: "a", titulo: "Investigación formal abierta", desc: "La Supervisión abre expediente y designa a una persona externa para coordinar la investigación." },
@@ -503,8 +443,6 @@ export const escolar = {
           "La abogada les explicó que el hostigamiento sexual por parte de una figura de autoridad escolar es un delito tipificado. Que no necesitan grabaciones. Que la credibilidad también es evidencia.",
           "Con esa información, la estudiante decidió no retractarse. Decidió presentar una denuncia formal ante la Fiscalía, con la tutora y la abogada como acompañantes.",
         ],
-        dato: "El hostigamiento sexual cometido por servidores públicos en funciones está tipificado en el Código Penal Federal y en la mayoría de los códigos estatales de México.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cómo avanza la denuncia?",
         opciones: [
           { id: "a", titulo: "Con acompañamiento completo", desc: "La abogada, la tutora y una organización civil acompañan todo el proceso legal." },
@@ -518,8 +456,6 @@ export const escolar = {
           "Cuatro estudiantes más. La tutora las escuchó una por una. Sus relatos coincidían en detalles que ninguna podría haber inventado por separado.",
           "Con esos testimonios, el caso dejó de ser 'una queja individual' para convertirse en evidencia de una conducta sistemática.",
         ],
-        dato: "La identificación de un patrón sistemático de hostigamiento multiplica por 6 las posibilidades de que el caso derive en una sanción formal al agresor.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Qué pasa con los testimonios colectivos?",
         opciones: [
           { id: "a", titulo: "Se presenta denuncia colectiva", desc: "Las estudiantes y la tutora presentan una denuncia conjunta ante la Fiscalía y la SEP." },
@@ -533,8 +469,6 @@ export const escolar = {
           "El registro meticuloso de la tutora se convirtió en el expediente más sólido del caso. Cada 'no hay pruebas' institucional quedó documentado como parte del patrón de encubrimiento.",
           "Con ese material, la tutora y la estudiante se presentaron ante la Supervisión de Zona y ante la Fiscalía el mismo día.",
         ],
-        dato: "La documentación sistemática de respuestas institucionales inadecuadas puede constituir evidencia de encubrimiento, lo que agrava la responsabilidad de las autoridades involucradas.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cuál es el resultado?",
         opciones: [
           { id: "a", titulo: "El subdirector es imputado", desc: "Con el expediente completo, la fiscalía vincula al subdirector a proceso penal." },
@@ -548,8 +482,6 @@ export const escolar = {
           "Cuando las otras estudiantes supieron que había un reporte formal, algo cambió. El miedo seguía ahí, pero ya no estaban solas. Una a una, fueron agregando sus testimonios.",
           "El caso pasó de ser 'la queja de una estudiante' a ser evidencia de una conducta reiterada. Eso cambia todo en términos legales.",
         ],
-        dato: "Los testimonios múltiples sobre un mismo agresor constituyen evidencia de patrón sistemático, lo que en México puede derivar en cargos agravados.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cómo termina el proceso?",
         opciones: [
           { id: "a", titulo: "Con remoción definitiva", desc: "El subdirector es removido definitivamente de sus funciones y se abre proceso penal." },
@@ -563,8 +495,6 @@ export const escolar = {
           "La Supervisión de Zona asignó a una coordinadora externa para llevar la investigación. La dirección del plantel fue apartada del proceso para evitar conflicto de interés.",
           "Por primera vez, la investigación avanza sin que la institución investigada sea quien decide su ritmo.",
         ],
-        dato: "Las investigaciones conducidas por instancias externas a la escuela tienen una tasa de resolución 3 veces mayor que las investigaciones internas.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cuál es el desenlace?",
         opciones: [
           { id: "a", titulo: "El subdirector es sancionado", desc: "La investigación concluye con una sanción administrativa formal y proceso penal abierto." },
@@ -578,8 +508,6 @@ export const escolar = {
           "El subdirector fue separado de sus funciones. Las estudiantes lo supieron al llegar a la escuela un lunes. No hubo comunicado oficial, no hubo explicación pública.",
           "Pero el alivio fue real. Y la pregunta también: ¿qué pasa con todo lo que ya ocurrió?",
         ],
-        dato: "La separación cautelar de un agresor no implica justicia ni reparación del daño. Sin proceso formal, el 60% de los casos separados regresan al cargo en menos de seis meses.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Qué exigen las estudiantes ahora?",
         opciones: [
           { id: "a", titulo: "Proceso formal y transparente", desc: "Exigen saber qué proceso se abrió, quién lo lleva y cuáles serán las consecuencias reales." },
@@ -593,8 +521,6 @@ export const escolar = {
           "La investigadora externa llegó a la escuela. No era parte del sistema que había ignorado las quejas. Escuchó a las estudiantes, revisó el expediente, entrevistó al personal.",
           "Su informe fue contundente: patrón documentado, omisión institucional, responsabilidad del subdirector y de quienes no actuaron.",
         ],
-        dato: "Los informes de investigadoras externas especializadas en violencia de género tienen una tasa de derivación a proceso penal del 71%.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cuál es el resultado del informe?",
         opciones: [
           { id: "a", titulo: "Proceso penal abierto", desc: "La Fiscalía recibe el informe y vincula al subdirector a proceso por hostigamiento sexual." },
@@ -608,8 +534,6 @@ export const escolar = {
           "Llamaron a las familias. Les dijeron que 'esto podía resolverse internamente'. Que 'hacer escándalo' perjudicaría a sus hijas. Que el subdirector 'llevaría años en la institución sin problemas'.",
           "Dos familias aceptaron retirarse. Cuatro no. Las cuatro que se mantuvieron sostuvieron el proceso.",
         ],
-        dato: "La presión institucional para retirar quejas por hostigamiento sexual afecta al 55% de las familias involucradas. La red de apoyo entre denunciantes es el factor más efectivo de resistencia.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cómo sostienen las familias el proceso?",
         opciones: [
           { id: "a", titulo: "Con acompañamiento legal", desc: "Contratan a una abogada especializada que asesora a las cuatro familias en conjunto." },
@@ -623,8 +547,6 @@ export const escolar = {
           "El subdirector fue suspendido. Las estudiantes respiraron. Pero la suspensión con goce de sueldo no es justicia: es un paréntesis.",
           "Saben que si no hay proceso formal, él puede regresar. Y que otras estudiantes en otras escuelas pueden estar viviendo lo mismo.",
         ],
-        dato: "El 60% de los funcionarios escolares suspendidos cautelarmente por hostigamiento regresan a sus cargos si no hay una denuncia penal activa que sostenga el proceso.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Qué deciden hacer las estudiantes?",
         opciones: [
           { id: "a", titulo: "Presentar denuncia penal", desc: "Deciden formalizar la denuncia ante la Fiscalía para que la suspensión derive en proceso real." },
@@ -647,8 +569,6 @@ export const escolar = {
         "En una escuela secundaria, un docente de computación permite que los estudiantes 'accedan libremente' a contenido en internet durante las clases. Dice que los trata 'como adultos'. Algunos estudiantes lo admiran por eso.",
         "Lo que comenzó como permisividad se fue convirtiendo en algo más: contenido sexual explícito en pantallas compartidas, comentarios sobre el cuerpo de las y los estudiantes, normalización de prácticas que ningún menor debería presenciar en un espacio escolar.",
       ],
-      dato: "La corrupción de menores en entornos escolares frecuentemente comienza con la normalización progresiva de contenido inapropiado. El 78% de los casos no es identificado hasta que el daño es significativo.",
-      sublabelDato: "Dato de Contexto Nacional",
       pregunta: "¿Quién nota primero que algo está mal?",
       opciones: [
         { id: "a", titulo: "Un estudiante habla en casa", desc: "Un estudiante le cuenta a su madre lo que pasa en las clases de computación sin dimensionar la gravedad." },
@@ -664,8 +584,6 @@ export const escolar = {
           "La madre escuchó a su hijo. No lo minimizó. Fue a la escuela al día siguiente. La directora la recibió con escepticismo: 'los niños a veces exageran, hay que verificar'.",
           "Mientras se 'verifica', el docente sigue frente al grupo. La madre sale de la escuela sin certezas y con la sensación de que proteger a su hijo depende solo de ella.",
         ],
-        dato: "Cuando los padres reportan situaciones de corrupción de menores en escuelas, el 65% recibe como primera respuesta una minimización o cuestionamiento de la veracidad del menor.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Qué hace la madre ante la inacción?",
         opciones: [
           { id: "a", titulo: "Busca asesoría legal", desc: "Contacta a un abogado especializado en derechos de infancia para entender qué puede hacer." },
@@ -679,8 +597,6 @@ export const escolar = {
           "La maestra comenzó a preguntar, con cuidado, a estudiantes de confianza. Lo que escuchó la perturbó: llevaba meses pasando. Los estudiantes no lo habían dicho porque 'el profe era buena onda'.",
           "Con esa información, fue directamente a la Supervisión de Zona, sin pasar por la dirección de la escuela. Había aprendido que los problemas serios no se resuelven donde se generan.",
         ],
-        dato: "Los docentes que reportan directamente a instancias superiores casos de conducta inapropiada de colegas tienen 4 veces más probabilidad de lograr una intervención efectiva.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cómo responde la Supervisión de Zona?",
         opciones: [
           { id: "a", titulo: "Intervención inmediata", desc: "La Supervisión designa a una persona para visitar la escuela y tomar testimonios de los estudiantes." },
@@ -694,8 +610,6 @@ export const escolar = {
           "El rechazo del estudiante creó un quiebre en la dinámica del grupo. Algunos compañeros lo presionaron. Pero otros, en privado, le dijeron que también se sentían incómodos.",
           "El docente lo ignoró públicamente, pero empezó a bajarlo la calificación. Ese patrón, la represalia académica, fue lo que finalmente alertó a su familia.",
         ],
-        dato: "La represalia académica contra estudiantes que se niegan a participar en dinámicas inapropiadas es una señal de alerta reconocida en los protocolos de detección de corrupción de menores.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cómo responde la familia al identificar el patrón?",
         opciones: [
           { id: "a", titulo: "Documenta las calificaciones", desc: "Comparan las calificaciones previas y posteriores y construyen evidencia del patrón de represalia." },
@@ -712,8 +626,6 @@ export const escolar = {
           "El abogado fue claro: lo que describía el estudiante constituía corrupción de menores, un delito. Y que la escuela tenía obligación de actuar al primer reporte. No lo hizo.",
           "Con esa certeza, la madre y el abogado presentaron denuncia formal ante la Fiscalía. El docente fue citado a declarar.",
         ],
-        dato: "La corrupción de menores está tipificada en el Código Penal Federal con penas de hasta 10 años de prisión. Pocos casos llegan a sentencia por falta de acompañamiento durante el proceso.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cómo avanza el proceso legal?",
         opciones: [
           { id: "a", titulo: "Con más testimonios", desc: "Otros estudiantes del grupo se suman a la denuncia con el apoyo de sus familias." },
@@ -727,8 +639,6 @@ export const escolar = {
           "Habló con tres madres. Las tres conocían situaciones similares. Una de ellas tenía capturas de pantalla que su hijo le había mostrado meses atrás sin saber qué hacer con ellas.",
           "Juntas tenían algo que ninguna tenía sola: un patrón documentado y corroborado. Decidieron presentar una queja conjunta.",
         ],
-        dato: "Las quejas colectivas con evidencia corroborada por múltiples familias tienen una tasa de derivación a proceso penal del 68%.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cómo presentan la queja?",
         opciones: [
           { id: "a", titulo: "Ante la Fiscalía", desc: "Presentan denuncia penal conjunta con toda la evidencia recopilada por las familias." },
@@ -742,8 +652,6 @@ export const escolar = {
           "La denuncia fue clara, directa y con suficiente información para que la Fiscalía actuara. El docente fue citado a declarar en menos de dos semanas.",
           "La escuela, al recibir la notificación de la Fiscalía, suspendió al docente de inmediato. Lo que no hicieron por voluntad propia, lo hicieron porque no tuvieron opción.",
         ],
-        dato: "Las denuncias directas ante la Fiscalía en casos de corrupción de menores obligan a las instituciones escolares a tomar medidas cautelares, independientemente de su voluntad institucional.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Qué sigue en el proceso?",
         opciones: [
           { id: "a", titulo: "Peritaje de equipos", desc: "La Fiscalía solicita un peritaje de las computadoras del aula para recuperar el historial." },
@@ -757,8 +665,6 @@ export const escolar = {
           "El perito informático recuperó el historial completo de las máquinas del aula. Las fechas, los sitios, los horarios: todo coincidía con el horario de clase del docente.",
           "La evidencia digital es difícil de negar. El docente cambió su versión tres veces ante la Fiscalía.",
         ],
-        dato: "La evidencia digital recuperada de equipos escolares es admisible en procesos penales y ha sido determinante en el 80% de los casos de corrupción de menores con componente tecnológico.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cuál es el resultado?",
         opciones: [
           { id: "a", titulo: "Vinculación a proceso", desc: "El docente es vinculado a proceso penal con la evidencia digital como prueba principal." },
@@ -772,8 +678,6 @@ export const escolar = {
           "La Supervisión pidió más evidencia. Mientras tanto, el docente siguió frente al grupo. La maestra documentó cada día que pasaba sin intervención.",
           "Ese registro del tiempo transcurrido se convirtió en evidencia de omisión institucional.",
         ],
-        dato: "Cada semana de inacción institucional ante una denuncia activa de corrupción de menores puede constituir omisión de deber, que en México es también un delito perseguible.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cómo presiona la maestra para que haya acción?",
         opciones: [
           { id: "a", titulo: "Escala a la SEP directamente", desc: "Envía su documentación directamente a la Secretaría de Educación sin esperar a la Supervisión." },
@@ -787,8 +691,6 @@ export const escolar = {
           "La dirección fue notificada por la Supervisión. En lugar de actuar, llamó a la maestra a su oficina y le pidió 'discreción' y 'no alarmar a los padres'.",
           "La maestra tenía ahora dos problemas: el docente y la dirección. Decidió que no podía resolver ambos desde adentro.",
         ],
-        dato: "La obstaculización de una denuncia por parte de directivos escolares puede constituir encubrimiento, que agrava la responsabilidad penal de quienes lo cometen.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Qué hace la maestra?",
         opciones: [
           { id: "a", titulo: "Denuncia el encubrimiento", desc: "Documenta la conversación con la directora y la incluye en su reporte a la Fiscalía." },
@@ -802,8 +704,6 @@ export const escolar = {
           "Las calificaciones antes y después. Los mensajes. Los testimonios de otros estudiantes que también notaron el cambio. La familia construyó un expediente sin saber que eso era lo que estaban haciendo.",
           "Cuando lo presentaron ante la Supervisión de Zona, nadie pudo decir que era insuficiente.",
         ],
-        dato: "La documentación detallada de represalias académicas combinada con testimonios de pares constituye evidencia sólida en casos de corrupción de menores con componente de abuso de autoridad.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cuál es la respuesta institucional?",
         opciones: [
           { id: "a", titulo: "Suspensión inmediata", desc: "La Supervisión suspende al docente preventivamente mientras se abre investigación formal." },
@@ -817,8 +717,6 @@ export const escolar = {
           "Fueron a la dirección con todo: el estudiante, la familia, los registros de calificaciones, una descripción escrita de lo ocurrido en el aula. La directora no pudo ignorarlos.",
           "El docente fue citado a la dirección ese mismo día. Por primera vez, tuvo que responder frente a alguien con autoridad.",
         ],
-        dato: "Las confrontaciones institucionales con evidencia documentada tienen el doble de probabilidad de derivar en acciones formales que las quejas verbales sin respaldo.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Qué sigue después de la confrontación?",
         opciones: [
           { id: "a", titulo: "La dirección actúa", desc: "La directora reporta el caso a la Supervisión de Zona y suspende al docente preventivamente." },
@@ -832,8 +730,6 @@ export const escolar = {
           "Cuatro familias se reunieron. Cada una tenía una pieza del mismo rompecabezas. Juntas tenían la imagen completa.",
           "Decidieron presentar la queja de forma colectiva, con asesoría legal, ante la Fiscalía y la SEP simultáneamente.",
         ],
-        dato: "Las denuncias colectivas simultáneas ante instancias penales y administrativas generan mayor presión institucional y tienen una tasa de atención del 82%.",
-        sublabelDato: "Dato de Contexto Nacional",
         pregunta: "¿Cuál es el resultado de la acción colectiva?",
         opciones: [
           { id: "a", titulo: "El docente es suspendido", desc: "La SEP suspende al docente en 48 horas ante la denuncia simultánea en dos instancias." },

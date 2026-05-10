@@ -1,22 +1,20 @@
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight, Check, Info } from "lucide-react";
+import { ChevronLeft, ChevronRight, Check } from "lucide-react";
 import SiteLayout from "../components/SiteLayout.jsx";
 import StoryImage from "../components/StoryImage.jsx";
+import DatoDinamico from "../components/DatoDinamico.jsx";
 import { useStory } from "../context/StoryContext.jsx";
 import { escolar } from "../data/storyContent.js";
 
 export default function HistoriaDos() {
   const { tipoHistoria, decisiones, tomarDecision } = useStory();
 
-  const tipo = tipoHistoria || "abuso_sexual";
+  const tipo         = tipoHistoria || "abuso_sexual";
   const decisionCap1 = decisiones.cap1 || "a";
-  const choice = decisiones.cap2;
+  const choice       = decisiones.cap2;
 
-  const data = escolar[tipo].capitulo2[decisionCap1];
-  const cacheKey = `cap2_${decisionCap1}_${choice}`;
-
-  const selectedOption = data.opciones.find(o => o.id === choice);
-  const accionDesc = selectedOption ? selectedOption.titulo : null;
+  const data         = escolar[tipo].capitulo2[decisionCap1];
+  const capKeyPrefix = `${tipo}_cap2_${decisionCap1}`;
 
   return (
     <SiteLayout>
@@ -36,13 +34,7 @@ export default function HistoriaDos() {
           </div>
         </article>
 
-        <div className="mt-6 flex gap-3 rounded-xl border border-primary/20 bg-primary/5 p-4">
-          <Info className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-          <div>
-            <p className="text-xs font-semibold text-primary">{data.sublabelDato}</p>
-            <p className="mt-1 text-xs text-foreground/80 leading-relaxed">{data.dato}</p>
-          </div>
-        </div>
+        <DatoDinamico />
 
         <p className="mt-10 text-center text-xs font-semibold tracking-wider text-muted-foreground">
           {data.pregunta}
@@ -68,10 +60,11 @@ export default function HistoriaDos() {
           })}
         </div>
 
-        <StoryImage 
-          capKey={cacheKey} 
-          accionDesc={accionDesc} 
-          contextoNarrativo={data.descripcion} 
+        <StoryImage
+          capKeyPrefix={capKeyPrefix}
+          opciones={data.opciones}
+          opcionSeleccionadaId={choice}
+          descripcionHistoria={data.descripcion}
         />
 
         <div className="mt-10 border-t pt-6 flex items-center justify-between">

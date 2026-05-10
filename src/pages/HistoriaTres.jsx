@@ -1,26 +1,23 @@
-// HistoriaTres.jsx — Capítulo 3
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight, Check, AlertCircle } from "lucide-react";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight, Check } from "lucide-react";
 import SiteLayout from "../components/SiteLayout.jsx";
 import StoryImage from "../components/StoryImage.jsx";
+import DatoDinamico from "../components/DatoDinamico.jsx";
 import { useStory } from "../context/StoryContext.jsx";
 import { escolar, getCap3Key } from "../data/storyContent.js";
-import { useState } from "react";
 
 export default function HistoriaTres() {
   const { tipoHistoria, decisiones } = useStory();
   const [choice, setChoice] = useState("a");
 
-  const tipo = tipoHistoria || "abuso_sexual";
+  const tipo         = tipoHistoria || "abuso_sexual";
   const decisionCap1 = decisiones.cap1 || "a";
   const decisionCap2 = decisiones.cap2 || "a";
 
-  const cap3Key = getCap3Key(decisionCap1, decisionCap2);
-  const data = escolar[tipo].capitulo3[cap3Key];
-  const cacheKey = `cap3_${cap3Key}_${choice}`;
-
-  const selectedOption = data.opciones.find(o => o.id === choice);
-  const accionDesc = selectedOption ? selectedOption.titulo : null;
+  const cap3Key      = getCap3Key(decisionCap1, decisionCap2);
+  const data         = escolar[tipo].capitulo3[cap3Key];
+  const capKeyPrefix = `${tipo}_cap3_${cap3Key}`;
 
   return (
     <SiteLayout>
@@ -40,13 +37,7 @@ export default function HistoriaTres() {
           </div>
         </article>
 
-        <div className="mt-6 flex gap-3 rounded-xl border border-primary/20 bg-primary/5 p-4">
-          <AlertCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-          <div>
-            <p className="text-xs font-semibold text-primary">{data.sublabelDato}</p>
-            <p className="mt-1 text-xs text-foreground/80 leading-relaxed">{data.dato}</p>
-          </div>
-        </div>
+        <DatoDinamico />
 
         <p className="mt-10 text-center text-xs font-semibold tracking-wider text-muted-foreground">
           {data.pregunta}
@@ -72,10 +63,11 @@ export default function HistoriaTres() {
           })}
         </div>
 
-        <StoryImage 
-            capKey={cacheKey} 
-            accionDesc={accionDesc} 
-            contextoNarrativo={data.descripcion} 
+        <StoryImage
+          capKeyPrefix={capKeyPrefix}
+          opciones={data.opciones}
+          opcionSeleccionadaId={choice}
+          descripcionHistoria={data.descripcion}
         />
 
         <div className="mt-10 border-t pt-6 flex items-center justify-between">

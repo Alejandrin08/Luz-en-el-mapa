@@ -17,7 +17,7 @@ export default function SiteLayout({ children }) {
         <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
           <Logo />
           <nav className="flex items-center gap-6 text-sm">
-            <Link to="/nacional" className="text-foreground/80 hover:text-primary">Mapa Nacional</Link>
+            <Link to="/mapa" className="text-foreground/80 hover:text-primary">Mapa Nacional</Link>
             <Link to="/recursos" className="text-foreground/80 hover:text-primary">Recursos</Link>
           </nav>
         </div>
@@ -57,7 +57,7 @@ export default function SiteLayout({ children }) {
           </div>
         </div>
         <div className="border-t py-4 text-center text-xs text-muted-foreground">
-          © 2025 Luz en el mapa. Iniciativa ciudadana por la protección de la infancia en México.
+          2026 Luz en el mapa. Iniciativa ciudadana por la protección de la infancia en México.
         </div>
       </footer>
     </div>

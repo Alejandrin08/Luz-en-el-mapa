@@ -1,20 +1,30 @@
-// Configura.jsx
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { Search, User, Users, Baby, Home, School, Globe, MapPin, Info, ArrowRight, X } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ChevronDown, User, Users, Baby, Home, School, Globe, MapPin, Info, ArrowRight, X } from "lucide-react";
 import SiteLayout from "../components/SiteLayout.jsx";
 import { useStory } from "../context/StoryContext.jsx";
 
+const ESTADOS = [
+  "Aguascalientes", "Baja California", "Baja California Sur", "Campeche",
+  "Chiapas", "Chihuahua", "Ciudad de México", "Coahuila", "Colima",
+  "Durango", "Estado de México", "Guanajuato", "Guerrero", "Hidalgo",
+  "Jalisco", "Michoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca",
+  "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa",
+  "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz",
+  "Yucatán", "Zacatecas",
+];
+
 const ages = [
-  { id: "0-5", label: "0 - 5 años", sub: "Primera infancia", icon: Baby },
-  { id: "6-12", label: "6 - 12 años", sub: "Infancia", icon: User },
-  { id: "13-17", label: "13 - 17 años", sub: "Adolescencia", icon: Users },
+  { id: "0-5",   label: "0 - 5 años",   sub: "Primera infancia", icon: Baby },
+  { id: "6-12",  label: "6 - 12 años",  sub: "Infancia",         icon: User },
+  { id: "13-17", label: "13 - 17 años", sub: "Adolescencia",     icon: Users },
 ];
 
 const contexts = [
-  { id: "hogar", label: "Hogar", icon: Home },
-  { id: "escuela", label: "Escuela", icon: School },
-  { id: "digital", label: "Digital", icon: Globe },
+  { id: "hogar",   label: "Hogar",          icon: Home   },
+  { id: "escuela", label: "Escuela",         icon: School },
+  { id: "digital", label: "Digital",         icon: Globe  },
   { id: "publico", label: "Espacio Público", icon: MapPin },
 ];
 
@@ -22,7 +32,7 @@ export default function Configura() {
   const { iniciarHistoria } = useStory();
   const navigate = useNavigate();
 
-  const [estado, setEstado] = useState("");
+  const [estado, setEstado] = useState("Ciudad de México");
   const [age, setAge] = useState("6-12");
   const [gender, setGender] = useState("Femenino");
   const [context, setContext] = useState("escuela");
@@ -51,23 +61,27 @@ export default function Configura() {
         </div>
 
         <div className="mt-8 rounded-xl border bg-card p-6 md:p-8 space-y-8">
-          {/* Ubicación */}
+
           <div>
             <p className="text-xs font-semibold tracking-wider text-muted-foreground">UBICACIÓN</p>
             <label className="mt-2 block text-sm font-medium">Estado de la República</label>
             <div className="mt-2 relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-              <input
+              <select
                 value={estado}
                 onChange={(e) => setEstado(e.target.value)}
-                className="w-full rounded-md border border-input bg-background pl-9 pr-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
-                placeholder="Buscar estado (ej. Jalisco, CDMX, Veracruz...)"
-              />
+                className="w-full appearance-none rounded-md border border-input bg-background pl-4 pr-10 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 cursor-pointer"
+              >
+                {ESTADOS.map((e) => (
+                  <option key={e} value={e}>{e}</option>
+                ))}
+              </select>
+              <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
             </div>
-            <p className="mt-2 text-xs text-muted-foreground">Los datos estadísticos se adaptarán según la entidad federativa elegida.</p>
+            <p className="mt-2 text-xs text-muted-foreground">
+              Los datos estadísticos se adaptarán según la entidad federativa elegida.
+            </p>
           </div>
 
-          {/* Edad */}
           <div>
             <p className="text-xs font-semibold tracking-wider text-muted-foreground">RANGO DE EDAD DE LA VÍCTIMA</p>
             <div className="mt-3 grid grid-cols-3 gap-3">
@@ -92,7 +106,6 @@ export default function Configura() {
             </div>
           </div>
 
-          {/* Género */}
           <div>
             <p className="text-xs font-semibold tracking-wider text-muted-foreground">IDENTIDAD DE GÉNERO</p>
             <div className="mt-3 flex flex-wrap gap-2">
@@ -108,7 +121,6 @@ export default function Configura() {
             </div>
           </div>
 
-          {/* Contexto */}
           <div>
             <p className="text-xs font-semibold tracking-wider text-muted-foreground">CONTEXTO O ENTORNO</p>
             <div className="mt-3 grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -131,7 +143,6 @@ export default function Configura() {
             </div>
           </div>
 
-          {/* Aviso */}
           <div className="rounded-lg bg-primary-soft border border-primary/20 p-4 flex gap-3 text-sm">
             <Info className="h-5 w-5 text-primary shrink-0" />
             <p className="text-foreground/80">
@@ -141,7 +152,9 @@ export default function Configura() {
           </div>
 
           <div className="flex items-center justify-between pt-2">
-            <Link to="/" className="text-sm text-muted-foreground hover:text-foreground">Volver al inicio</Link>
+            <Link to="/" className="text-sm text-muted-foreground hover:text-foreground">
+              Volver al inicio
+            </Link>
             <button
               onClick={handleIniciar}
               className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-primary-foreground font-medium hover:bg-primary/90 transition"

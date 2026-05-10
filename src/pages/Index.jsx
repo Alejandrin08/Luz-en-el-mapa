@@ -20,7 +20,7 @@ export default function Index() {
           <Link to="/configura" className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-primary-foreground font-medium shadow hover:bg-primary/90 transition">
             Crear historia <ArrowRight className="h-4 w-4" />
           </Link>
-          <Link to="/nacional" className="inline-flex items-center gap-2 rounded-md border border-input bg-card px-5 py-3 font-medium hover:bg-accent transition">
+          <Link to="/mapa" className="inline-flex items-center gap-2 rounded-md border border-input bg-card px-5 py-3 font-medium hover:bg-accent transition">
             Explorar el mapa
           </Link>
         </div>
