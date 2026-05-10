@@ -3,22 +3,28 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./styles.css";
 
+import { StoryProvider } from "./context/StoryContext.jsx";
+
 import Index from "./pages/Index.jsx";
 import Configura from "./pages/Configura.jsx";
-import Historia from "./pages/Historia.jsx";
+import HistoriaUno from "./pages/HistoriaUno.jsx";
+import HistoriaDos from "./pages/HistoriaDos.jsx";
+import HistoriaTres from "./pages/HistoriaTres.jsx";
 import Nacional from "./pages/Nacional.jsx";
 import Recursos from "./pages/Recursos.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/configura" element={<Configura />} />
-        <Route path="/historia" element={<Historia />} />
-        <Route path="/nacional" element={<Nacional />} />
-        <Route path="/recursos" element={<Recursos />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+    <StoryProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/configura" element={<Configura />} />
+          <Route path="/historiaUno" element={<HistoriaUno />} />
+          <Route path="/historiaDos" element={<HistoriaDos />} />
+          <Route path="/historiaTres" element={<HistoriaTres />} />
+          <Route path="/mapa" element={<Nacional />} />
+          <Route path="/recursos" element={<Recursos />} />
+        </Routes>
+      </BrowserRouter>
+    </StoryProvider>
 );
