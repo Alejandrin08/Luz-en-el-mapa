@@ -44,7 +44,7 @@ function buildSQL(estado, delitos, limit = 30) {
     .join(", ");
 
   return (
-    `SELECT "Subtipo de delito", "Sexo", "Rango de edad", SUM("Cantidad"::numeric) as total ` +
+    `SELECT "Tipo de delito", "Sexo", "Rango de edad", SUM("Cantidad"::numeric) as total ` +
     `FROM "${RESOURCE_ID}" ` +
     `WHERE "Entidad" ILIKE '${estado.replace(/'/g, "''")}' ` +
     `AND "Tipo de delito" IN (${list}) ` +
