@@ -3,18 +3,13 @@
 // escolar[tipo] → capitulo1 | capitulo2[opcionElegidaEnCap1] | capitulo3[opcionElegidaEnCap2]
 // Tipos: "abuso_sexual" | "acoso_sexual" | "hostigamiento_sexual" | "corrupcion_menores"
 
-export const escolar = {
+export const stories = {
 
-  // ─────────────────────────────────────────────
-  // 1. ABUSO SEXUAL
-  // ─────────────────────────────────────────────
-  abuso_sexual: {
-    label: "Abuso Sexual",
-
+  escolar: {
     capitulo1: {
       titulo: "Capítulo 1: Lo que nadie quiere ver",
       descripcion: [
-        "En una escuela primaria pública, un docente de educación física lleva meses ganándose la confianza de los estudiantes con privilegios especiales: los deja salir antes, les regala dulces, los llama a quedarse después de clase. Nadie lo cuestiona.",
+        "En una escuela primaria {nombre} pública, un docente de educación física lleva meses ganándose la confianza de los estudiantes con privilegios especiales: los deja salir antes, les regala dulces, los llama a quedarse después de clase. Nadie lo cuestiona.",
         "Una estudiante comienza a mostrar señales de alerta: pesadillas, negativa a ir a la escuela, cambios bruscos de humor. Su maestra de grupo lo nota, pero el protocolo escolar es difuso y el miedo a equivocarse paraliza la respuesta.",
       ],
       pregunta: "¿Cuál es la primera reacción del sistema escolar?",
@@ -191,554 +186,361 @@ export const escolar = {
     },
   },
 
-  // ─────────────────────────────────────────────
-  // 2. ACOSO SEXUAL
-  // ─────────────────────────────────────────────
-  acoso_sexual: {
-    label: "Acoso Sexual",
+  hogar: {
+    infancia: {
+      capitulo1: {
+        titulo: "Capítulo 1: Lo que nadie quiere ver",
+        descripcion: [
+          "{nombre} últimamente, cuando suena el timbre de salida en la escuela, algo se resiste. Se queda haciendo preguntas que no necesita preguntar, borrando el pizarrón sin que nadie se lo pida, acomodando su mochila despacio. Sus maestros piensan que solo es alguien con mucha curiosidad o responsable. {nombre} sabe que solo está demorando lo inevitable: llegar a casa.",
+          "No podría explicar por qué. Su casa se supone que es un lugar seguro. Y sin embargo, algo ahí lo incomoda de una manera que no sabe nombrar.",
+          "Esa noche, mientras cena, la televisión muestra una nota sobre delitos cometidos contra niños y adolescentes en el país.",
 
-    capitulo1: {
-      titulo: "Capítulo 1: Los comentarios que nadie frena",
-      descripcion: [
-        "En una secundaria técnica, un grupo de estudiantes mayores sistemáticamente hace comentarios sobre el cuerpo de una compañera más joven. Sucede en el pasillo, en el recreo, frente a docentes que miran hacia otro lado.",
-        "La estudiante comienza a ir al baño a la hora del recreo para evitar los pasillos. Cambió su ropa para 'no llamar la atención'. Nadie en la escuela ha intervenido formalmente.",
-      ],
-      pregunta: "¿Cuál es la primera respuesta del entorno escolar?",
-      opciones: [
-        { id: "a", titulo: "Una maestra interviene", desc: "Una docente que presenció un incidente decide hablar con la directora y con los padres de los involucrados." },
-        { id: "b", titulo: "Amigas de la víctima actúan", desc: "Un grupo de compañeras decide acompañarla siempre y confrontar verbalmente a los acosadores." },
-        { id: "c", titulo: "Nadie hace nada visible", desc: "El acoso continúa porque el entorno normaliza los comentarios como 'juegos' o 'cosas de chavos'." },
-      ],
+          { tipo: "dato", delito: ["Abuso sexual", "Hostigamiento sexual"], sublabel: "Dato de Contexto" },
+
+          "{nombre} no dice nada. Pero esa noche tarda mucho en dormirse."
+        ],
+        pregunta: "¿Qué debería hacer {nombre}?",
+        opciones: [
+          { id: "a", titulo: "Pedir ayuda a un profesor para investigar más", desc: "Busca a su maestro favorito para entender lo que vio en las noticias." },
+          { id: "b", titulo: "Seguir guardando silencio", desc: "Decide no decir nada y seguir cargando con lo que siente." },
+          { id: "c", titulo: "Hablar con su mejor amigo", desc: "Le dice a su amigo que no quiere ir a casa. Su amigo lo invita a la suya." },
+        ],
+      },
+
+      capitulo2: {
+        a: {
+          titulo: "Capítulo 2: Pedir ayuda a un profesor para investigar más",
+          descripcion: [
+            "Al día siguiente, {nombre} busca a su maestro/a favorito/a. No sabe bien cómo empezar, así que pregunta por lo más fácil: si lo que vio en la televisión es verdad.",
+            "El maestro/a lo invita a sentarse. Le dice que sí, que desafortunadamente es real, y que hay cosas importantes que los niños deben saber para protegerse. Le explica con calma:",
+            "El abuso sexual es cualquier contacto o comportamiento sexual hacia una persona sin su consentimiento. Cuando la víctima es un menor, el agresor casi siempre es alguien cercano: un familiar, un conocido, alguien de confianza. ",
+
+            { tipo: "dato", delito: ["Abuso sexual"], sublabel: "Dato de Contexto" },
+
+            "El hostigamiento sexual incluye comentarios, gestos, roces o conductas de naturaleza sexual que generan incomodidad o miedo. No necesita ser violento para ser un delito. ",
+
+            { tipo: "dato", delito: ["Hostigamiento sexual"], sublabel: "Dato de Contexto" },
+
+            "{nombre} escucha. El maestro/a habla con calma. Y algo en esa conversación hace que {nombre} sienta, por primera vez, que lo que le pasa en casa podría tener nombre.",
+            "Guarda silencio un momento. Luego dice, despacio, que en su casa lo acarician de una manera que se siente rara. Que pensó que era una nueva forma de mostrarle cariño. Pero que algo no se siente bien.",
+            "El maestro/a lo escucha sin interrumpirlo."
+
+
+          ],
+
+          pregunta: "¿Qué debería hacer el maestro?",
+          opciones: [
+            { id: "a", titulo: "Buscar ayuda", desc: "Activa el protocolo escolar y busca apoyo con las autoridades correspondientes." },
+            { id: "b", titulo: "Decidir ignorarlo", desc: "Prefiere no involucrarse, pensando que quizás es solo la imaginación del niño." },
+          ],
+        },
+        b: {
+          titulo: "Capítulo 2: Permanecer callado",
+          descripcion: [
+            "{nombre} no le dice nada a nadie. Los días pasan y él los deja pasar. Sus amigos notan que algo está diferente: ya no quiere jugar en el recreo, contesta con monosílabos, a veces se queda mirando la nada. Le dicen que si le duele algo. {nombre} dice que no. Le dicen que si está enojado. {nombre} dice que tampoco.",
+            "Sus amigos, sin saber exactamente qué hacer, le comentan a un maestro que {nombre} 'se ve raro'.",
+            "El maestro se acerca a {nombre} con cuidado. Le habla sobre la importancia de expresar lo que uno siente. Le cuenta que hay situaciones en la vida que pesan tanto que la gente tarda años en hablar de ellas. Que existen delitos como la violación y el incesto que sus víctimas carga solas durante mucho tiempo, convencidas de que nadie las va a creer. ",
+            { tipo: "dato", delito: ["Violación"], sublabel: "Dato de Contexto Nacional" },
+            { tipo: "dato", delito: ["Incesto"], sublabel: "Dato de Contexto Nacional" },
+          ],
+          dato: "En 2024, de los 33.5 millones de delitos ocurridos en México, solo el 9.6% se denunció, y el 93.2% no se investigó (cifra negra). En el caso específico de delitos sexuales, el subregistro es aún mayor: la violación tiene una cifra negra del 91.8% y el hostigamiento o intimidación sexual del 97.7%. INEGI/ENVIPE 2024.",
+          sublabelDato: "Dato de Contexto Nacional",
+          pregunta: "¿Cómo debería reaccionar {nombre}?",
+          opciones: [
+            { id: "a", titulo: "{nombre} decide hablar con el maestro", desc: "Se anima a contarle al maestro lo que ha estado viviendo en casa." },
+            { id: "b", titulo: "{nombre} decide seguir callado", desc: "No tiene energía para hablar. Asiente con la cabeza y sigue igual" },
+          ],
+        },
+        c: {
+          titulo: "Capítulo 2: Habla con su mejor amigo",
+          descripcion: [
+            "{nombre} no sabe cómo hablar con un adulto. Pero sí sabe hablar con su mejor amigo. Le dice que no quiere irse a su casa.",
+            "Su amigo, sin preguntar demasiado, lo invita a la suya. La mamá les hace de comer. Hacen la tarea en la misma mesa. Juegan en el patio hasta que oscurece. Es una tarde ordinaria y perfecta, el tipo de tarde que {nombre} había olvidado que existía.",
+            "Al final del día, mientras recogen los juguetes, {nombre} le cuenta a su amigo sobre las cosas que pasan en su casa. No sabe bien cómo llamarlas. Solo sabe que se sienten raras.",
+            "Su amigo lo escucha. Y aunque es solo un niño, algo en él reconoce que eso no suena normal. Esa noche, le cuenta a sus papás.",
+            "Sus papás se quedan en silencio. Escuchar que algo así puede estarle pasando a alguien cercano es diferente a verlo en las noticias. El papá decide investigar sobre la  Corrupción de menores y Retención o sustracción de menores",
+           
+            { tipo: "dato", delito: ["Corrupción de menores", "Retención o sustracción de menores e incapaces"], sublabel: "Dato de Contexto Nacional" },
+          
+          ],
+          dato: "Según la ENDIREH 2021 del INEGI, apenas el 13.1% de las mujeres víctimas de violencia sexual lo denuncian, y la principal razón para no hacerlo es la normalización: consideraron que se trató de algo sin importancia que no les afectó.",
+          sublabelDato: "Dato de Contexto Nacional",
+          pregunta: "¿Cómo deberían actuar los papas del amigo de {nombre}?",
+          opciones: [
+            { id: "a", titulo: "Deciden tomar acción", desc: "Buscan orientación y hacen lo posible por ayudar, aunque no sepan bien cómo." },
+            { id: "b", titulo: "Fingir que no saben nada", desc: "Le dicen a su hijo que se aleje. No es su problema y no quieren complicaciones." },
+          ],
+        },
+      },
+
+      capitulo3: {
+        // flujos de cap2.a
+        aa: {
+          titulo: "Capítulo 3: El maestro/a decide buscar ayuda",
+          descripcion: [
+            "El maestro/a sabe que lo que {nombre} acaba de decir no puede quedarse en esa conversación. No es fácil. Hay que hablar con el director, con trabajo social, con la familia. Hay momentos incómodos y preguntas difíciles. {nombre} tiene que repetir cosas que le cuesta decir.",
+            "Pero también hay momentos distintos: una trabajadora social que lo escucha sin juzgarlo, una psicóloga que le dice que lo que siente tiene sentido, y el lento, gradual alivio de no cargar algo tan pesado solo.",
+            "Semanas después, {nombre} sigue llegando tarde a casa. Pero ya no por miedo: ahora porque de verdad le gusta quedarse a platicar con su maestro/a.",
+
+          ],
+          dato: "Según UNICEF (2024), las consecuencias del abuso sexual se agravan aún más cuando los niños y niñas retrasan el momento de revelar sus experiencias, a veces durante largos periodos de tiempo. Las supervivientes suelen arrastrar el trauma hasta la edad adulta, con mayor riesgo de enfermedades de transmisión sexual, abuso de sustancias, aislamiento social y trastornos mentales como ansiedad y depresión, además de dificultades para forjar relaciones sanas. ",
+          sublabelDato: "Dato de Contexto Nacional",
+          pregunta: "A veces, la persona que más necesitamos no es un héroe. Es alguien que sabe escuchar y que decide actuar. ¿Cuántos personas esperan que alguien dé ese paso?",
+
+        },
+        ab: {
+          titulo: "Capítulo 3: El maestro/a decide ignorarlo",
+          descripcion: [
+            "El maestro/a escucha a {nombre}. Pero lo que el niño describe suena vago, confuso. ¿Acaso no podría ser solo la imaginación de un niño sensible? Decide no involucrarse: no es su responsabilidad, no quiere malinterpretar, no quiere causar un problema donde quizás no lo hay.",
+            "{nombre} nota el cambio en la mirada del maestro/a. Entiende que habló de más. Guarda todo de nuevo.",
+            "Las semanas siguientes, el maestro/a observa que {nombre} está cada vez más apático. Menos participativo. Llega tarde, se va rápido, no ríe. Algo en él empieza a dudar: ¿y si sí era verdad? Pero aceptar eso significaría aceptar que tuvo la oportunidad de actuar y no lo hizo.",
+            "Cuando finalmente se atreve a acercarse a {nombre} de nuevo, el niño lo mira un segundo y baja la vista. Ya no confía.",
+          ],
+          dato: "En un artículo publicado en Tribuna Noticias, Antonio (2026) señala que el miedo, la culpa, la dependencia económica y la manipulación emocional son factores que inhiben la denuncia. Además, menciona que la revictimización institucional, los procesos largos y la falta de personal capacitado también dificultan que las víctimas denuncien.",
+          sublabelDato: "Dato de Contexto Nacional",
+          pregunta: "No creerle a un niño no es neutralidad: es una decisión. Y esa decisión también tiene consecuencias. ¿Cuántas veces se confunde 'no involucrarse' con 'proteger'?",
+
+        },
+        // flujos de cap2.b
+        ba: {
+          titulo: "Capítulo 3: Hablar cambia el rumbo",
+          descripcion: [
+            "{nombre} escucha al maestro. Respira. Y empieza a contar, despacio, sin saber bien si las palabras van a salir bien formadas",
+            "No salen perfectas. Pero salen.",
+            "El maestro lo escucha hasta el final. Luego le dice que hizo algo muy valiente. Que a partir de ese momento, no está solo.",
+            "Lo que sigue no es sencillo: hay adultos involucrados, conversaciones incómodas, noches difíciles. Pero también hay un proceso que empieza a moverse. Y {nombre}, lentamente, empieza a entender que lo que le pasaba no era normal, y que él no tuvo la culpa.",
+
+          ],
+          dato: "La OMS recomienda específicamente servicios de respuesta y apoyo para detectar los casos a tiempo, y atención continua a los niños maltratados y a sus familias para evitar que el maltrato se reproduzca y para paliar sus consecuencias. ",
+          sublabelDato: "Dato de Contexto Nacional",
+          pregunta: "Hablar es difícil. Pero el silencio tiene un costo que no siempre se ve desde afuera. A veces la valentía no se parece a lo que imaginamos: a veces es solo encontrar las palabras y decirlas en voz baja.",
+
+        },
+        bb: {
+          titulo: "Capítulo 3: Seguir callado hasta que alguien actue ",
+          descripcion: [
+            "{nombre} ni siquiera escucha del todo lo que el maestro le dice. Está demasiado cansado. Hablar requeriría un esfuerzo que no tiene. Asiente con la cabeza para que lo dejen en paz, y sigue igual.",
+            "Pero los maestros no lo dejan en paz. En silencio y sin que {nombre} lo sepa, empiezan a documentar lo que observan: su apatía, sus llegadas tarde, su desconexión. La escuela activa un protocolo de atención a alumnos en situación de riesgo.",
+            "Una trabajadora social empieza a visitarlo con regularidad. No le hace preguntas directas. Solo habla con él. Le pregunta cómo estuvo su día. Qué comió. Si le gusta el fútbol.",
+            "Semanas después, en una de esas conversaciones ordinarias, {nombre} dice algo que no planeaba decir. Algo pequeño, casi de pasada. Pero suficiente.",
+            "La trabajadora social anota. Y el proceso empieza.",
+          ],
+          dato: "La OMS recomienda específicamente servicios de respuesta y apoyo para detectar los casos a tiempo, y atención continua a los niños maltratados y a sus familias para evitar que el maltrato se reproduzca y para paliar sus consecuencias. ",
+          sublabelDato: "Dato de Contexto Nacional",
+          pregunta: "A veces los niños no pueden pedir ayuda porque nadie les enseñó cómo. Pero los adultos alrededor sí pueden aprender a ver. ¿Estamos mirando con suficiente atención?",
+
+        },
+        // flujos de cap2.c
+        ca: {
+          titulo: "Capítulo 3: Los papás del amigo deciden actuar",
+          descripcion: [
+            "Los papás del amigo no son expertos. No saben exactamente qué pasos seguir. Pero saben que no pueden quedarse sin hacer nada.",
+            "Buscan orientación: llaman al DIF, a una línea de apoyo, preguntan en la escuela. El proceso es más lento y burocrático de lo que esperaban, pero no se detienen.",
+            "{nombre}, que nunca imaginó que alguien más iba a luchar por él, ve cómo adultos que ni siquiera son su familia mueven cielo y tierra para que esté bien.",
+            "Meses después, {nombre} vuelve a correr en el recreo. Vuelve a hacer preguntas en clase. Y cuando suena el timbre de salida, ya no busca razones para quedarse.",
+
+          ],
+          dato: "UNICEF también destaca que la atención temprana debe incluir escucha, protección, atención médica, apoyo psicológico y denuncia, ya que una intervención adecuada puede disminuir el impacto emocional y prevenir nuevas agresiones.",
+          sublabelDato: "Dato de Contexto Nacional",
+          pregunta: "No hace falta ser el adulto perfecto para hacer lo correcto. A veces basta con escuchar a un niño, creerle, y no quedarse quieto. ¿Qué pasaría si todos actuáramos así?",
+
+        },
+        cb: {
+          titulo: "Capítulo 3: Ignorar es el camino más fácil",
+          descripcion: [
+            "Los papás del amigo están asustados. Lo que escucharon es demasiado grande, demasiado complicado. Deciden que no es su problema involucrarse: bastante tienen con cuidar a su propio hijo. Le dicen que ya no juegue con {nombre}. Que se meta en lo suyo.",
+            "El amigo obedece, aunque no entiende del todo por qué.",
+            "{nombre} nota que su amigo lo evita. No sabe qué hizo mal. El silencio que ya cargaba se vuelve más pesado.",
+            "Las semanas siguientes, {nombre} se aisla más. Come solo. No responde en clase. Pero hay algo que los papás del amigo no calcularon: que la escuela también observa. Y que los protocolos existen precisamente para los casos en que los adultos cercanos fallan.",
+            "Eventualmente, la red escolar llega hasta {nombre}. Tarde, con más cicatrices de las necesarias. Pero llega.",
+          ],
+          dato: "De acuerdo con datos de la ENVIPE del INEGI, alrededor del 95% de los delitos sexuales contra menores no se denuncian, lo que dificulta que las víctimas reciban apoyo y protección a tiempo.",
+          sublabelDato: "Dato de Contexto Nacional",
+          pregunta: "Alejarse de un niño que pide ayuda no es proteger a los propios: es abandonar a alguien que ya estaba solo. Los datos nos dicen que esto pasa más de lo que queremos creer. ¿Qué tipo de comunidad queremos ser?",
+
+        },
+      },
+
     },
 
-    capitulo2: {
-      a: {
-        titulo: "Capítulo 2: La queja que el sistema minimiza",
+    adolescencia: {
+      capitulo1: {
+        titulo: "Capítulo 1:  DOLESCENCIA Lo que nadie quiere ver",
         descripcion: [
-          "La directora recibió el reporte. Llamó a los estudiantes acosadores a su oficina y les dio 'una llamada de atención'. No se notificó formalmente a sus padres, no se abrió expediente.",
-          "La maestra que reportó siente que hizo lo correcto pero que el sistema anuló su acción. La estudiante acosada lo sabe: si la escuela no actuó con la maestra, no actuará con ella.",
-        ],
-        pregunta: "¿Qué hace la maestra ante la inacción?",
-        opciones: [
-          { id: "a", titulo: "Escalar el reporte", desc: "Documenta el caso por escrito y lo escala a la Supervisión de Zona exigiendo respuesta formal." },
-          { id: "b", titulo: "Acompañar a la familia", desc: "Se acerca a los padres de la estudiante para orientarlos sobre cómo presentar una queja formal." },
-          { id: "c", titulo: "Crear un espacio seguro", desc: "Ante la inacción institucional, habilita su aula como espacio seguro y sensibiliza a su grupo." },
-        ],
-      },
-      b: {
-        titulo: "Capítulo 2: La solidaridad que no debería ser la solución",
-        descripcion: [
-          "Las compañeras forman un escudo humano cotidiano. El acoso disminuye en los espacios visibles, pero los acosadores buscan momentos donde la estudiante esté sola: salida de la escuela, transporte.",
-          "La carga de proteger a su amiga empieza a pesar sobre el grupo. Una de ellas fue insultada por un acosador. La escuela sigue sin intervenir formalmente.",
-        ],
-        pregunta: "¿Qué pasa cuando la solidaridad no es suficiente?",
-        opciones: [
-          { id: "a", titulo: "Las amigas reportan juntas", desc: "El grupo de compañeras presenta una queja colectiva ante la dirección con fechas y descripciones." },
-          { id: "b", titulo: "Buscan a un adulto aliado", desc: "Identifican a una maestra de confianza y le presentan todo lo que ha pasado." },
-          { id: "c", titulo: "El grupo se fractura", desc: "La presión y los ataques dividen al grupo; la estudiante acosada queda más vulnerable que antes." },
-        ],
-      },
-      c: {
-        titulo: "Capítulo 2: La normalización que destruye",
-        descripcion: [
-          "El acoso escaló. Ya no son solo comentarios: son fotografías tomadas sin consentimiento en los pasillos, notas en el escritorio, mensajes por redes sociales. La estudiante dejó de participar en clases.",
-          "Un docente que presenció un episodio dijo a la clase: 'ya dejen de pelear'. Nadie lo corrigió. La escuela sigue funcionando como si nada pasara.",
-        ],
-        pregunta: "¿Qué quiebra el silencio institucional?",
-        opciones: [
-          { id: "a", titulo: "La familia exige respuesta", desc: "Los padres van a la escuela con un registro escrito de todos los episodios y exigen una reunión formal." },
-          { id: "b", titulo: "Un docente actúa solo", desc: "Un maestro decide documentar lo que presenció y lo reporta a la Supervisión de Zona sin avisar a la dirección." },
-          { id: "c", titulo: "La estudiante habla en clase", desc: "En un momento inesperado, la estudiante narra ante todo el grupo lo que ha vivido. El silencio cambia." },
-        ],
-      },
-    },
+          "{nombre} últimamente, cuando suena el timbre de salida en la escuela, algo en él se resiste. Se queda haciendo preguntas que no necesita preguntar, borrando el pizarrón sin que nadie se lo pida, acomodando su mochila despacio. Sus maestros piensan que es curioso o responsable. {nombre} sabe que solo está demorando lo inevitable: llegar a casa.",
+          "No podría explicar por qué. Su casa se supone que es un lugar seguro. Y sin embargo, algo ahí lo incomoda de una manera que no sabe nombrar.",
+          "Esa noche, mientras cena, la televisión muestra una nota sobre delitos cometidos contra niños y adolescentes en el país.",
 
-    capitulo3: {
-      aa: {
-        titulo: "Capítulo 3: El expediente que importa",
-        descripcion: [
-          "La Supervisión de Zona abrió un expediente formal. Los acosadores y sus familias fueron citados. Por primera vez, la escuela tuvo que explicar por qué no actuó antes.",
-          "La estudiante siente algo nuevo: que el sistema reconoce lo que vivió. No es justicia completa, pero es un comienzo real.",
+          { tipo: "dato", delito: ["Abuso sexual", "Hostigamiento sexual"], sublabel: "Dato de Contexto" },
+
+          "{nombre} no dice nada. Pero esa noche tarda mucho en dormirse."
         ],
-        pregunta: "¿Cómo concluye el proceso?",
+
+        pregunta: "¿Qué debería hacer {nombre}?",
         opciones: [
-          { id: "a", titulo: "Sanción a los acosadores", desc: "Los estudiantes reciben una suspensión formal y sus familias firman un acta de compromiso." },
-          { id: "b", titulo: "Protocolo actualizado", desc: "La escuela es obligada a actualizar su protocolo de actuación ante acoso y capacitar a su personal." },
-          { id: "c", titulo: "Ambas medidas", desc: "Se aplican sanciones y se exige actualización del protocolo, sentando un precedente en la zona escolar." },
+          { id: "a", titulo: "Pedir ayuda a un profesor para investigar más", desc: "Busca a su maestro favorito para entender lo que vio en las noticias." },
+          { id: "b", titulo: "Seguir guardando silencio", desc: "Decide no decir nada y seguir cargando con lo que siente." },
+          { id: "c", titulo: "Hablar con su mejor amigo", desc: "Le dice a su amigo que no quiere ir a casa. Su amigo lo invita a la suya." },
         ],
       },
-      ab: {
-        titulo: "Capítulo 3: Familia informada, familia fuerte",
-        descripcion: [
-          "Los padres, ya orientados, presentaron una queja formal ante la dirección con copia a la Supervisión de Zona. La escuela no pudo ignorarlos: había registro escrito.",
-          "La maestra y la familia trabajan juntos. La estudiante lo siente: hay adultos que la creen y actúan. Eso cambia algo importante en ella.",
-        ],
-        pregunta: "¿Cuál es el resultado?",
-        opciones: [
-          { id: "a", titulo: "Cambios estructurales", desc: "La queja obliga a la escuela a implementar un comité de convivencia escolar activo." },
-          { id: "b", titulo: "Justicia para la estudiante", desc: "Los acosadores son sancionados y la estudiante recibe acompañamiento psicológico de la escuela." },
-          { id: "c", titulo: "Visibilización del caso", desc: "El caso se convierte en referente para otras familias de la zona que vivían situaciones similares." },
-        ],
+
+      capitulo2: {
+        a: {
+          titulo: "Capítulo 2: DOLESCENCIAPedir ayuda a un profesor para investigar más",
+          descripcion: [
+            "Al día siguiente, {nombre} busca a su maestro/a favorito/a. No sabe bien cómo empezar, así que pregunta por lo más fácil: si lo que vio en la televisión es verdad.",
+            "El maestro/a lo invita a sentarse. Le dice que sí, que desafortunadamente es real, y que hay cosas importantes que los niños deben saber para protegerse. Le explica con calma:",
+            "El abuso sexual es cualquier contacto o comportamiento sexual hacia una persona sin su consentimiento. Cuando la víctima es un menor, el agresor casi siempre es alguien cercano: un familiar, un conocido, alguien de confianza. ",
+
+            { tipo: "dato", delito: ["Abuso sexual"], sublabel: "Dato de Contexto" },
+
+            "El hostigamiento sexual incluye comentarios, gestos, roces o conductas de naturaleza sexual que generan incomodidad o miedo. No necesita ser violento para ser un delito. ",
+
+            { tipo: "dato", delito: ["Hostigamiento sexual"], sublabel: "Dato de Contexto" },
+
+            "{nombre} escucha. El maestro/a habla con calma, sin alarmarlo. Y algo en esa conversación hace que {nombre} sienta, por primera vez, que lo que le pasa en casa podría tener nombre.",
+            "Se queda callado un momento. Luego dice, despacio, que en su casa lo acarician de una manera que se siente rara. Que pensó que era una nueva forma de mostrarle cariño. Pero que algo no se siente bien.",
+            "El maestro/a lo escucha sin interrumpirlo."
+
+
+          ],
+          dato: "Cponer cosas sobre las personas que buscan ayuda",
+          sublabelDato: "Dato de Contexto Nacional",
+
+          pregunta: "¿Qué debería hacer el maestro?",
+          opciones: [
+            { id: "a", titulo: "Buscar ayuda", desc: "Activa el protocolo escolar y busca apoyo con las autoridades correspondientes." },
+            { id: "b", titulo: "Decidir ignorarlo", desc: "Prefiere no involucrarse, pensando que quizás es solo la imaginación del niño." },
+          ],
+        },
+        b: {
+          titulo: "Capítulo 2:DOLESCENCIA Permanecer callado",
+          descripcion: [
+            "{nombre} no le dice nada a nadie. Los días pasan y él los deja pasar. Sus amigos notan que algo está diferente: ya no quiere jugar en el recreo, contesta con monosílabos, a veces se queda mirando la nada. Le dicen que si le duele algo. {nombre} dice que no. Le dicen que si está enojado. {nombre} dice que tampoco.",
+            "Sus amigos, sin saber exactamente qué hacer, le comentan a un maestro que {nombre} 'se ve raro'.",
+            "El maestro se acerca a {nombre} con cuidado. Le habla sobre la importancia de expresar lo que uno siente. Le cuenta que hay situaciones en la vida que pesan tanto que la gente tarda años en hablar de ellas. Que existen delitos como la violación y el incesto que sus víctimas carga solas durante mucho tiempo, convencidas de que nadie las va a creer. ",
+            { tipo: "dato", texto: " en [ESTADO] datos sobre ese tipo de delito en el estado", sublabel: "Dato de Contexto Nacional" },
+          ],
+          dato: "Cponer cosas sobre las personas que guardan silencio",
+          sublabelDato: "Dato de Contexto Nacional",
+          pregunta: "¿Cómo debería reaccionar {nombre}?",
+          opciones: [
+            { id: "a", titulo: "{nombre} decide hablar con el maestro", desc: "Se anima a contarle al maestro lo que ha estado viviendo en casa." },
+            { id: "b", titulo: "{nombre} decide seguir callado", desc: "No tiene energía para hablar. Asiente con la cabeza y sigue igual" },
+          ],
+        },
+        c: {
+          titulo: "Capítulo 2:DOLESCENCIA Habla con su mejor amigo",
+          descripcion: [
+            "{nombre} no sabe cómo hablar con un adulto. Pero sí sabe hablar con su mejor amigo. Le dice que no quiere irse a su casa.",
+            "Su amigo, sin preguntar demasiado, lo invita a la suya. La mamá les hace de comer. Hacen la tarea en la misma mesa. Juegan en el patio hasta que oscurece. Es una tarde ordinaria y perfecta, el tipo de tarde que {nombre} había olvidado que existía.",
+            "Al final del día, mientras recogen los juguetes, {nombre} le cuenta a su amigo sobre las cosas que pasan en su casa. No sabe bien cómo llamarlas. Solo sabe que se sienten raras.",
+            "Su amigo lo escucha. Y aunque es solo un niño, algo en él reconoce que eso no suena normal. Esa noche, le cuenta a sus papás.",
+            "Sus papás se quedan en silencio. Escuchar que algo así puede estarle pasando a alguien cercano es diferente a verlo en las noticias. El papá decide investigar sobre la  Corrupción de menores y Retención o sustracción ",
+
+          ],
+          dato: "Caddato sobre eso.",
+          sublabelDato: "Dato de Contexto Nacional",
+          pregunta: "¿Cómo deberían actuar los papas del amigo de {nombre}?",
+          opciones: [
+            { id: "a", titulo: "Deciden tomar acción", desc: "Buscan orientación y hacen lo posible por ayudar, aunque no sepan bien cómo." },
+            { id: "b", titulo: "Fingir que no saben nada", desc: "Le dicen a su hijo que se aleje. No es su problema y no quieren complicaciones." },
+          ],
+        },
       },
-      ac: {
-        titulo: "Capítulo 3: El aula que protege",
-        descripcion: [
-          "El espacio que la maestra creó se convirtió en referencia. Otros estudiantes comenzaron a acercarse. Ella escucha, orienta, documenta casos con permiso de los involucrados.",
-          "La dirección lo nota y no sabe cómo reaccionar. El cambio no vino de arriba, vino del interior de un aula.",
-        ],
-        pregunta: "¿Qué sigue para este espacio?",
-        opciones: [
-          { id: "a", titulo: "La dirección lo institucionaliza", desc: "Ante los resultados visibles, la dirección decide adoptar el modelo a nivel escuela." },
-          { id: "b", titulo: "Otros docentes se suman", desc: "Tres maestras más abren espacios similares en sus aulas. La cultura escolar empieza a cambiar." },
-          { id: "c", titulo: "Se convierte en proyecto formal", desc: "La maestra presenta el modelo ante la Supervisión de Zona como propuesta de intervención replicable." },
-        ],
+
+      capitulo3: {
+        // flujos de cap2.a
+        aa: {
+          titulo: "Capítulo 3: EDOLESCENCIAl maestro/a decide buscar ayuda",
+          descripcion: [
+            "El maestro/a sabe que lo que {nombre} acaba de decir no puede quedarse en esa conversación. No es fácil. Hay que hablar con el director, con trabajo social, con la familia. Hay momentos incómodos y preguntas difíciles. {nombre} tiene que repetir cosas que le cuesta decir.",
+            "Pero también hay momentos distintos: una trabajadora social que lo escucha sin juzgarlo, una psicóloga que le dice que lo que siente tiene sentido, y el lento, gradual alivio de no cargar algo tan pesado solo.",
+            "Semanas después, {nombre} sigue llegando tarde a casa. Pero ya no por miedo: ahora porque de verdad le gusta quedarse a platicar con su maestro/a.",
+
+          ],
+          dato: "En México,datoooo 3 a 7 años. Solo el 1% termina en condena.",
+          sublabelDato: "Dato de Contexto Nacional",
+          pregunta: "A veces, la persona que más necesitamos no es un héroe. Es alguien que sabe escuchar y que decide actuar. ¿Cuántos personas esperan que alguien dé ese paso?",
+
+        },
+        ab: {
+          titulo: "Capítulo 3: DOLESCENCIADOLESCENCIAEl maestro/a decide ignorarlo",
+          descripcion: [
+            "El maestro/a escucha a {nombre}. Pero lo que el niño describe suena vago, confuso. ¿Acaso no podría ser solo la imaginación de un niño sensible? Decide no involucrarse: no es su responsabilidad, no quiere malinterpretar, no quiere causar un problema donde quizás no lo hay.",
+            "{nombre} nota el cambio en la mirada del maestro/a. Entiende que habló de más. Guarda todo de nuevo.",
+            "Las semanas siguientes, el maestro/a observa que {nombre} está cada vez más apático. Menos participativo. Llega tarde, se va rápido, no ríe. Algo en él empieza a dudar: ¿y si sí era verdad? Pero aceptar eso significaría aceptar que tuvo la oportunidad de actuar y no lo hizo.",
+            "Cuando finalmente se atreve a acercarse a {nombre} de nuevo, el niño lo mira un segundo y baja la vista. Ya no confía.",
+          ],
+          dato: "Las familias acompañadas por organizaciones civiles especializadas tienen 3 vece algooooos más probabilidades de sostener una denuncia hasta su resolución.",
+          sublabelDato: "Dato de Contexto Nacional",
+          pregunta: "No creerle a un niño no es neutralidad: es una decisión. Y esa decisión también tiene consecuencias. ¿Cuántas veces se confunde 'no involucrarse' con 'proteger'?",
+
+        },
+        // flujos de cap2.b
+        ba: {
+          titulo: "Capítulo 3: DOLESCENCIAHablar cambia el rumbo",
+          descripcion: [
+            "{nombre} escucha al maestro. Respira. Y empieza a contar, despacio, sin saber bien si las palabras van a salir bien formadas",
+            "No salen perfectas. Pero salen.",
+            "El maestro lo escucha hasta el final. Luego le dice que hizo algo muy valiente. Que a partir de ese momento, no está solo.",
+            "Lo que sigue no es sencillo: hay adultos involucrados, conversaciones incómodas, noches difíciles. Pero también hay un proceso que empieza a moverse. Y {nombre}, lentamente, empieza a entender que lo que le pasaba no era normal, y que él no tuvo la culpa.",
+
+          ],
+          dato: "Solo el 22% de las denuncias ante supervisiDATOOOO tigación formal ante la Secretaría de Educación.",
+          sublabelDato: "Dato de Contexto Nacional",
+          pregunta: "Hablar es difícil. Pero el silencio tiene un costo que no siempre se ve desde afuera. A veces la valentía no se parece a lo que imaginamos: a veces es solo encontrar las palabras y decirlas en voz baja.",
+
+        },
+        bb: {
+          titulo: "Capítulo 3: DOLESCENCIA Seguir callado hasta que alguien actue ",
+          descripcion: [
+            "{nombre} ni siquiera escucha del todo lo que el maestro le dice. Está demasiado cansado. Hablar requeriría un esfuerzo que no tiene. Asiente con la cabeza para que lo dejen en paz, y sigue igual.",
+            "Pero los maestros no lo dejan en paz. En silencio y sin que {nombre} lo sepa, empiezan a documentar lo que observan: su apatía, sus llegadas tarde, su desconexión. La escuela activa un protocolo de atención a alumnos en situación de riesgo.",
+            "Una trabajadora social empieza a visitarlo con regularidad. No le hace preguntas directas. Solo habla con él. Le pregunta cómo estuvo su día. Qué comió. Si le gusta el fútbol.",
+            "Semanas después, en una de esas conversaciones ordinarias, {nombre} dice algo que no planeaba decir. Algo pequeño, casi de pasada. Pero suficiente.",
+            "La trabajadora social anota. Y el proceso empieza.",
+          ],
+          dato: "En México, solo 1 de cada 5 niñas y niDATOOO izada tras el evento.",
+          sublabelDato: "Dato de Contexto Nacional",
+          pregunta: "A veces los niños no pueden pedir ayuda porque nadie les enseñó cómo. Pero los adultos alrededor sí pueden aprender a ver. ¿Estamos mirando con suficiente atención?",
+
+        },
+        // flujos de cap2.c
+        ca: {
+          titulo: "Capítulo 3: DOLESCENCIA Los papás del amigo deciden actuar",
+          descripcion: [
+            "Los papás del amigo no son expertos. No saben exactamente qué pasos seguir. Pero saben que no pueden quedarse sin hacer nada.",
+            "Buscan orientación: llaman al DIF, a una línea de apoyo, preguntan en la escuela. El proceso es más lento y burocrático de lo que esperaban, pero no se detienen.",
+            "{nombre}, que nunca imaginó que alguien más iba a luchar por él, ve cómo adultos que ni siquiera son su familia mueven cielo y tierra para que esté bien.",
+            "Meses después, {nombre} vuelve a correr en el recreo. Vuelve a hacer preguntas en clase. Y cuando suena el timbre de salida, ya no busca razones para quedarse.",
+
+          ],
+          dato: "En el 60% de los casos de abus DAOTOO",
+          sublabelDato: "Dato de Contexto Nacional",
+          pregunta: "No hace falta ser el adulto perfecto para hacer lo correcto. A veces basta con escuchar a un niño, creerle, y no quedarse quieto. ¿Qué pasaría si todos actuáramos así?",
+
+        },
+        cb: {
+          titulo: "Capítulo 3: DOLESCENCIA Ignorar es el camino más fácil",
+          descripcion: [
+            "Los papás del amigo están asustados. Lo que escucharon es demasiado grande, demasiado complicado. Deciden que no es su problema involucrarse: bastante tienen con cuidar a su propio hijo. Le dicen que ya no juegue con {nombre}. Que se meta en lo suyo.",
+            "El amigo obedece, aunque no entiende del todo por qué.",
+            "{nombre} nota que su amigo lo evita. No sabe qué hizo mal. El silencio que ya cargaba se vuelve más pesado.",
+            "Las semanas siguientes, {nombre} se aisla más. Come solo. No responde en clase. Pero hay algo que los papás del amigo no calcularon: que la escuela también observa. Y que los protocolos existen precisamente para los casos en que los adultos cercanos fallan.",
+            "Eventualmente, la red escolar llega hasta {nombre}. Tarde, con más cicatrices de las necesarias. Pero llega.",
+          ],
+          dato: "La sobre cuaanas veces llega tarde la ayuda ",
+          sublabelDato: "Dato de Contexto Nacional",
+          pregunta: "Alejarse de un niño que pide ayuda no es proteger a los propios: es abandonar a alguien que ya estaba solo. Los datos nos dicen que esto pasa más de lo que queremos creer. ¿Qué tipo de comunidad queremos ser?",
+
+        },
       },
-      ba: {
-        titulo: "Capítulo 3: La queja que abre puertas",
-        descripcion: [
-          "La queja colectiva impactó diferente a una individual. La dirección no pudo minimizarla. Se convocó a una reunión con todos los padres involucrados.",
-          "La estudiante acosada lo vio: sus amigas hablaron por ella y con ella. Por primera vez, los acosadores tuvieron que mirar a la cara las consecuencias de sus actos.",
-        ],
-        pregunta: "¿Cuál es el desenlace?",
-        opciones: [
-          { id: "a", titulo: "Sanciones y protocolo", desc: "La escuela aplica sanciones y se compromete a actualizar su reglamento en 30 días." },
-          { id: "b", titulo: "Proceso de reparación", desc: "Se inicia un proceso de reparación del daño donde los acosadores reconocen su responsabilidad." },
-          { id: "c", titulo: "La escuela es auditada", desc: "La Supervisión de Zona abre una auditoría para revisar todos los casos de acoso no atendidos." },
-        ],
-      },
-      bb: {
-        titulo: "Capítulo 3: El adulto que hace la diferencia",
-        descripcion: [
-          "La maestra escuchó todo. Con calma, sin juzgar, tomó notas. Les dijo que lo que describían era acoso sexual y que tenía un nombre y consecuencias legales.",
-          "Con su orientación, el grupo y la familia de la estudiante construyeron una queja documentada. La maestra ofreció ser testigo formal si era necesario.",
-        ],
-        pregunta: "¿Cómo termina esta historia?",
-        opciones: [
-          { id: "a", titulo: "Con justicia real", desc: "Los acosadores son sancionados formalmente y la escuela implementa un protocolo nuevo." },
-          { id: "b", titulo: "Con acompañamiento continuo", desc: "La estudiante recibe apoyo psicológico y la maestra sigue siendo su punto de confianza en la escuela." },
-          { id: "c", titulo: "Con transformación colectiva", desc: "El caso genera un taller de prevención de acoso sexual que se integra al calendario escolar." },
-        ],
-      },
-      bc: {
-        titulo: "Capítulo 3: Reconstruir desde la fractura",
-        descripcion: [
-          "El grupo se separó. La estudiante quedó sin su red de apoyo justo cuando más la necesitaba. Los acosadores lo notaron.",
-          "Pero algo quedó: ella misma había visto que había personas dispuestas a acompañarla. Eso no desaparece del todo.",
-        ],
-        pregunta: "¿Cómo se reconstruye el camino?",
-        opciones: [
-          { id: "a", titulo: "Con apoyo profesional", desc: "La familia busca orientación psicológica para la estudiante y apoyo legal para documentar el caso." },
-          { id: "b", titulo: "Con nuevas alianzas", desc: "La estudiante encuentra apoyo en una organización juvenil fuera de la escuela." },
-          { id: "c", titulo: "Con su propia voz", desc: "Decide hablar directamente con la directora, sola, con todo documentado." },
-        ],
-      },
-      ca: {
-        titulo: "Capítulo 3: El registro que cambia todo",
-        descripcion: [
-          "La familia llegó con fechas, descripciones, fotos de mensajes, nombres. La dirección no pudo ignorarlos. Por primera vez en meses, la escuela tuvo que dar respuestas.",
-          "El registro meticuloso de la familia se convirtió en el expediente que la institución no quiso construir. Ahora era evidencia.",
-        ],
-        pregunta: "¿Cuál es el resultado de la queja?",
-        opciones: [
-          { id: "a", titulo: "Sanciones formales", desc: "Los acosadores son suspendidos y sus familias reciben una citación formal con acta." },
-          { id: "b", titulo: "Cambio de directora", desc: "La Supervisión de Zona determina que la dirección falló en su obligación y abre un proceso administrativo." },
-          { id: "c", titulo: "Protocolo de emergencia", desc: "La escuela implementa un protocolo inmediato de atención y prevención de acoso sexual." },
-        ],
-      },
-      cb: {
-        titulo: "Capítulo 3: Cuando un docente actúa solo",
-        descripcion: [
-          "El reporte del docente llegó a la Supervisión de Zona sin pasar por la dirección. Eso fue inusual. Y efectivo.",
-          "La dirección fue convocada a explicar por qué no había actuado. El docente que reportó se convirtió en testigo clave del proceso.",
-        ],
-        pregunta: "¿Cómo avanza el caso?",
-        opciones: [
-          { id: "a", titulo: "Con investigación formal", desc: "La Supervisión abre un proceso formal que incluye entrevistas a estudiantes, padres y personal docente." },
-          { id: "b", titulo: "Con intervención de la SEP", desc: "El caso escala a la Secretaría de Educación, que envía un equipo de intervención a la escuela." },
-          { id: "c", titulo: "Con cambios inmediatos", desc: "La directora es obligada a implementar medidas correctivas en un plazo de 15 días hábiles." },
-        ],
-      },
-      cc: {
-        titulo: "Capítulo 3: La voz que cambia la sala",
-        descripcion: [
-          "Cuando ella habló, el salón quedó en silencio. Algunos compañeros bajaron la mirada. Otros la miraron con algo nuevo: reconocimiento.",
-          "La maestra, que estaba presente, tomó la decisión más importante de su carrera ese día: creerle, documentar, actuar.",
-        ],
-        pregunta: "¿Qué pasa después de que ella habló?",
-        opciones: [
-          { id: "a", titulo: "La escuela actúa de inmediato", desc: "La maestra activa el protocolo ese mismo día y la dirección convoca a una reunión urgente." },
-          { id: "b", titulo: "El grupo toma posición", desc: "Varios compañeros deciden apoyarla formalmente como testigos ante la dirección." },
-          { id: "c", titulo: "Se abre un diálogo real", desc: "La maestra facilita un espacio de diálogo estructurado donde se nombra el acoso y sus consecuencias." },
-        ],
-      },
-    },
+    }
+
+
   },
 
-  // ─────────────────────────────────────────────
-  // 3. HOSTIGAMIENTO SEXUAL
-  // ─────────────────────────────────────────────
-  hostigamiento_sexual: {
-    label: "Hostigamiento Sexual",
-
-    capitulo1: {
-      titulo: "Capítulo 1: El poder que abusa de la confianza",
-      descripcion: [
-        "Un subdirector de bachillerato utiliza su posición para hacer comentarios inapropiados a estudiantes que piden permisos, constancias o revisiones de calificaciones. Siempre a solas, siempre con la puerta entreabierta.",
-        "Varias estudiantes han aprendido a ir acompañadas a su oficina o a evitarlo por completo. Ninguna ha hablado formalmente. El miedo a no graduarse, a perder una beca, a no ser creída, pesa más.",
-      ],
-      pregunta: "¿Qué detona la primera acción?",
-      opciones: [
-        { id: "a", titulo: "Una estudiante habla", desc: "Una estudiante decide contarle a su tutora lo que ocurrió en la última visita a la subdirección." },
-        { id: "b", titulo: "Un testigo reporta", desc: "Un docente que escuchó a través de la puerta decide documentar lo que oyó y reportarlo." },
-        { id: "c", titulo: "Las estudiantes se organizan", desc: "Un grupo de estudiantes afectadas decide reunirse, comparar experiencias y actuar de forma colectiva." },
-      ],
-    },
-
-    capitulo2: {
-      a: {
-        titulo: "Capítulo 2: Ser creída no es suficiente",
-        descripcion: [
-          "La tutora la creyó. Pero cuando lo llevó a la dirección, la respuesta fue pedir 'más pruebas'. La estudiante no tiene grabaciones, no tiene testigos directos. Solo su palabra contra la de un funcionario con 15 años en la institución.",
-          "Le sugirieron 'evitar situaciones incómodas' y 'ser más cuidadosa'. La tutora está frustrada. La estudiante se arrepiente de haber hablado.",
-        ],
-        pregunta: "¿Cómo responde la tutora ante el bloqueo institucional?",
-        opciones: [
-          { id: "a", titulo: "Busca asesoría jurídica", desc: "Contacta a una abogada especializada para orientar a la estudiante sobre sus derechos y opciones." },
-          { id: "b", titulo: "Identifica a más afectadas", desc: "Discretamente, habla con otras estudiantes para saber si han vivido situaciones similares." },
-          { id: "c", titulo: "Documenta todo", desc: "Empieza a registrar por escrito cada comunicación, reunión y respuesta institucional." },
-        ],
-      },
-      b: {
-        titulo: "Capítulo 2: El testigo que rompe el patrón",
-        descripcion: [
-          "El reporte del docente llegó a la dirección. Era inusual: un testimonio adulto, con fecha, descripción y firma. La dirección no pudo ignorarlo como ignoraba los rumores.",
-          "El subdirector fue convocado a una reunión privada. Negó todo. Pero el expediente ya existía. Y el docente que reportó se mantuvo firme.",
-        ],
-        pregunta: "¿Cómo avanza el caso?",
-        opciones: [
-          { id: "a", titulo: "Más testimonios se suman", desc: "Otras estudiantes, al saber que hay un reporte formal, deciden agregar sus propios testimonios." },
-          { id: "b", titulo: "Intervención de la Supervisión", desc: "La dirección, ante la presión, reporta el caso a la Supervisión de Zona para cubrirse institucionalmente." },
-          { id: "c", titulo: "El subdirector es separado", desc: "Como medida cautelar, el subdirector es removido de sus funciones mientras se investiga." },
-        ],
-      },
-      c: {
-        titulo: "Capítulo 2: La fuerza del colectivo",
-        descripcion: [
-          "Seis estudiantes. Seis historias distintas, con el mismo nombre al centro. Cuando se sentaron juntas y compararon, el patrón fue innegable: mismas palabras, mismos momentos, mismo lugar.",
-          "Decidieron no ir a la dirección primero. Fueron directamente a la Supervisión de Zona con un documento firmado por todas.",
-        ],
-        pregunta: "¿Cuál es la respuesta institucional?",
-        opciones: [
-          { id: "a", titulo: "Investigación formal abierta", desc: "La Supervisión abre expediente y designa a una persona externa para coordinar la investigación." },
-          { id: "b", titulo: "Presión para retirar la queja", desc: "Funcionarios contactan a las familias para 'resolver el asunto internamente' antes de que escale." },
-          { id: "c", titulo: "El subdirector es suspendido", desc: "Como medida inmediata, el subdirector es suspendido con goce de sueldo mientras se investiga." },
-        ],
-      },
-    },
-
-    capitulo3: {
-      aa: {
-        titulo: "Capítulo 3: El derecho que nadie explicó",
-        descripcion: [
-          "La abogada les explicó que el hostigamiento sexual por parte de una figura de autoridad escolar es un delito tipificado. Que no necesitan grabaciones. Que la credibilidad también es evidencia.",
-          "Con esa información, la estudiante decidió no retractarse. Decidió presentar una denuncia formal ante la Fiscalía, con la tutora y la abogada como acompañantes.",
-        ],
-        pregunta: "¿Cómo avanza la denuncia?",
-        opciones: [
-          { id: "a", titulo: "Con acompañamiento completo", desc: "La abogada, la tutora y una organización civil acompañan todo el proceso legal." },
-          { id: "b", titulo: "Con más testimonios", desc: "Otras estudiantes se suman a la denuncia, fortaleciendo el expediente." },
-          { id: "c", titulo: "Con exigencia de remoción", desc: "Se solicita la remoción definitiva del subdirector como medida cautelar urgente." },
-        ],
-      },
-      ab: {
-        titulo: "Capítulo 3: Las voces que confirman el patrón",
-        descripcion: [
-          "Cuatro estudiantes más. La tutora las escuchó una por una. Sus relatos coincidían en detalles que ninguna podría haber inventado por separado.",
-          "Con esos testimonios, el caso dejó de ser 'una queja individual' para convertirse en evidencia de una conducta sistemática.",
-        ],
-        pregunta: "¿Qué pasa con los testimonios colectivos?",
-        opciones: [
-          { id: "a", titulo: "Se presenta denuncia colectiva", desc: "Las estudiantes y la tutora presentan una denuncia conjunta ante la Fiscalía y la SEP." },
-          { id: "b", titulo: "La CNDH interviene", desc: "Los testimonios son presentados ante la Comisión Nacional de Derechos Humanos." },
-          { id: "c", titulo: "La institución actúa primero", desc: "Ante la evidencia, la dirección inicia un proceso disciplinario formal antes de que llegue a instancias externas." },
-        ],
-      },
-      ac: {
-        titulo: "Capítulo 3: El expediente que no se puede ignorar",
-        descripcion: [
-          "El registro meticuloso de la tutora se convirtió en el expediente más sólido del caso. Cada 'no hay pruebas' institucional quedó documentado como parte del patrón de encubrimiento.",
-          "Con ese material, la tutora y la estudiante se presentaron ante la Supervisión de Zona y ante la Fiscalía el mismo día.",
-        ],
-        pregunta: "¿Cuál es el resultado?",
-        opciones: [
-          { id: "a", titulo: "El subdirector es imputado", desc: "Con el expediente completo, la fiscalía vincula al subdirector a proceso penal." },
-          { id: "b", titulo: "La dirección es investigada", desc: "La documentación de encubrimiento abre un proceso paralelo contra la dirección del plantel." },
-          { id: "c", titulo: "Se exige reforma institucional", desc: "El caso se usa para exigir protocolos obligatorios de atención a hostigamiento en todos los planteles de la zona." },
-        ],
-      },
-      ba: {
-        titulo: "Capítulo 3: El efecto dominó",
-        descripcion: [
-          "Cuando las otras estudiantes supieron que había un reporte formal, algo cambió. El miedo seguía ahí, pero ya no estaban solas. Una a una, fueron agregando sus testimonios.",
-          "El caso pasó de ser 'la queja de una estudiante' a ser evidencia de una conducta reiterada. Eso cambia todo en términos legales.",
-        ],
-        pregunta: "¿Cómo termina el proceso?",
-        opciones: [
-          { id: "a", titulo: "Con remoción definitiva", desc: "El subdirector es removido definitivamente de sus funciones y se abre proceso penal." },
-          { id: "b", titulo: "Con cambio institucional", desc: "La institución implementa un protocolo de atención obligatorio y un comité de vigilancia." },
-          { id: "c", titulo: "Con acompañamiento a las víctimas", desc: "Las estudiantes reciben apoyo psicológico y legal durante todo el proceso." },
-        ],
-      },
-      bb: {
-        titulo: "Capítulo 3: La investigación que no puede detenerse",
-        descripcion: [
-          "La Supervisión de Zona asignó a una coordinadora externa para llevar la investigación. La dirección del plantel fue apartada del proceso para evitar conflicto de interés.",
-          "Por primera vez, la investigación avanza sin que la institución investigada sea quien decide su ritmo.",
-        ],
-        pregunta: "¿Cuál es el desenlace?",
-        opciones: [
-          { id: "a", titulo: "El subdirector es sancionado", desc: "La investigación concluye con una sanción administrativa formal y proceso penal abierto." },
-          { id: "b", titulo: "El plantel es auditado", desc: "La auditoría revela otros casos no atendidos, lo que amplía el alcance de la investigación." },
-          { id: "c", titulo: "Se crean nuevos protocolos", desc: "El caso se convierte en el argumento central para reformar los protocolos de la zona escolar." },
-        ],
-      },
-      bc: {
-        titulo: "Capítulo 3: La medida que llega tarde, pero llega",
-        descripcion: [
-          "El subdirector fue separado de sus funciones. Las estudiantes lo supieron al llegar a la escuela un lunes. No hubo comunicado oficial, no hubo explicación pública.",
-          "Pero el alivio fue real. Y la pregunta también: ¿qué pasa con todo lo que ya ocurrió?",
-        ],
-        pregunta: "¿Qué exigen las estudiantes ahora?",
-        opciones: [
-          { id: "a", titulo: "Proceso formal y transparente", desc: "Exigen saber qué proceso se abrió, quién lo lleva y cuáles serán las consecuencias reales." },
-          { id: "b", titulo: "Reparación del daño", desc: "Solicitan apoyo psicológico institucional y reconocimiento formal de lo ocurrido." },
-          { id: "c", titulo: "Garantías de no repetición", desc: "Piden que la institución implemente mecanismos permanentes para prevenir futuros casos." },
-        ],
-      },
-      ca: {
-        titulo: "Capítulo 3: La investigación que cambia el caso",
-        descripcion: [
-          "La investigadora externa llegó a la escuela. No era parte del sistema que había ignorado las quejas. Escuchó a las estudiantes, revisó el expediente, entrevistó al personal.",
-          "Su informe fue contundente: patrón documentado, omisión institucional, responsabilidad del subdirector y de quienes no actuaron.",
-        ],
-        pregunta: "¿Cuál es el resultado del informe?",
-        opciones: [
-          { id: "a", titulo: "Proceso penal abierto", desc: "La Fiscalía recibe el informe y vincula al subdirector a proceso por hostigamiento sexual." },
-          { id: "b", titulo: "Sanción institucional", desc: "La SEP inicia un proceso de separación definitiva del subdirector y de la dirección del plantel." },
-          { id: "c", titulo: "Reforma del protocolo", desc: "El informe se convierte en base para reformar los protocolos de atención a nivel estatal." },
-        ],
-      },
-      cb: {
-        titulo: "Capítulo 3: Resistir la presión",
-        descripcion: [
-          "Llamaron a las familias. Les dijeron que 'esto podía resolverse internamente'. Que 'hacer escándalo' perjudicaría a sus hijas. Que el subdirector 'llevaría años en la institución sin problemas'.",
-          "Dos familias aceptaron retirarse. Cuatro no. Las cuatro que se mantuvieron sostuvieron el proceso.",
-        ],
-        pregunta: "¿Cómo sostienen las familias el proceso?",
-        opciones: [
-          { id: "a", titulo: "Con acompañamiento legal", desc: "Contratan a una abogada especializada que asesora a las cuatro familias en conjunto." },
-          { id: "b", titulo: "Con visibilidad pública", desc: "Deciden hacer pública la situación a través de medios y redes sociales, con protección de identidades." },
-          { id: "c", titulo: "Con apoyo de la CNDH", desc: "Presentan queja ante la Comisión Nacional de Derechos Humanos documentando la presión recibida." },
-        ],
-      },
-      cc: {
-        titulo: "Capítulo 3: La suspensión que no es el final",
-        descripcion: [
-          "El subdirector fue suspendido. Las estudiantes respiraron. Pero la suspensión con goce de sueldo no es justicia: es un paréntesis.",
-          "Saben que si no hay proceso formal, él puede regresar. Y que otras estudiantes en otras escuelas pueden estar viviendo lo mismo.",
-        ],
-        pregunta: "¿Qué deciden hacer las estudiantes?",
-        opciones: [
-          { id: "a", titulo: "Presentar denuncia penal", desc: "Deciden formalizar la denuncia ante la Fiscalía para que la suspensión derive en proceso real." },
-          { id: "b", titulo: "Exigir proceso disciplinario", desc: "Solicitan a la SEP que abra un proceso disciplinario formal paralelo al penal." },
-          { id: "c", titulo: "Organizarse más allá de la escuela", desc: "Crean una red de estudiantes para documentar y visibilizar casos similares en otras instituciones." },
-        ],
-      },
-    },
-  },
-
-  // ─────────────────────────────────────────────
-  // 4. CORRUPCIÓN DE MENORES
-  // ─────────────────────────────────────────────
-  corrupcion_menores: {
-    label: "Corrupción de Menores",
-
-    capitulo1: {
-      titulo: "Capítulo 1: La frontera que se mueve despacio",
-      descripcion: [
-        "En una escuela secundaria, un docente de computación permite que los estudiantes 'accedan libremente' a contenido en internet durante las clases. Dice que los trata 'como adultos'. Algunos estudiantes lo admiran por eso.",
-        "Lo que comenzó como permisividad se fue convirtiendo en algo más: contenido sexual explícito en pantallas compartidas, comentarios sobre el cuerpo de las y los estudiantes, normalización de prácticas que ningún menor debería presenciar en un espacio escolar.",
-      ],
-      pregunta: "¿Quién nota primero que algo está mal?",
-      opciones: [
-        { id: "a", titulo: "Un estudiante habla en casa", desc: "Un estudiante le cuenta a su madre lo que pasa en las clases de computación sin dimensionar la gravedad." },
-        { id: "b", titulo: "Una docente lo percibe", desc: "Una maestra nota cambios en el lenguaje y comportamiento de los estudiantes del grupo y comienza a indagar." },
-        { id: "c", titulo: "Un estudiante se niega", desc: "Un estudiante se incomoda ante el contenido y se niega a participar. Sus compañeros lo presionan." },
-      ],
-    },
-
-    capitulo2: {
-      a: {
-        titulo: "Capítulo 2: Lo que los adultos hacen con lo que saben",
-        descripcion: [
-          "La madre escuchó a su hijo. No lo minimizó. Fue a la escuela al día siguiente. La directora la recibió con escepticismo: 'los niños a veces exageran, hay que verificar'.",
-          "Mientras se 'verifica', el docente sigue frente al grupo. La madre sale de la escuela sin certezas y con la sensación de que proteger a su hijo depende solo de ella.",
-        ],
-        pregunta: "¿Qué hace la madre ante la inacción?",
-        opciones: [
-          { id: "a", titulo: "Busca asesoría legal", desc: "Contacta a un abogado especializado en derechos de infancia para entender qué puede hacer." },
-          { id: "b", titulo: "Habla con otras familias", desc: "Discretamente contacta a madres y padres de otros estudiantes del mismo grupo." },
-          { id: "c", titulo: "Denuncia directamente", desc: "Decide presentar una denuncia formal ante la Fiscalía sin esperar la respuesta de la escuela." },
-        ],
-      },
-      b: {
-        titulo: "Capítulo 2: La investigación que nace desde adentro",
-        descripcion: [
-          "La maestra comenzó a preguntar, con cuidado, a estudiantes de confianza. Lo que escuchó la perturbó: llevaba meses pasando. Los estudiantes no lo habían dicho porque 'el profe era buena onda'.",
-          "Con esa información, fue directamente a la Supervisión de Zona, sin pasar por la dirección de la escuela. Había aprendido que los problemas serios no se resuelven donde se generan.",
-        ],
-        pregunta: "¿Cómo responde la Supervisión de Zona?",
-        opciones: [
-          { id: "a", titulo: "Intervención inmediata", desc: "La Supervisión designa a una persona para visitar la escuela y tomar testimonios de los estudiantes." },
-          { id: "b", titulo: "Solicita más evidencia", desc: "Pide a la maestra documentar más casos antes de actuar, lo que retrasa la intervención." },
-          { id: "c", titulo: "Notifica a la dirección", desc: "Informa a la dirección del plantel para que 'resuelva internamente', lo que pone en riesgo el proceso." },
-        ],
-      },
-      c: {
-        titulo: "Capítulo 2: El estudiante que dice no",
-        descripcion: [
-          "El rechazo del estudiante creó un quiebre en la dinámica del grupo. Algunos compañeros lo presionaron. Pero otros, en privado, le dijeron que también se sentían incómodos.",
-          "El docente lo ignoró públicamente, pero empezó a bajarlo la calificación. Ese patrón, la represalia académica, fue lo que finalmente alertó a su familia.",
-        ],
-        pregunta: "¿Cómo responde la familia al identificar el patrón?",
-        opciones: [
-          { id: "a", titulo: "Documenta las calificaciones", desc: "Comparan las calificaciones previas y posteriores y construyen evidencia del patrón de represalia." },
-          { id: "b", titulo: "Confrontan a la escuela", desc: "Van a la dirección con el estudiante y exponen tanto la situación del aula como la represalia." },
-          { id: "c", titulo: "Contactan a otras familias", desc: "Preguntan a otros padres si sus hijos han vivido algo similar en esa clase." },
-        ],
-      },
-    },
-
-    capitulo3: {
-      aa: {
-        titulo: "Capítulo 3: El derecho a que te crean",
-        descripcion: [
-          "El abogado fue claro: lo que describía el estudiante constituía corrupción de menores, un delito. Y que la escuela tenía obligación de actuar al primer reporte. No lo hizo.",
-          "Con esa certeza, la madre y el abogado presentaron denuncia formal ante la Fiscalía. El docente fue citado a declarar.",
-        ],
-        pregunta: "¿Cómo avanza el proceso legal?",
-        opciones: [
-          { id: "a", titulo: "Con más testimonios", desc: "Otros estudiantes del grupo se suman a la denuncia con el apoyo de sus familias." },
-          { id: "b", titulo: "Con evidencia digital", desc: "Se recuperan registros del historial de navegación de las computadoras del aula." },
-          { id: "c", titulo: "Con acompañamiento especializado", desc: "Una organización civil se une al proceso para acompañar a las familias y documentar el caso." },
-        ],
-      },
-      ab: {
-        titulo: "Capítulo 3: La red que confirma el patrón",
-        descripcion: [
-          "Habló con tres madres. Las tres conocían situaciones similares. Una de ellas tenía capturas de pantalla que su hijo le había mostrado meses atrás sin saber qué hacer con ellas.",
-          "Juntas tenían algo que ninguna tenía sola: un patrón documentado y corroborado. Decidieron presentar una queja conjunta.",
-        ],
-        pregunta: "¿Cómo presentan la queja?",
-        opciones: [
-          { id: "a", titulo: "Ante la Fiscalía", desc: "Presentan denuncia penal conjunta con toda la evidencia recopilada por las familias." },
-          { id: "b", titulo: "Ante la SEP y la Supervisión", desc: "Presentan queja administrativa simultánea para que el docente sea suspendido de inmediato." },
-          { id: "c", titulo: "Ante ambas instancias", desc: "Presentan denuncia penal y queja administrativa en paralelo, con el asesoramiento de un abogado." },
-        ],
-      },
-      ac: {
-        titulo: "Capítulo 3: La fiscalía que actúa",
-        descripcion: [
-          "La denuncia fue clara, directa y con suficiente información para que la Fiscalía actuara. El docente fue citado a declarar en menos de dos semanas.",
-          "La escuela, al recibir la notificación de la Fiscalía, suspendió al docente de inmediato. Lo que no hicieron por voluntad propia, lo hicieron porque no tuvieron opción.",
-        ],
-        pregunta: "¿Qué sigue en el proceso?",
-        opciones: [
-          { id: "a", titulo: "Peritaje de equipos", desc: "La Fiscalía solicita un peritaje de las computadoras del aula para recuperar el historial." },
-          { id: "b", titulo: "Testimonios de estudiantes", desc: "Con protocolos adecuados, se toman testimonios de los menores involucrados." },
-          { id: "c", titulo: "Vinculación a proceso", desc: "Con la evidencia reunida, el juez vincula al docente a proceso penal." },
-        ],
-      },
-      ba: {
-        titulo: "Capítulo 3: La evidencia que no miente",
-        descripcion: [
-          "El perito informático recuperó el historial completo de las máquinas del aula. Las fechas, los sitios, los horarios: todo coincidía con el horario de clase del docente.",
-          "La evidencia digital es difícil de negar. El docente cambió su versión tres veces ante la Fiscalía.",
-        ],
-        pregunta: "¿Cuál es el resultado?",
-        opciones: [
-          { id: "a", titulo: "Vinculación a proceso", desc: "El docente es vinculado a proceso penal con la evidencia digital como prueba principal." },
-          { id: "b", titulo: "Separación definitiva", desc: "La SEP inicia proceso de separación definitiva del cargo con base en la evidencia." },
-          { id: "c", titulo: "Ambas medidas en paralelo", desc: "Se procesan simultáneamente el expediente penal y el administrativo." },
-        ],
-      },
-      bb: {
-        titulo: "Capítulo 3: Esperar cuando no hay tiempo",
-        descripcion: [
-          "La Supervisión pidió más evidencia. Mientras tanto, el docente siguió frente al grupo. La maestra documentó cada día que pasaba sin intervención.",
-          "Ese registro del tiempo transcurrido se convirtió en evidencia de omisión institucional.",
-        ],
-        pregunta: "¿Cómo presiona la maestra para que haya acción?",
-        opciones: [
-          { id: "a", titulo: "Escala a la SEP directamente", desc: "Envía su documentación directamente a la Secretaría de Educación sin esperar a la Supervisión." },
-          { id: "b", titulo: "Contacta a una organización civil", desc: "Busca apoyo de una ONG especializada que pueda acompañar el proceso y hacer presión institucional." },
-          { id: "c", titulo: "Alerta a las familias", desc: "Informa discretamente a las familias del grupo para que también presenten quejas formales." },
-        ],
-      },
-      bc: {
-        titulo: "Capítulo 3: Cuando la institución se convierte en obstáculo",
-        descripcion: [
-          "La dirección fue notificada por la Supervisión. En lugar de actuar, llamó a la maestra a su oficina y le pidió 'discreción' y 'no alarmar a los padres'.",
-          "La maestra tenía ahora dos problemas: el docente y la dirección. Decidió que no podía resolver ambos desde adentro.",
-        ],
-        pregunta: "¿Qué hace la maestra?",
-        opciones: [
-          { id: "a", titulo: "Denuncia el encubrimiento", desc: "Documenta la conversación con la directora y la incluye en su reporte a la Fiscalía." },
-          { id: "b", titulo: "Busca aliados dentro", desc: "Identifica a otros docentes dispuestos a firmar un reporte conjunto." },
-          { id: "c", titulo: "Actúa con las familias", desc: "Informa a las familias del grupo y las orienta para presentar sus propias denuncias directamente." },
-        ],
-      },
-      ca: {
-        titulo: "Capítulo 3: La evidencia construida con cuidado",
-        descripcion: [
-          "Las calificaciones antes y después. Los mensajes. Los testimonios de otros estudiantes que también notaron el cambio. La familia construyó un expediente sin saber que eso era lo que estaban haciendo.",
-          "Cuando lo presentaron ante la Supervisión de Zona, nadie pudo decir que era insuficiente.",
-        ],
-        pregunta: "¿Cuál es la respuesta institucional?",
-        opciones: [
-          { id: "a", titulo: "Suspensión inmediata", desc: "La Supervisión suspende al docente preventivamente mientras se abre investigación formal." },
-          { id: "b", titulo: "Denuncia a la Fiscalía", desc: "La Supervisión está obligada a reportar el caso a la Fiscalía por tratarse de un posible delito." },
-          { id: "c", titulo: "Auditoría del aula", desc: "Se ordena una revisión de los equipos de cómputo del aula como parte de la investigación." },
-        ],
-      },
-      cb: {
-        titulo: "Capítulo 3: La confrontación que abre el caso",
-        descripcion: [
-          "Fueron a la dirección con todo: el estudiante, la familia, los registros de calificaciones, una descripción escrita de lo ocurrido en el aula. La directora no pudo ignorarlos.",
-          "El docente fue citado a la dirección ese mismo día. Por primera vez, tuvo que responder frente a alguien con autoridad.",
-        ],
-        pregunta: "¿Qué sigue después de la confrontación?",
-        opciones: [
-          { id: "a", titulo: "La dirección actúa", desc: "La directora reporta el caso a la Supervisión de Zona y suspende al docente preventivamente." },
-          { id: "b", titulo: "La familia escala", desc: "Ante una respuesta insuficiente, la familia presenta denuncia directamente ante la Fiscalía." },
-          { id: "c", titulo: "Otros estudiantes hablan", desc: "La confrontación abre la puerta para que otros estudiantes del grupo compartan sus propias experiencias." },
-        ],
-      },
-      cc: {
-        titulo: "Capítulo 3: La comunidad que se organiza",
-        descripcion: [
-          "Cuatro familias se reunieron. Cada una tenía una pieza del mismo rompecabezas. Juntas tenían la imagen completa.",
-          "Decidieron presentar la queja de forma colectiva, con asesoría legal, ante la Fiscalía y la SEP simultáneamente.",
-        ],
-        pregunta: "¿Cuál es el resultado de la acción colectiva?",
-        opciones: [
-          { id: "a", titulo: "El docente es suspendido", desc: "La SEP suspende al docente en 48 horas ante la denuncia simultánea en dos instancias." },
-          { id: "b", titulo: "Se abre investigación formal", desc: "La Fiscalía abre carpeta de investigación y solicita peritaje de los equipos del aula." },
-          { id: "c", titulo: "Ambas medidas", desc: "El docente es suspendido y se abre investigación penal en paralelo, con acompañamiento a las familias." },
-        ],
-      },
-    },
-  },
 };
 
 export function getCap3Key(decisionCap1, decisionCap2) {

@@ -1,57 +1,60 @@
 import { createContext, useContext, useState, useCallback, useRef } from "react";
-import { escolar } from "../data/storyContent.js";
+import { stories } from "../data/storyContent.js";
 
 const StoryContext = createContext(null);
 
-const TIPOS = Object.keys(escolar);
-const RESOURCE_ID = "cc86a62f-6581-40b1-a5f3-d81e5ca5745a";
 const GROQ_API_KEY = import.meta.env.VITE_GROQ_API_KEY;
-const GROQ_MODEL   = "llama-3.3-70b-versatile";
+const GROQ_MODEL = "llama-3.3-70b-versatile";
+const RESOURCE_ID = "cc86a62f-6581-40b1-a5f3-d81e5ca5745a";
 
-const DELITOS_POR_TIPO = {
-  abuso_sexual:         ["Abuso sexual"],
-  acoso_sexual:         ["Acoso sexual"],
-  hostigamiento_sexual: ["Hostigamiento sexual"],
-  corrupcion_menores:   ["Corrupción de menores"],
+
+const NOMBRES = {
+  Femenino: ["Sofía", "Valentina", "Camila", "Lucía", "Isabella"],
+  Masculino: ["Pedro", "Mateo", "Diego", "Emilio", "Sebastián"],
+  "No binario / Otro": ["Alex", "Sam", "Nico", "Jordan", "Remy"],
 };
 
 const ENTORNO_LABELS = {
-  escuela: "school classroom",
-  hogar:   "home interior",
+  escolar: "school classroom",
+  hogar: "home interior",
   digital: "digital environment with screens",
   publico: "public urban space in Mexico",
 };
 const EDAD_LABELS = {
-  "0-5":   "a toddler around 4 years old",
-  "6-12":  "a child around 9 years old",
+  "0-5": "a toddler around 4 years old",
+  "6-12": "a child around 9 years old",
   "13-17": "a teenager around 15 years old",
 };
 const GENERO_LABELS = {
-  Femenino:            "girl",
-  Masculino:           "boy",
+  Femenino: "girl",
+  Masculino: "boy",
   "No binario / Otro": "child",
 };
 
-function elegirTipoAleatorio() {
-  return TIPOS[Math.floor(Math.random() * TIPOS.length)];
+function elegirNombre(genero) {
+  const lista = NOMBRES[genero] || NOMBRES["No binario / Otro"];
+  return lista[Math.floor(Math.random() * lista.length)];
 }
 
-function buildSQL(estado, delitos) {
-  const list = delitos.map((d) => `'${d.replace(/'/g, "''")}'`).join(", ");
+function buildSQL(estado, delitos, limit = 30) {
+  const delitosArray = Array.isArray(delitos) ? delitos : [delitos];
+
+  const list = delitosArray
+    .map((d) => `'${d.replace(/'/g, "''")}'`)
+    .join(", ");
+
   return (
     `SELECT "Subtipo de delito", "Sexo", "Rango de edad", SUM("Cantidad"::numeric) as total ` +
     `FROM "${RESOURCE_ID}" ` +
     `WHERE "Entidad" ILIKE '${estado.replace(/'/g, "''")}' ` +
-    `AND "Subtipo de delito" IN (${list}) ` +
-    `GROUP BY "Subtipo de delito", "Sexo", "Rango de edad" ORDER BY total DESC LIMIT 30`
+    `AND "Tipo de delito" IN (${list}) ` +
+    `GROUP BY "Tipo de delito", "Sexo", "Rango de edad" ` +
+    `ORDER BY total DESC LIMIT ${limit}`
   );
 }
 
 async function groqChat(prompt) {
-  if (!GROQ_API_KEY) {
-    console.warn("VITE_GROQ_API_KEY no definida en .env");
-    return null;
-  }
+  if (!GROQ_API_KEY) return null;
   const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
     method: "POST",
     headers: {
@@ -65,10 +68,7 @@ async function groqChat(prompt) {
       temperature: 0.7,
     }),
   });
-  if (!res.ok) {
-    const err = await res.text();
-    throw new Error(`Groq ${res.status}: ${err}`);
-  }
+  if (!res.ok) throw new Error(`Groq ${res.status}`);
   const data = await res.json();
   return data.choices?.[0]?.message?.content?.trim() || null;
 }
@@ -80,9 +80,7 @@ async function sanitizarTextos(contextoEs, opcionesDescs) {
       opcionesEn: opcionesDescs.map(() => "a thoughtful response to the situation"),
     };
   }
-
   const listaOpciones = opcionesDescs.map((d, i) => `${i + 1}. ${d}`).join("\n");
-
   try {
     const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
@@ -106,15 +104,14 @@ async function sanitizarTextos(contextoEs, opcionesDescs) {
         temperature: 0.3,
       }),
     });
-    const data   = await res.json();
-    const raw    = data.choices?.[0]?.message?.content?.trim() || "{}";
+    const data = await res.json();
+    const raw = data.choices?.[0]?.message?.content?.trim() || "{}";
     const parsed = JSON.parse(raw);
     return {
-      contextoEn: parsed.context || "a tense situation in a school environment",
+      contextoEn: parsed.context || "a tense situation",
       opcionesEn: parsed.options || opcionesDescs.map(() => "a thoughtful response"),
     };
-  } catch (err) {
-    console.warn("sanitizarTextos falló:", err.message);
+  } catch {
     return {
       contextoEn: "a tense situation in a school environment",
       opcionesEn: opcionesDescs.map(() => "a thoughtful response to the situation"),
@@ -124,8 +121,8 @@ async function sanitizarTextos(contextoEs, opcionesDescs) {
 
 function buildImagePrompt(config, opcionDescEn, contextoEn) {
   const entorno = ENTORNO_LABELS[config.contexto] || "school classroom";
-  const edad    = EDAD_LABELS[config.edad]         || "a child";
-  const genero  = GENERO_LABELS[config.genero]     || "child";
+  const edad = EDAD_LABELS[config.edad] || "a child";
+  const genero = GENERO_LABELS[config.genero] || "child";
   return (
     `Wide-angle environmental illustration, Studio Ghibli inspired digital art. ` +
     `Setting: a ${entorno} in Mexico. Narrative context: "${contextoEn}". ` +
@@ -137,21 +134,15 @@ function buildImagePrompt(config, opcionDescEn, contextoEn) {
 
 function buildPollinationsUrl(prompt) {
   const promptCorto = prompt.slice(0, 350);
-  const seed        = Math.floor(Math.random() * 999999);
+  const seed = Math.floor(Math.random() * 999999);
   return `https://image.pollinations.ai/prompt/${encodeURIComponent(promptCorto)}?width=640&height=360&seed=${seed}&nologo=true&model=turbo`;
 }
 
 async function generarURLsParaCapitulo({
-  capKeyPrefix,
-  opciones,
-  descripcion,
-  config,
-  version,
-  generandoKeys,
-  imageCacheRef,
-  setImageCache,
+  capKeyPrefix, opciones, descripcion, config, version,
+  generandoKeys, imageCacheRef, setImageCache,
 }) {
-  const lockKey   = `v${version}_${capKeyPrefix}`;
+  const lockKey = `v${version}_${capKeyPrefix}`;
   if (generandoKeys.has(lockKey)) return;
 
   const faltantes = opciones.filter(
@@ -161,109 +152,188 @@ async function generarURLsParaCapitulo({
 
   generandoKeys.add(lockKey);
 
-  console.log(`[Imágenes] Generando ${faltantes.length} para ${lockKey}`);
+  const textoDesc = descripcion
+    .filter((p) => typeof p === "string")
+    .join(" ");
 
-  const descsOriginales            = faltantes.map((o) => o.desc || o.titulo);
-  const { contextoEn, opcionesEn } = await sanitizarTextos(descripcion[0] || "", descsOriginales);
-
-  console.log(`[Contexto sanitizado]: ${contextoEn}`);
+  const descsOriginales = faltantes.map((o) => o.desc || o.titulo);
+  const { contextoEn, opcionesEn } = await sanitizarTextos(textoDesc, descsOriginales);
 
   const nuevas = {};
   faltantes.forEach((opcion, idx) => {
-    const cacheKey     = `v${version}_${capKeyPrefix}_${opcion.id}`;
+    const cacheKey = `v${version}_${capKeyPrefix}_${opcion.id}`;
     const opcionDescEn = opcionesEn[idx] || "a thoughtful response";
-    const prompt       = buildImagePrompt(config, opcionDescEn, contextoEn);
-    const url          = buildPollinationsUrl(prompt);
-    const img          = { src: url };
-
-    imageCacheRef[cacheKey] = img;
-    nuevas[cacheKey]        = img;
-    console.log(`✓ URL lista: ${cacheKey}`);
+    const prompt = buildImagePrompt(config, opcionDescEn, contextoEn);
+    const url = buildPollinationsUrl(prompt);
+    imageCacheRef[cacheKey] = { src: url };
+    nuevas[cacheKey] = { src: url };
   });
 
   setImageCache((prev) => ({ ...prev, ...nuevas }));
 }
 
+async function generarDatoInline({ estado, delito, sublabel, groqKey }) {
+  if (!groqKey) return null;
+
+  const delitos = Array.isArray(delito) ? delito : [delito];
+
+  try {
+    const sql = buildSQL(estado, delitos, 10);
+
+    const sqlUrl =
+      `https://datamx.io/api/3/action/datastore_search_sql?sql=${encodeURIComponent(sql)}`;
+
+    const res = await fetch(sqlUrl);
+    const json = await res.json();
+
+    if (!json.success || !json.result?.records?.length) return "sin datos";
+
+    const records = json.result.records;
+
+    const total = records.reduce(
+      (s, r) => s + (parseFloat(r.total) || 0),
+      0
+    );
+
+    if (!total) {
+      return "sin datos";
+    }
+
+    const resumen = records
+      .slice(0, 5)
+      .map(
+        (r) =>
+          `${r["Sexo"]} | ${r["Rango de edad"]}: ${Math.round(r.total)} casos`
+      )
+      .join("\n");
+
+    const prompt =
+      `Eres redactor para una plataforma de concientización sobre violencia contra la infancia en México.\n` +
+      `Datos reales en ${estado} (fuente SESNSP):\n` +
+      `Delito(s): ${delitos.join(", ")} | Total: ${Math.round(total)} casos registrados\n` +
+      `Desglose:\n${resumen}\n\n` +
+      `Escribe UNA oración (máx 35 palabras) en español que mencione una cifra concreta sobre ${delitos.join(", ")} en ${estado}. ` +
+      `Tono empático, sin tecnicismos. Solo la oración, sin comillas ni explicaciones.`;
+
+    return await groqChat(prompt);
+
+  } catch (err) {
+    console.warn("generarDatoInline error:", err.message);
+    return null;
+  }
+}
+
 export function StoryProvider({ children }) {
-  const [config, setConfig]           = useState({
+  const [config, setConfig] = useState({
     estado: "Ciudad de México",
     edad: "6-12",
+    rango: "infancia",
     genero: "Femenino",
-    contexto: "escuela",
+    contexto: "escolar",
+    nombre: "Sofía",
   });
-  const [tipoHistoria, setTipoHistoria] = useState(null);
-  const [decisiones, setDecisiones]     = useState({ cap1: "a", cap2: "a" });
-  const [imageCache, setImageCache]     = useState({});
-  const [datoDinamico, setDatoDinamico] = useState(null);
-  const [loadingDato, setLoadingDato]   = useState(false);
+  const [decisiones, setDecisiones] = useState({ cap1: "a", cap2: "a" });
+  const [imageCache, setImageCache] = useState({});
+  const [datosInline, setDatosInline] = useState({});     // { "indice_cap_X": texto }
+  const [loadingDato, setLoadingDato] = useState(false);
 
   const configVersionRef = useRef(0);
-  const generandoKeys    = useRef(new Set());
-  const imageCacheRef    = useRef({});
+  const generandoKeys = useRef(new Set());
+  const imageCacheRef = useRef({});
+  const datosInlineRef = useRef({});
 
   const iniciarHistoria = useCallback(async (configUsuario) => {
     configVersionRef.current += 1;
     generandoKeys.current.clear();
     imageCacheRef.current = {};
 
-    setConfig(configUsuario);
-    const tipo = elegirTipoAleatorio();
-    setTipoHistoria(tipo);
+    const nombre = elegirNombre(configUsuario.genero);
+    const rango = (configUsuario.edad === "6-12") ? "infancia" : "adolescencia";
+    const config = { ...configUsuario, nombre, rango };
+
+    setConfig(config);
     setDecisiones({ cap1: "a", cap2: "a" });
     setImageCache({});
-    setDatoDinamico(null);
+
+    setDatosInline({});
     setLoadingDato(true);
 
     const version = configVersionRef.current;
+    const contexto = config.contexto;
+    const historia = stories[contexto]?.[rango];
+    if (!historia) { setLoadingDato(false); return; }
 
+    // Imágenes cap1
     generarURLsParaCapitulo({
-      capKeyPrefix:  `${tipo}_cap1`,
-      opciones:       escolar[tipo].capitulo1.opciones,
-      descripcion:    escolar[tipo].capitulo1.descripcion,
-      config:         configUsuario,
+      capKeyPrefix: `${historia}_cap1`,
+      opciones: historia.capitulo1.opciones,
+      descripcion: historia.capitulo1.descripcion,
+      config,
       version,
-      generandoKeys:  generandoKeys.current,
-      imageCacheRef:  imageCacheRef.current,
+      generandoKeys: generandoKeys.current,
+      imageCacheRef: imageCacheRef.current,
       setImageCache,
     });
 
-    try {
-      const delitos = DELITOS_POR_TIPO[tipo] || ["Abuso sexual"];
-      const sqlUrl  = `https://datamx.io/api/3/action/datastore_search_sql?sql=${encodeURIComponent(buildSQL(configUsuario.estado, delitos))}`;
-      const res     = await fetch(sqlUrl);
-      const json    = await res.json();
+    // Datos inline (bloques { tipo:"dato", delito:"..." })
+    const bloques = historia.capitulo1.descripcion.filter(
+      (p) => p && typeof p === "object" && p.tipo === "dato"
+    );
 
-      if (!json.success || !json.result?.records?.length) {
-        console.warn("Sin datos en API para", configUsuario.estado);
-        setDatoDinamico(null);
-        return;
-      }
+    bloques.forEach(async (bloque, i) => {
+      +
+        setDatosInline((prev) => ({
+          ...prev,
+          [`cap1_${i}`]: null
+        }));
 
-      const records      = json.result.records;
-      const totalGeneral = records.reduce((s, r) => s + (parseFloat(r.total) || 0), 0);
-      const resumen      = records
-        .slice(0, 10)
-        .map((r) => `${r["Subtipo de delito"]} | ${r["Sexo"]} | ${r["Rango de edad"]}: ${Math.round(r.total)} casos`)
-        .join("\n");
+      const texto = await generarDatoInline({
+        estado: config.estado,
+        delito: bloque.delito,
+        sublabel: bloque.sublabel,
+        groqKey: GROQ_API_KEY,
+      });
+      setDatosInline((prev) => ({
+        ...prev,
+        [`cap1_${i}`]: texto ?? "sin datos"
+      }));
+    });
 
-      const promptTexto =
-        `Eres redactor para una plataforma de concientización sobre violencia contra la infancia en México.\n` +
-        `Datos reales en ${configUsuario.estado} (fuente SESNSP):\n` +
-        `Delito: ${escolar[tipo].label} | Total: ${Math.round(totalGeneral)} casos registrados\n` +
-        `Desglose:\n${resumen}\n\n` +
-        `Escribe UN párrafo breve (2-3 oraciones, máx 60 palabras) en español, tono humano, ` +
-        `con cifras concretas, generando empatía. Sin listas ni tecnicismos. Solo el párrafo, sin comillas.`;
 
-      const texto = await groqChat(promptTexto);
-      console.log("✓ Groq texto:", texto?.slice(0, 60));
-      setDatoDinamico(texto);
-    } catch (err) {
-      console.error("Error dato dinámico:", err);
-      setDatoDinamico(null);
-    } finally {
-      setLoadingDato(false);
-    }
   }, []);
+
+  const generarDatosInlineCap = useCallback(async (capKey, descripcion) => {
+    const bloques = descripcion.filter(
+      (p) => p && typeof p === "object" && p.tipo === "dato"
+    );
+
+    bloques.forEach(async (bloque, i) => {
+      const clave = `${capKey}_${i}`;
+      datosInlineRef.current[clave] = null;
+
+      setDatosInline((prev) => ({
+        ...prev,
+        [clave]: null,
+      }));
+
+      const texto = await generarDatoInline({
+        estado: config.estado,
+        delito: bloque.delito,
+        sublabel: bloque.sublabel,
+        groqKey: GROQ_API_KEY,
+      });
+
+      const resultado = texto ?? "sin datos";
+
+      datosInlineRef.current[clave] = resultado;
+
+      setDatosInline((prev) => ({
+        ...prev,
+        [clave]: resultado,
+      }));
+    });
+
+  }, [config.estado]);
 
   const preGenerarImagenes = useCallback((capKeyPrefix, opciones, descripcion) => {
     generarURLsParaCapitulo({
@@ -271,7 +341,7 @@ export function StoryProvider({ children }) {
       opciones,
       descripcion,
       config,
-      version:       configVersionRef.current,
+      version: configVersionRef.current,
       generandoKeys: generandoKeys.current,
       imageCacheRef: imageCacheRef.current,
       setImageCache,
@@ -282,18 +352,23 @@ export function StoryProvider({ children }) {
     setDecisiones((prev) => ({ ...prev, [capitulo]: opcionId }));
   }, []);
 
+  const interpolar = useCallback((texto, nombre) => {
+    return typeof texto === "string" ? texto.replace(/\{nombre\}/g, nombre) : texto;
+  }, []);
+
   return (
     <StoryContext.Provider value={{
       config,
-      tipoHistoria,
       decisiones,
       imageCache,
-      datoDinamico,
+      datosInline,
       loadingDato,
       iniciarHistoria,
       tomarDecision,
       preGenerarImagenes,
+      interpolar,
       configVersion: configVersionRef.current,
+      generarDatosInlineCap,
     }}>
       {children}
     </StoryContext.Provider>

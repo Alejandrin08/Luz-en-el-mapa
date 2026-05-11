@@ -6,14 +6,32 @@ import SiteLayout from "../components/SiteLayout.jsx";
 const RESOURCE_ID = "cc86a62f-6581-40b1-a5f3-d81e5ca5745a";
 const API_BASE = "https://datamx.io/api/3/action/datastore_search_sql";
 
-const DELITOS_POR_ENTORNO = {
-  Hogar: ["Abuso sexual", "Violación", "Incesto", "Corrupción de menores", "Hostigamiento sexual", "Retención o sustracción de menores"],
-  Escuela: ["Abuso sexual", "Acoso sexual", "Hostigamiento sexual", "Corrupción de menores"],
-  Digital: ["Acoso sexual", "Pornografía infantil", "Violación a la intimidad sexual", "Corrupción de menores", "Trata de personas"],
-  "Espacio público": ["Acoso sexual", "Abuso sexual", "Rapto", "Privación ilegal de la libertad", "Trata de personas", "Tráfico de menores"],
-};
-
-const ENTORNOS = Object.keys(DELITOS_POR_ENTORNO);
+// Lista completa de delitos disponibles
+const DELITOS_DISPONIBLES = [
+  "Aborto", "Abuso de confianza", "Abuso sexual", "Acoso sexual",
+  "Allanamiento de morada", "Amenazas", "Contra el medio ambiente",
+  "Corrupción de menores", "Daño a la propiedad",
+  "Delitos cometidos por servidores públicos",
+  "Delitos contra la administración de justicia", "Despojo",
+  "Discriminación", "Electorales", "Evasión de presos", "Extorsión",
+  "Falsedad", "Falsificación", "Feminicidio", "Fraude", "Homicidio",
+  "Hostigamiento sexual", "Incesto",
+  "Incumplimiento de obligaciones de asistencia familiar", "Lesiones",
+  "Narcomenudeo", "Otros delitos contra el patrimonio",
+  "Otros delitos contra la familia",
+  "Otros delitos contra la sociedad",
+  "Otros delitos del Fuero Común",
+  "Otros delitos que atentan contra la libertad personal",
+  "Otros delitos que atentan contra la libertad y la seguridad sexual",
+  "Otros delitos que atentan contra la vida y la integridad corporal",
+  "Pornografía infantil", "Privación ilegal de la libertad", "Rapto",
+  "Retención o sustracción de menores e incapaces", "Robo",
+  "Secuestro", "Suplantación y usurpación de identidad", "Tortura",
+  "Tráfico de menores", "Trata de personas", "Violación",
+  "Violación a la intimidad sexual",
+  "Violencia de género en todas sus modalidades distinta a la violencia familiar",
+  "Violencia familiar"
+];
 
 const COLORS = {
   none: "#e2e8f0",
@@ -24,20 +42,12 @@ const COLORS = {
   selected: "#0ea5e9",
 };
 
-function buildSQL(entorno) {
-  const delitos = DELITOS_POR_ENTORNO[entorno]
-    .map((d) => `'${d.replace(/'/g, "''")}'`)
-    .join(", ");
-
-  return `SELECT "Entidad", "Municipio", "Subtipo de delito", "Modalidad", "Sexo", "Rango de edad", SUM("Cantidad"::numeric) as total FROM "${RESOURCE_ID}" WHERE "Subtipo de delito" IN (${delitos}) GROUP BY "Entidad", "Municipio", "Subtipo de delito", "Modalidad", "Sexo", "Rango de edad" ORDER BY "Entidad"`;
+function buildSQL(delito) {
+  return `SELECT "Entidad", "Municipio", "Tipo de delito", "Modalidad", "Sexo", "Rango de edad", SUM("Cantidad"::numeric) as total FROM "${RESOURCE_ID}" WHERE "Tipo de delito" = '${delito.replace(/'/g, "''")}' GROUP BY "Entidad", "Municipio", "Tipo de delito", "Modalidad", "Sexo", "Rango de edad" ORDER BY "Entidad"`;
 }
 
-function buildSQLEstatal(entorno) {
-  const delitos = DELITOS_POR_ENTORNO[entorno]
-    .map((d) => `'${d.replace(/'/g, "''")}'`)
-    .join(", ");
-
-  return `SELECT "Entidad", "Subtipo de delito", SUM("Cantidad"::numeric) as total FROM "${RESOURCE_ID}" WHERE "Subtipo de delito" IN (${delitos}) GROUP BY "Entidad", "Subtipo de delito" ORDER BY total DESC`;
+function buildSQLEstatal(delito) {
+  return `SELECT "Entidad", "Tipo de delito", SUM("Cantidad"::numeric) as total FROM "${RESOURCE_ID}" WHERE "Tipo de delito" = '${delito.replace(/'/g, "''")}' GROUP BY "Entidad", "Tipo de delito" ORDER BY total DESC`;
 }
 
 function getColor(valor, max) {
@@ -48,13 +58,12 @@ function getColor(valor, max) {
   return COLORS.high;
 }
 
-
 export default function Nacional() {
   const mapRef = useRef(null);
   const leafletRef = useRef(null);
   const layerRef = useRef(null);
 
-  const [entorno, setEntorno] = useState("Escuela");
+  const [delito, setDelito] = useState("Abuso sexual");
   const [datos, setDatos] = useState(null); 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -67,7 +76,7 @@ export default function Nacional() {
     setError(null);
     setSelected(null);
 
-    const sql = buildSQLEstatal(entorno);
+    const sql = buildSQLEstatal(delito);
     const url = `${API_BASE}?sql=${encodeURIComponent(sql)}`;
 
     fetch(url)
@@ -78,7 +87,7 @@ export default function Nacional() {
         const records = json.result.records;
 
         const porEstado = {};
-        records.forEach(({ Entidad, "Subtipo de delito": subtipo, total }) => {
+        records.forEach(({ Entidad, "Tipo de delito": subtipo, total }) => {
           const t = parseFloat(total) || 0;
           if (!porEstado[Entidad]) porEstado[Entidad] = { total: 0, desglose: {} };
           porEstado[Entidad].total += t;
@@ -104,7 +113,7 @@ export default function Nacional() {
         setError("No se pudieron cargar los datos. Verifica la conexión a la API.");
       })
       .finally(() => setLoading(false));
-  }, [entorno]);
+  }, [delito]);
 
   useEffect(() => {
     if (leafletRef.current || !mapRef.current) return;
@@ -209,13 +218,13 @@ export default function Nacional() {
     <SiteLayout>
       <section className="mx-auto max-w-3xl px-6 py-12 text-center">
         <span className="inline-flex items-center gap-2 rounded-full bg-primary-soft text-primary px-3 py-1 text-xs font-medium">
-          <ShieldCheck className="h-3.5 w-3.5" /> CONCLUSIÓN DE LA EXPERIENCIA
+          <ShieldCheck className="h-3.5 w-3.5" /> DATOS POR TIPO DE DELITO
         </span>
         <h1 className="mt-6 text-4xl md:text-5xl font-bold tracking-tight">
-          La responsabilidad <em className="not-italic text-primary">nunca</em> es de la niñez.
+          Visualizando la violencia <em className="not-italic text-primary">por tipo de delito</em>
         </h1>
         <p className="mt-4 text-muted-foreground">
-          A través de datos reales, hemos visto cómo decisiones individuales se entretejen con la falta de apoyo, la ausencia de política y la revictimización del sistema.
+          Explora la incidencia de cada delito a nivel nacional por entidad federativa.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <Link to="/recursos" className="rounded-md bg-primary px-5 py-2.5 text-primary-foreground font-medium hover:bg-primary/90">
@@ -232,20 +241,20 @@ export default function Nacional() {
           <div>
             <h2 className="text-2xl font-bold">Mapa Nacional de Incidencia</h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              Casos reportados por entidad federativa · Haz clic en un estado para ver el detalle
+              Casos de {delito} por entidad federativa · Haz clic en un estado para ver el detalle
             </p>
           </div>
 
           <div className="relative">
-            <label className="text-xs font-semibold text-muted-foreground tracking-wider block mb-1">FILTRAR POR ENTORNO</label>
+            <label className="text-xs font-semibold text-muted-foreground tracking-wider block mb-1">FILTRAR POR TIPO DE DELITO</label>
             <div className="relative">
               <select
-                value={entorno}
-                onChange={(e) => setEntorno(e.target.value)}
-                className="appearance-none rounded-lg border border-input bg-card pl-4 pr-10 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary/40 cursor-pointer"
+                value={delito}
+                onChange={(e) => setDelito(e.target.value)}
+                className="appearance-none rounded-lg border border-input bg-card pl-4 pr-10 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary/40 cursor-pointer min-w-[200px]"
               >
-                {ENTORNOS.map((e) => (
-                  <option key={e} value={e}>{e}</option>
+                {DELITOS_DISPONIBLES.map((d) => (
+                  <option key={d} value={d}>{d}</option>
                 ))}
               </select>
               <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
@@ -261,15 +270,15 @@ export default function Nacional() {
               ) : (
                 <p className="text-2xl font-bold text-primary">{stats.total.toLocaleString("es-MX")}</p>
               )}
-              <p className="text-xs text-muted-foreground mt-1">Casos en el periodo</p>
+              <p className="text-xs text-muted-foreground mt-1">Casos de {delito}</p>
             </div>
             <div className="p-4 text-center">
               <p className="text-2xl font-bold text-primary">{stats.estados}</p>
               <p className="text-xs text-muted-foreground mt-1">Entidades con datos</p>
             </div>
             <div className="p-4 text-center">
-              <p className="text-2xl font-bold text-primary">{DELITOS_POR_ENTORNO[entorno].length}</p>
-              <p className="text-xs text-muted-foreground mt-1">Tipos de delito filtrados</p>
+              <p className="text-2xl font-bold text-primary">1</p>
+              <p className="text-xs text-muted-foreground mt-1">Tipo de delito seleccionado</p>
             </div>
           </div>
 
@@ -281,7 +290,7 @@ export default function Nacional() {
                 <div className="absolute inset-0 bg-card/80 backdrop-blur-sm flex items-center justify-center z-[1000]">
                   <div className="flex flex-col items-center gap-3">
                     <Loader2 className="h-8 w-8 animate-spin text-primary" />
-                    <p className="text-sm font-medium">Cargando datos de {entorno}…</p>
+                    <p className="text-sm font-medium">Cargando datos de {delito}…</p>
                   </div>
                 </div>
               )}
@@ -330,13 +339,13 @@ export default function Nacional() {
 
                   <div className="mt-4 rounded-lg bg-primary/10 border border-primary/20 p-3 text-center">
                     <p className="text-2xl font-bold text-primary">{Math.round(selected.total).toLocaleString("es-MX")}</p>
-                    <p className="text-xs text-muted-foreground mt-0.5">casos totales registrados</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">casos de {delito}</p>
                   </div>
 
                   {selected.desglose && selected.desglose.length > 0 ? (
                     <div className="mt-4 space-y-2">
                       <p className="text-xs font-semibold text-muted-foreground tracking-wider">DESGLOSE POR DELITO</p>
-                      {selected.desglose.map(({ subtipo, total }) => {
+                      {selected.desglose.slice(0, 5).map(({ subtipo, total }) => {
                         const pct = selected.total > 0 ? (total / selected.total) * 100 : 0;
                         return (
                           <div key={subtipo} className="space-y-1">
@@ -355,14 +364,14 @@ export default function Nacional() {
                       })}
                     </div>
                   ) : (
-                    <p className="mt-4 text-sm text-muted-foreground text-center">Sin datos para el entorno seleccionado.</p>
+                    <p className="mt-4 text-sm text-muted-foreground text-center">Sin datos para el delito seleccionado.</p>
                   )}
 
                   {top3.includes(selected.nombre) && (
                     <div className="mt-4 rounded-lg bg-violet-50 dark:bg-violet-950/30 border border-violet-200 dark:border-violet-800 p-3">
-                      <p className="text-xs font-semibold text-violet-700 dark:text-violet-400">⚠ Estado con mayor incidencia</p>
+                      <p className="text-xs font-semibold text-violet-700 dark:text-violet-400">⚠ Alta incidencia</p>
                       <p className="text-xs text-violet-600 dark:text-violet-300 mt-1">
-                        Este estado está entre los 3 con mayor número de casos registrados para el entorno "{entorno}".
+                        Este estado está entre los 3 con mayor número de casos de {delito}.
                       </p>
                     </div>
                   )}
@@ -371,11 +380,11 @@ export default function Nacional() {
                 <div className="p-5 flex flex-col items-center justify-center h-full min-h-[200px] text-center">
                   <Map className="h-8 w-8 text-muted-foreground/40 mb-3" />
                   <p className="text-sm font-medium text-muted-foreground">Selecciona un estado en el mapa</p>
-                  <p className="text-xs text-muted-foreground/70 mt-1">Haz clic en cualquier entidad federativa para ver el detalle de incidencias.</p>
+                  <p className="text-xs text-muted-foreground/70 mt-1">Haz clic en cualquier entidad federativa para ver el detalle de incidencias de {delito}.</p>
 
                   {top3.length > 0 && !loading && (
                     <div className="mt-6 w-full text-left">
-                      <p className="text-xs font-semibold text-muted-foreground tracking-wider mb-2">TOP 3 CON MAYOR INCIDENCIA</p>
+                      <p className="text-xs font-semibold text-muted-foreground tracking-wider mb-2">TOP 3 CON MAYOR INCIDENCIA DE {delito.toUpperCase()}</p>
                       {top3.map((nombre, i) => (
                         <button
                           key={nombre}
@@ -400,8 +409,7 @@ export default function Nacional() {
 
           <div className="border-t px-5 py-3 bg-secondary/20">
             <p className="text-xs text-muted-foreground">
-              <span className="font-semibold">Delitos incluidos en "{entorno}":</span>{" "}
-              {DELITOS_POR_ENTORNO[entorno].join(" · ")}
+              <span className="font-semibold">Visualizando actualmente:</span> Incidencia del delito <span className="font-semibold text-primary">"{delito}"</span> a nivel nacional por entidad federativa.
             </p>
           </div>
         </div>

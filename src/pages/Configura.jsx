@@ -5,18 +5,14 @@ import { ChevronDown, User, Users, Baby, Home, School, Globe, MapPin, Info, Arro
 import SiteLayout from "../components/SiteLayout.jsx";
 import { useStory } from "../context/StoryContext.jsx";
 
-const ESTADOS = [
-  "Aguascalientes", "Baja California", "Baja California Sur", "Campeche",
-  "Chiapas", "Chihuahua", "Ciudad de México", "Coahuila", "Colima",
-  "Durango", "Estado de México", "Guanajuato", "Guerrero", "Hidalgo",
-  "Jalisco", "Michoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca",
-  "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa",
-  "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz",
-  "Yucatán", "Zacatecas",
+const ESTADOS = [ "Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Chiapas", "Chihuahua",
+  "Ciudad de México", "Coahuila de Zaragoza", "Colima", "Durango", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco",
+  "México", "Michoacán de Ocampo", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo",
+  "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz de Ignacio de la Llave",
+  "Yucatán", "Zacatecas"
 ];
 
 const ages = [
-  { id: "0-5",   label: "0 - 5 años",   sub: "Primera infancia", icon: Baby },
   { id: "6-12",  label: "6 - 12 años",  sub: "Infancia",         icon: User },
   { id: "13-17", label: "13 - 17 años", sub: "Adolescencia",     icon: Users },
 ];
@@ -84,7 +80,7 @@ export default function Configura() {
 
           <div>
             <p className="text-xs font-semibold tracking-wider text-muted-foreground">RANGO DE EDAD DE LA VÍCTIMA</p>
-            <div className="mt-3 grid grid-cols-3 gap-3">
+            <div className="mt-3 grid grid-cols-2 gap-2">
               {ages.map((a) => {
                 const active = age === a.id;
                 const Icon = a.icon;
