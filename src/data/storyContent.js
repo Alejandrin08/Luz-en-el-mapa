@@ -1,191 +1,309 @@
-// storyContent.js
-// Estructura:
-// escolar[tipo] → capitulo1 | capitulo2[opcionElegidaEnCap1] | capitulo3[opcionElegidaEnCap2]
-// Tipos: "abuso_sexual" | "acoso_sexual" | "hostigamiento_sexual" | "corrupcion_menores"
-
 export const stories = {
-
-  escolar: {
+ escuela: {
+  infancia: {
     capitulo1: {
-      titulo: "Capítulo 1: Lo que nadie quiere ver",
+      titulo: "Capítulo 1: El monstruo del taller",
       descripcion: [
-        "En una escuela primaria {nombre} pública, un docente de educación física lleva meses ganándose la confianza de los estudiantes con privilegios especiales: los deja salir antes, les regala dulces, los llama a quedarse después de clase. Nadie lo cuestiona.",
-        "Una estudiante comienza a mostrar señales de alerta: pesadillas, negativa a ir a la escuela, cambios bruscos de humor. Su maestra de grupo lo nota, pero el protocolo escolar es difuso y el miedo a equivocarse paraliza la respuesta.",
+        "Al comenzar el ciclo escolar, {nombre} entraba con entusiasmo a la clase de Arte. Le contaba a sus papás con detalle las obras que hacía, los colores que mezclaba, lo que aprendía cada semana.",
+        "Pero en algún momento, eso empezó a cambiar.",
+        "El docente de la materia comenzó a pedirle a {nombre} que se quedara al final de cada clase a ordenar los \"materiales\". Durante esos minutos, se acercaba demasiado por la espalda y lo tocaba de formas que le incomodaban, con el pretexto de \"corregirle la postura\" al pintar.",
+        "Para asegurar su silencio, el docente le regalaba materiales diciéndole que era su premio por ser el mejor alumno.",
+        "{nombre} no sabe cómo decirlo con palabras. Así que dibuja en su libreta un monstruo gigante, parado a lo lejos, observando a un niño pequeño.",
+
+        { tipo: "dato", delito: ["Abuso sexual", "Hostigamiento sexual"], sublabel: "Dato de Contexto" },
+
+        "El silencio en los niños no siempre es pasivo: a menudo intentan comunicar la violencia que viven a través del arte, el juego o cambios repentinos en su conducta."
       ],
-      pregunta: "¿Cuál es la primera reacción del sistema escolar?",
+      pregunta: "¿Qué debería hacer {nombre} con el dibujo?",
       opciones: [
-        { id: "a", titulo: "Activar el protocolo", desc: "La directora decide reportar el caso al departamento de orientación y notifica a los padres de familia." },
-        { id: "b", titulo: "Hablar primero con el docente", desc: "Se decide confrontar internamente al maestro antes de involucrar a instancias externas." },
-        { id: "c", titulo: "Esperar más evidencia", desc: "La escuela decide no actuar aún, temiendo levantar falsas acusaciones sin pruebas claras." },
+        { id: "a", titulo: "Dejar la libreta abierta sobre el escritorio de otra maestra", desc: "La deja en un lugar donde alguien más pueda verla, sin decir nada." },
+        { id: "b", titulo: "Arrancar la hoja, tirarla y negarse a volver al taller", desc: "Destruye el dibujo y decide no regresar a esas clases." },
+        { id: "c", titulo: "Dárselo a su hermano/a mayor a la hora de la salida", desc: "Se lo entrega en silencio, esperando que alguien en casa entienda." },
       ],
     },
 
     capitulo2: {
       a: {
-        titulo: "Capítulo 2: El engranaje institucional",
+        titulo: "Capítulo 2: El mensaje descifrado",
         descripcion: [
-          "El protocolo se activó, pero nadie parece conocerlo a fondo. Orientación convoca a los padres, pero el maestro sigue frente a grupo mientras se 'investiga internamente'. La niña siente que el sistema la expone sin protegerla.",
-          "La supervisión escolar exige 'no alarmar a la comunidad' y pide discreción. Los padres, desconcertados, no saben si denunciar en la fiscalía o esperar la resolución interna.",
+          "Otra maestra encuentra la libreta abierta. En lugar de ignorarla o cerrarla sin más, algo en el dibujo la detiene: el monstruo, el niño, la distancia entre ambos.",
+          "Al día siguiente, le pide a {nombre} que le cuente la historia detrás del monstruo. {nombre}, sintiéndose apenas un poco más seguro, empieza a hablar.",
+          "Le cuenta sobre las tardes en el taller. Sobre los materiales como premio. Sobre las manos del instructor corrigiéndole la postura.",
+
+          { tipo: "dato", delito: ["Abuso sexual"], sublabel: "Dato de Contexto" },
+
+          "La maestra lo escucha sin interrumpirlo. Sin cambiar la cara. Sin decirle que quizás lo malinterpretó."
         ],
-        pregunta: "¿Qué camino toman los padres?",
+        pregunta: "¿Qué debería hacer la maestra?",
         opciones: [
-          { id: "a", titulo: "Denuncia en fiscalía", desc: "Deciden no esperar a la escuela y presentan denuncia formal ante la Fiscalía Especializada." },
-          { id: "b", titulo: "Buscar apoyo externo", desc: "Contactan a una organización civil de protección a la infancia para orientarse antes de actuar." },
-          { id: "c", titulo: "Confiar en la escuela", desc: "Deciden dar tiempo al proceso interno, esperando que la institución resuelva el caso con justicia." },
+          { id: "a", titulo: "Llevar las pruebas a dirección y activar el protocolo", desc: "Sigue los canales institucionales correctos para proteger a {nombre}." },
+          { id: "b", titulo: "Ir a reclamarle directamente al instructor sin avisar a nadie", desc: "Decide confrontarlo a solas, creyendo que puede resolver la situación." },
         ],
       },
       b: {
-        titulo: "Capítulo 2: La confrontación que protege al agresor",
+        titulo: "Capítulo 2: El peso del silencio",
         descripcion: [
-          "La dirección citó al docente. Él lo negó todo y amenazó con demandar por difamación. La conversación fue a puerta cerrada, sin testigos, sin registro. La estudiante nunca fue escuchada formalmente.",
-          "Ahora el maestro está alerta. Cambia su comportamiento públicamente y se gana simpatías del resto del personal. La narrativa empieza a voltear hacia la familia: '¿por qué esperaron tanto para hablar?'.",
+          "{nombre} arranca el dibujo y lo tira. En casa dice que odia el arte, que el taller le aburre, que ya no quiere ir.",
+          "Sus papás no preguntan más. Asumen que es una fase.",
+          "Pero el instructor no desaparece. Lo intercepta en los pasillos y le exige que regrese a clases, amenazándolo: si no vuelve, le dirá a sus papás que fue él quien robó materiales del taller.",
+          "{nombre} se congela. No sabe si alguien le creería.",
+
+          { tipo: "dato", delito: ["Hostigamiento sexual"], sublabel: "Dato de Contexto" },
         ],
-        pregunta: "¿Cómo responde la familia ante esta situación?",
+        pregunta: "¿Cómo debería reaccionar {nombre}?",
         opciones: [
-          { id: "a", titulo: "Exigir intervención externa", desc: "La familia denuncia ante la Supervisión de Zona y exige la suspensión inmediata del docente." },
-          { id: "b", titulo: "Retirar a la estudiante", desc: "Deciden cambiar a la niña de escuela para protegerla mientras buscan asesoría legal." },
-          { id: "c", titulo: "Aceptar la versión oficial", desc: "Presionados y sin apoyo, terminan aceptando la versión de la escuela y el caso queda sin resolución." },
+          { id: "a", titulo: "Vencer el miedo y contarle la amenaza al prefecto", desc: "Busca a un adulto de confianza en la escuela y le dice lo que está pasando." },
+          { id: "b", titulo: "Ceder al chantaje y regresar al taller", desc: "Por miedo a que lo regañen, decide obedecer y volver." },
         ],
       },
       c: {
-        titulo: "Capítulo 2: El peso de la espera",
+        titulo: "Capítulo 2: La red de apoyo en casa",
         descripcion: [
-          "Pasaron tres semanas. El docente sigue dando clases. La estudiante desarrolla crisis de ansiedad cada mañana antes de entrar a la escuela. Su rendimiento cae al mínimo. Nadie ha hablado con ella.",
-          "Otros padres empiezan a notar cambios en sus propios hijos. Un rumor circula en el grupo de WhatsApp de la escuela. La dirección pide 'no difundir información no verificada'.",
+          "A la hora de la salida, {nombre} le da el dibujo a su hermano/a mayor sin decir nada. Solo se lo pone en la mano.",
+          "El hermano/a lo observa. Conoce bien a {nombre} y sabe que algo no está bien. Le hace preguntas sencillas, sin presionarlo.",
+          "Poco a poco, {nombre} le confiesa lo que pasa en las tardes del taller: los materiales como premio, las manos del instructor, las excusas para quedarse solos.",
+          "El hermano/a llega a casa y lo cuenta todo.",
+
+          { tipo: "dato", delito: ["Abuso sexual", "Corrupción de menores"], sublabel: "Dato de Contexto" },
         ],
-        pregunta: "¿Qué detona finalmente la acción?",
+        pregunta: "¿Cómo debería reaccionar la familia?",
         opciones: [
-          { id: "a", titulo: "Otra víctima habla", desc: "Una segunda estudiante revela a su madre lo ocurrido, lo que obliga a la escuela a actuar." },
-          { id: "b", titulo: "La prensa se entera", desc: "Un familiar filtra información a un medio local y la presión pública obliga a la Secretaría de Educación a intervenir." },
-          { id: "c", titulo: "La niña habla sola", desc: "Sin apoyo adulto, la estudiante encuentra la fuerza para contarle a su orientadora escolar directamente." },
+          { id: "a", titulo: "Presentarse en la escuela para exigir la investigación del instructor", desc: "Van directamente a la institución a exigir que se actúe." },
+          { id: "b", titulo: "Sacar a {nombre} de esa escuela sin dar explicaciones", desc: "Deciden alejarlo del peligro lo antes posible, sin denunciar." },
         ],
       },
     },
 
     capitulo3: {
-      // flujos de cap2.a
       aa: {
-        titulo: "Capítulo 3: La justicia que llega tarde",
+        titulo: "Capítulo 3: El monstruo pierde su poder",
         descripcion: [
-          "La fiscalía abrió carpeta de investigación. Pero los tiempos institucionales son lentos: citas que se cancelan, peritos que no aparecen, formularios que se pierden. La familia lleva meses en un proceso que prometía ser ágil.",
-          "El docente fue suspendido preventivamente, pero con goce de sueldo. La estudiante tuvo que cambiar de escuela 'para su protección'. Ella siente que quien fue castigada fue ella.",
+          "La maestra no subestima lo que escuchó. Sigue el protocolo al pie de la letra: informa a la dirección, contacta a la familia de {nombre} y evita alertar al instructor.",
+          "La investigación revela que los \"premios\" existían, y que {nombre} no fue el único alumno afectado.",
+          "El instructor es separado del plantel de forma permanente y enfrenta cargos formales.",
+          "Con el tiempo, {nombre} vuelve a abrir su libreta. Los trazos oscuros y temblorosos van cediendo paso a colores brillantes. Ha entendido que los adultos a su alrededor saben cómo cuidarlo.",
         ],
-        pregunta: "¿Cuál es el siguiente paso para la familia?",
-        opciones: [
-          { id: "a", titulo: "Persistir con acompañamiento", desc: "Se unen a una red de apoyo legal y psicológico para no abandonar el proceso." },
-          { id: "b", titulo: "Explorar vías alternativas", desc: "Buscan la Comisión de Derechos Humanos para documentar las fallas institucionales." },
-          { id: "c", titulo: "Priorizar la recuperación", desc: "Deciden pausar el proceso legal para enfocarse en la salud emocional de su hija." },
-        ],
+        dato: "Según UNICEF (2024), las consecuencias del abuso sexual se agravan cuando los niños retrasan la revelación, a veces durante años. Una intervención temprana y bien dirigida puede prevenir secuelas emocionales permanentes.",
+        sublabelDato: "Dato de Contexto",
+        fuenteDato: "UNICEF. (2024). Más de 370 millones de niñas y mujeres en todo el mundo se ven sometidas a violaciones y abusos sexuales en la infancia [Comunicado de prensa]. https://www.unicef.org/es/comunicados-prensa/mas-370-millones-ninas-mujeres-mundo-sometidas-violaciones-abusos-sexuales-infancia",
+        pregunta: "El arte y el juego son la voz de los niños cuando las palabras no alcanzan. ¿Qué tan dispuestos estamos a leer entre líneas?",
       },
       ab: {
-        titulo: "Capítulo 3: La red que sostiene",
+        titulo: "Capítulo 3: Un acto imprudente",
         descripcion: [
-          "La organización civil tomó el caso. Asignaron una abogada especializada en derechos de infancia y una psicóloga para acompañar a la familia. Por primera vez, alguien les explica el proceso sin abrumarlos.",
-          "Con asesoría, la familia presenta denuncia formal. La organización documenta también las fallas del protocolo escolar. El caso ya no es solo de una niña: es evidencia de un sistema que falló.",
+          "Llevada por el coraje, la maestra confronta al instructor a solas. Él reacciona rápido: niega todo, deshace las evidencias que guardaba en el taller y acusa a la maestra de difamación.",
+          "Sin haber seguido los canales correctos, el caso se estanca. El instructor permanece en la escuela, ahora más cauteloso y más vigilante.",
+          "{nombre} se da cuenta de que la persona que intentó ayudarlo no pudo. Guarda todo de nuevo. Esta vez con menos esperanza.",
         ],
-        pregunta: "¿Cómo concluye esta etapa?",
-        opciones: [
-          { id: "a", titulo: "El docente es imputado", desc: "Con la evidencia documentada, la fiscalía logra vincular al docente a proceso." },
-          { id: "b", titulo: "La escuela es sancionada", desc: "La Secretaría de Educación inicia un procedimiento disciplinario contra la dirección por omisión." },
-          { id: "c", titulo: "El caso visibiliza el problema", desc: "El caso se convierte en referente para exigir protocolos obligatorios en escuelas de la región." },
-        ],
+        pregunta: "Las buenas intenciones no bastan si no están acompañadas del procedimiento correcto. ¿Por qué es tan peligroso intentar resolver esto en solitario?",
       },
-      ac: {
-        titulo: "Capítulo 3: La institución que se protege a sí misma",
-        descripcion: [
-          "La escuela cerró el caso internamente. El docente fue 'reubicado' a otro plantel. Nadie fue sancionado formalmente. La familia recibió una disculpa de palabra en una reunión privada.",
-          "La estudiante sigue cargando lo ocurrido. Sin proceso, sin reconocimiento, sin justicia. La escuela continúa operando igual. Y el docente frente a otro grupo.",
-        ],
-        pregunta: "¿Qué queda después del silencio?",
-        opciones: [
-          { id: "a", titulo: "La familia no se rinde", desc: "Meses después, con más fuerza, deciden denunciar ante la fiscalía y la CNDH." },
-          { id: "b", titulo: "Otras familias actúan", desc: "Padres de familia organizan una red de vigilancia y exigen a la SEP auditar al docente reubicado." },
-          { id: "c", titulo: "El silencio se rompe diferente", desc: "La propia estudiante, años después, comparte su historia y se convierte en activista." },
-        ],
-      },
-      // flujos de cap2.b
       ba: {
-        titulo: "Capítulo 3: La denuncia que cambia el rumbo",
+        titulo: "Capítulo 3: Desarmar la amenaza",
         descripcion: [
-          "La Supervisión de Zona intervino. Por primera vez, alguien externo a la escuela tomó nota formal del caso. El docente fue suspendido sin goce de sueldo mientras se investiga.",
-          "Pero la maquinaria burocrática es lenta. La familia necesita sostener la presión para que el expediente no se archive. Cada semana que pasa, el riesgo de que el caso sea minimizado crece.",
+          "{nombre} busca al prefecto y le cuenta la amenaza. Que el instructor lo obligó a regresar. Que le dijo que, si no volvía, lo acusaría de robar.",
+          "El prefecto le dice con calma que nada de eso es su culpa. Que él no hizo nada malo.",
+          "Al investigar discretamente, descubren que el mismo chantaje se había usado con otros tres alumnos de grados inferiores.",
+          "Lo que {nombre} sentía desaparece cuando ve al docente de arte salir de la escuela por última vez.",
         ],
-        pregunta: "¿Cómo sostiene la familia la presión?",
-        opciones: [
-          { id: "a", titulo: "Con apoyo legal", desc: "Contratan a una abogada para acompañar el proceso administrativo y penal en paralelo." },
-          { id: "b", titulo: "Con otras familias", desc: "Se unen a otras familias afectadas y presentan una queja colectiva ante la SEP." },
-          { id: "c", titulo: "Con documentación propia", desc: "Registran cada comunicación, reunión y respuesta institucional para construir un expediente sólido." },
-        ],
+        dato: "El chantaje y la entrega de objetos como \"premio\" son tácticas de manipulación habituales para asegurar el silencio de los menores durante períodos prolongados.",
+        sublabelDato: "Dato de Prevención",
+        fuenteDato: "Montiel, I., Carbonell, E., & Pereda, N. (2016). Estrategias de persuasión en grooming online de menores: un análisis cualitativo con agresores en prisión. Psychosocial Intervention, 26(3), 139–146. https://doi.org/10.1016/j.psi.2017.02.001",
+        pregunta: "Romper el silencio a tiempo es el único antídoto contra el chantaje. ¿Cómo construimos la confianza necesaria para que un niño hable antes de colapsar?",
       },
       bb: {
-        titulo: "Capítulo 3: El cambio que protege, pero no sana",
+        titulo: "Capítulo 3: El taller de los secretos",
         descripcion: [
-          "La estudiante está en una escuela nueva. El ambiente es diferente, más tranquilo. Pero lleva consigo lo que pasó. Los recuerdos no cambian de escuela.",
-          "La familia busca atención psicológica, pero el sistema público tiene listas de espera de meses. La atención privada es costosa. El daño emocional avanza sin el apoyo necesario.",
+          "El miedo es más grande. {nombre} cede y regresa al taller.",
+          "El instructor, sabiendo que tiene el control, va cruzando los límites con más frecuencia y menos cuidado.",
+          "La personalidad de {nombre} se apaga. Deja de hablar con sus amigos. Sus calificaciones caen.",
+          "El ciclo de violencia se asienta en su rutina. La escuela, que debería ser un lugar seguro, se convierte en su prisión.",
         ],
-        pregunta: "¿Qué hace la familia para acceder a apoyo?",
-        opciones: [
-          { id: "a", titulo: "Buscar organizaciones civiles", desc: "Localizan una organización que ofrece terapia gratuita para infancias víctimas de violencia." },
-          { id: "b", titulo: "Acudir al DIF municipal", desc: "Solicitan atención al DIF, que los canaliza a un programa de intervención familiar." },
-          { id: "c", titulo: "Construir red de apoyo", desc: "La familia y amigos crean un entorno de contención mientras esperan atención especializada." },
-        ],
+        dato: "Ceder ante las amenazas del agresor aísla a la víctima, intensifica la violencia y genera secuelas emocionales severas que pueden acompañarla durante años.",
+        sublabelDato: "Dato de Impacto Psicológico",
+        fuenteDato: "Echeburúa, E., & Guerricaechevarría, C. (2006). Especial consideración de algunos ámbitos de victimación. Cuadernos de Medicina Forense, 12(43–44), 75–82. https://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1135-76062006000100006",
+        pregunta: "Cuando el miedo encadena a un alumno, su comportamiento cambia radicalmente. ¿Cuántos gritos de auxilio silenciosos se nos escapan cada día?",
       },
-      bc: {
-        titulo: "Capítulo 3: Cuando la institución gana",
-        descripcion: [
-          "La versión oficial prevaleció. El docente siguió en su puesto. La familia fue señalada discretamente como 'conflictiva'. La estudiante escucha comentarios en los pasillos.",
-          "El silencio institucional tiene peso. La familia empieza a dudar de su propia memoria. El sistema no los venció con argumentos, sino con el agotamiento.",
-        ],
-        pregunta: "¿Qué les queda a la familia?",
-        opciones: [
-          { id: "a", titulo: "Recuperar la narrativa", desc: "Deciden documentar todo y buscar a un periodista de investigación para visibilizar el caso." },
-          { id: "b", titulo: "Buscar justicia restaurativa", desc: "Contactan a una organización que trabaja con mediación y justicia para infancias." },
-          { id: "c", titulo: "Proteger hacia adelante", desc: "Sin poder cambiar lo pasado, enfocan su energía en proteger a sus otros hijos y a los de su comunidad." },
-        ],
-      },
-      // flujos de cap2.c
       ca: {
-        titulo: "Capítulo 3: Voces que se suman",
+        titulo: "Capítulo 3: Un escudo familiar",
         descripcion: [
-          "La segunda víctima habló. Su testimonio coincide en detalles con el de la primera estudiante. La escuela ya no puede contener el caso internamente. La Supervisión de Zona interviene de oficio.",
-          "Dos familias, una misma historia. Ahora la pregunta no es si algo pasó, sino por qué tardó tanto en ser atendido.",
+          "La familia no titubea. Al día siguiente se presentan en la escuela, exigen la renuncia inmediata del docente e interponen una denuncia formal.",
+          "La presión familiar obliga a la institución a rendir cuentas y evita que el caso sea encubierto.",
+          "{nombre} observa a su familia defenderlo con firmeza. Esa imagen se le queda grabada.",
+          "Descubre que en casa hay un escudo que nadie podrá atravesar fácilmente.",
         ],
-        pregunta: "¿Cómo avanzan juntas las familias?",
-        opciones: [
-          { id: "a", titulo: "Denuncia conjunta", desc: "Presentan una denuncia penal conjunta con el acompañamiento de una organización especializada." },
-          { id: "b", titulo: "Queja ante la CNDH", desc: "Documentan las fallas institucionales y presentan queja ante la Comisión Nacional de Derechos Humanos." },
-          { id: "c", titulo: "Presión comunitaria", desc: "Convocan a la comunidad escolar a una asamblea para exigir transparencia y cambios estructurales." },
-        ],
+        pregunta: "Saberse respaldado desde el hogar cambia radicalmente cómo un niño enfrenta la violencia. ¿Cómo fortalecemos esa primera red de protección?",
       },
       cb: {
-        titulo: "Capítulo 3: La exposición que fuerza la respuesta",
+        titulo: "Capítulo 3: Huir no frena el daño",
         descripcion: [
-          "El medio publicó la nota. La Secretaría de Educación emitió un comunicado en 24 horas. Se anunció una 'investigación interna urgente'. El docente fue suspendido ese mismo día.",
-          "Pero la familia no buscaba titulares. Buscaba justicia. La exposición mediática trae presión, pero también vulnerabilidad. El nombre de la escuela, el barrio, los detalles filtran información que la niña no eligió compartir.",
+          "La familia, por miedo al escándalo o sin saber cómo enfrentar el proceso, decide dar de baja a {nombre} de la escuela, alegando un cambio de domicilio.",
+          "{nombre} queda a salvo físicamente. Pero el impacto emocional no recibe atención. Y el instructor permanece en su puesto, sin consecuencias.",
+          "Meses después, otro niño ocupa el lugar de {nombre} en el taller. Y cae exactamente en la misma trampa.",
         ],
-        pregunta: "¿Cómo navega la familia la atención pública?",
-        opciones: [
-          { id: "a", titulo: "Limitar la exposición", desc: "Deciden no dar más declaraciones y canalizan todo a través de un abogado que protege la identidad de la niña." },
-          { id: "b", titulo: "Usar la visibilidad", desc: "Deciden hablar públicamente, pero con condiciones: sin revelar datos de la menor y exigiendo reformas concretas." },
-          { id: "c", titulo: "Retirarse del escrutinio", desc: "Agotados por la exposición, se retiran de los medios y buscan resolver el caso por vías legales privadas." },
-        ],
-      },
-      cc: {
-        titulo: "Capítulo 3: La voz que nadie esperaba",
-        descripcion: [
-          "La estudiante lo contó ella sola. Sin que nadie la presionara, sin que nadie le creyera del todo al principio. La orientadora la escuchó, tomó notas, y esta vez siguió el protocolo.",
-          "Es la primera vez que alguien del sistema escolar actúa correctamente. Pero el camino que queda por delante sigue siendo largo y difícil.",
-        ],
-        pregunta: "¿Qué sigue después de que ella habló?",
-        opciones: [
-          { id: "a", titulo: "Activación del protocolo real", desc: "La orientadora sigue los pasos correctos: notificación a padres, reporte a dirección y contacto con la fiscalía." },
-          { id: "b", titulo: "Acompañamiento psicológico", desc: "Se prioriza la estabilidad emocional de la niña antes de cualquier acción legal o institucional." },
-          { id: "c", titulo: "La comunidad se organiza", desc: "El caso moviliza a docentes y padres para exigir formación en detección y prevención de abuso." },
-        ],
+        pregunta: "Proteger a los nuestros es un instinto natural. Pero, ¿qué responsabilidad tenemos con los niños que se quedan atrás?",
       },
     },
   },
+  adolescencia: {
+    capitulo1: {
+      titulo: "Capítulo 1: El blanco del grupo",
+      descripcion: [
+        "Era el inicio del ciclo escolar y {nombre} llegó emocionado al regreso a clases. Durante el primer día, el docente pidió que todos se presentaran frente al grupo. {nombre} estaba tan nervioso que tropezó al pasar al frente, esto provoco risas de todos sus compañeros. Fue un momento incómodo que la mayoría olvidó pronto. Pero un compañero en particular fijó en {nombre} una atención no muy buena.",
+        "Al pasar los días, ese compañero comenzó a molestarlo. Lo que empezó como acoso escolar se transformó rápidamente.",
+        "Al notar que {nombre} se paralizaba ante el miedo y no oponía resistencia, el agresor y su grupo empezaron a ir cada vez más lejos. Las burlas se convirtieron en comentarios humillantes sobre el cuerpo de {nombre} y en rumores degradantes que corrían por los pasillos. El grupo de alumnos malos, comenzaron a acorralarlo en los baños o en zonas vacías de la escuela, cruzando los límites con tocamientos forzados que dejaban a {nombre} con miedo.",
+        "Para asegurarse de que no hablara, el grupo lo rodeaba en el receso, lo obligaban a consumir sustancias ilícitas, amenazándolo con golpearlo si se negaba a \"madurar\".",
+        "Una mañana, {nombre} se encierra en uno de los cubículos del baño escolar. Escucha las risas del grupo afuera, esperándolo. Ya no puede seguir viviendo así.",
 
+        { tipo: "dato", delito: ["Acoso sexual", "Hostigamiento sexual", "Abuso sexual", "Corrupción de menores"], sublabel: "Dato de Contexto" },
+
+        "La violencia sexual entre compañeros a menudo se disfraza bajo la etiqueta de \"bullying\". Cuando hay tocamientos no consensuados, contenido sexual forzado y coerción grupal, se trata de delitos graves que destruyen la salud mental del adolescente."
+      ],
+      pregunta: "¿Qué debería hacer {nombre} en este momento?",
+      opciones: [
+        { id: "a", titulo: "Ir directo a Orientación Educativa y contarlo todo", desc: "Espera a que se vayan, sale del baño y busca al orientador para hablar." },
+        { id: "b", titulo: "Confrontar al grupo a golpes", desc: "La frustración es más fuerte que el miedo. Decide defenderse por la fuerza." },
+        { id: "c", titulo: "Escapar y regresar a su casa", desc: "No puede enfrentar al grupo ni confiar en nadie. Busca una salida." },
+      ],
+    },
+
+    capitulo2: {
+    a: {
+      titulo: "Capítulo 2: La búsqueda de ayuda",
+      descripcion: [
+        "{nombre} esperó en silencio hasta que los pasos del grupo se alejaron por el pasillo. {nombre} salió corriendo del baño y fue directo a la oficina de Orientación Educativa. Al entrar, con la voz entrecortada, le contó al orientador todo lo que estaba pasando: los tocamientos en los pasillos, las amenazas.",
+
+        "El orientador lo escuchó con atención, pero su respuesta no fue la que {nombre} esperaba. Solo le dijo: \"A veces los muchachos a esta edad tienen juegos muy pesados. ¿Estás seguro de que no lo estás malinterpretando? Son acusaciones graves y, sin pruebas, es difícil sancionarlos\".",
+
+        "{nombre} sintió demasiada desesperanza. Había reunido todo su valor para hablar. Y parecía que no le creían.",
+
+        {
+          tipo: "dato",
+          delito: ["Acoso sexual", "Hostigamiento sexual"],
+          sublabel: "Dato de Contexto"
+        },
+
+        "232 personas de entre 1 y 17 años fueron atendidas en hospitales del país por violencia sexual en escuelas. 78% de las víctimas eran mujeres y 22% hombres."
+      ],
+
+      fuenteDato:
+        "Instituto Nacional de Estadística y Geografía (INEGI). (2022). Encuesta Nacional sobre Discriminación (ENADIS) 2022. INEGI. https://www.inegi.org.mx/programas/enadis/2022/",
+
+      pregunta: "¿Qué debería hacer {nombre} ante esta respuesta?",
+
+      opciones: [
+        {
+          id: "a",
+          titulo: "Mantenerse firme y exigir que llamen a sus padres",
+          desc: "No acepta el \"no\". Insiste en que se levante un reporte formal."
+        },
+        {
+          id: "b",
+          titulo: "Sentirse derrotado y regresar al salón",
+          desc: "Agacha la cabeza, acepta que \"quizás exageró\" y sale de la oficina."
+        }
+      ]
+    },
+      b: {
+        titulo: "Capítulo 2: Violencia contra violencia",
+        descripcion: [
+          "La frustración fue más fuerte que el miedo. {nombre} empujó la puerta del cubículo y, sin pensarlo, se lanzó contra el grupo.",
+          "Pero la ventaja numérica era evidente. El grupo sometió a {nombre} entre golpes y burlas, hasta que un prefecto escuchó el ruido y entró a separarlos.",
+          "Tanto {nombre} como el grupo fueron llevados a la dirección. El director, molesto por el escándalo, no preguntó motivos. Vio una pelea escolar y suspendió a todos por tres días. El agresor miraba a {nombre} con una sonrisa; había ganado de nuevo, y ahora {nombre} iba a ser castigado como si fuera el problema.",
+
+          { tipo: "dato", delito: ["Abuso sexual", "Hostigamiento sexual"], sublabel: "Dato de Contexto" },
+
+          "Responder a la violencia sexual con violencia física suele ser un acto de desesperación. Lamentablemente, esto muchas veces lleva a que el sistema sancione a la víctima por romper el reglamento, desviando la atención de los delitos reales."
+        ],
+        pregunta: "¿Qué debe hacer {nombre} estando en la dirección?",
+        opciones: [
+          { id: "a", titulo: "Romper en llanto y revelar la verdad al director", desc: "{nombre} grita todo lo que ha estado callando." },
+          { id: "b", titulo: "Guardar silencio y aceptar la suspensión", desc: "Por orgullo y miedo, firma el reporte y se va a casa sin decir nada." },
+        ],
+      },
+      c: {
+        titulo: "Capítulo 2: La huida silenciosa",
+        descripcion: [
+          "{nombre} no podía enfrentar al grupo. Tampoco sentía la confianza para hablar con ningún maestro. Esperó a que sonara la campana y el baño quedara vacío. Con cuidado, se escapo por la parte trasera de la escuela, saltó una barda baja y caminó rápido hasta su casa.",
+          "Llegó mucho antes de su hora de salida. Sus padres estaban en la sala. Se sorprendieron al verlo entrar temblando. Su mamá se acercó de inmediato y le preguntó qué estaba haciendo ahí a esa hora.",
+
+          { tipo: "dato", delito: ["Hostigamiento sexual", "Abuso sexual"], sublabel: "Dato de Contexto" },
+
+          "Faltar a clases, escaparse de la escuela y el aislamiento repentino son señales silenciosas frecuentes cuando un adolescente está sufriendo hostigamiento o abuso grave."
+        ],
+        pregunta: "¿Cómo debería reaccionar {nombre} con sus padres?",
+        opciones: [
+          { id: "a", titulo: "Derrumbarse y contarles la verdad", desc: "Ya no puede sostener el peso solo. Les cuenta todo lo que ha estado viviendo." },
+          { id: "b", titulo: "Mentirles y encerrarse en su cuarto", desc: "Dice que se sintió mal y desaparece detrás de la puerta." },
+        ],
+      },
+    },
+
+    capitulo3: {
+      aa: {
+        titulo: "Capítulo 3: Insistir marca la diferencia",
+        descripcion: [
+          "{nombre} se armó de valor, se negó a salir de la oficina y exigió que llamaran a su casa. Al llegar, sus padres se enfurecieron al escuchar cómo el orientador intentaba minimizar la situación.",
+          "Con el respaldo de su familia, exigieron hablar con el director y levantaron un acta formal, advirtiendo que llevarían el caso a las autoridades si la escuela no actuaba.",
+          "La presión obligó a la institución a investigar. Descubrieron que no era la primera vez que ese grupo acosaba a alguien. El grupo fueron expulsados.",
+          "{nombre} aprendió que su voz tenía poder.",
+        ],
+        pregunta: "A veces las autoridades no quieren ver el problema. ¿Por qué es fundamental insistir y no dejarnos convencer de que la violencia que sufrimos \"no es para tanto\"?",
+      },
+      ab: {
+        titulo: "Capítulo 3: El costo de rendirse",
+        descripcion: [
+          "Sintiéndose invalidado, {nombre} agachó la cabeza, aceptó que \"quizás exageraba\" y regresó a clases. El orientador no hizo ningún reporte.",
+          "El grupo de agresores se enteró de que {nombre} había ido a quejarse. El acoso y los tocamientos se volvieron mucho más agresivos y constantes.",
+          "Semanas después, {nombre} dejó de asistir a la escuela por completo, perdiendo el año escolar mientras la institución seguía convencida de que todo habían sido \"juegos de adolescentes\".",
+        ],
+        pregunta: "Cuando un adulto le dice a un joven que ignore el abuso, lo está dejando solo frente a sus agresores. ¿De qué sirve tener autoridades si no protegen a quienes lo necesitan?",
+      },
+      ba: {
+        titulo: "Capítulo 3: La verdad que cambia todo",
+        descripcion: [
+          "{nombre} se rompió. Empezó a llorar de frustración y, frente al director y al agresor, gritó todo: las humillaciones, los tocamientos forzados.",
+          "El director se quedó helado. La gravedad del asunto cambió por completo la dirección de la conversación. La suspensión por la pelea se detuvo de inmediato y se activó el protocolo de violencia sexual.",
+          "Los agresores al darse cuenta de que su secreto ya no era suyo se preocuparon.",
+        ],
+        pregunta: "¿Estamos dispuestos a indagar qué es lo que realmente provoca que un joven explote? ¿O solo vemos la reacción sin preguntarnos qué la originó?",
+      },
+      bb: {
+        titulo: "Capítulo 3: Una paz prestada",
+        descripcion: [
+          "Por orgullo y terror, {nombre} no dijo nada. Firmó el reporte de mala conducta y se fue a casa suspendido por tres días.",
+          "Sus padres lo regañaron por pelear.",
+          "Durante esos tres días, la paz de no ver a sus agresores se convirtió en un terror al pensar en el regreso. El grupo se sintió intocable: al saber que {nombre} prefería ser castigado antes que delatarlos.",
+        ],
+        pregunta: "Comprar unos días de paz con el silencio tiene un costo altísimo. ¿Qué le pasa a la mente de un joven cuando prefiere cargar con la culpa de otros para poder escapar?",
+      },
+      ca: {
+        titulo: "Capítulo 3: El refugio que siempre estuvo ahí",
+        descripcion: [
+          "Al ver la preocupación genuina en los ojos de su mamá, {nombre} no pudo sostener más la mentira. Llorando en el sofá de su casa, le contó todo lo que vivía en los pasillos de la escuela.",
+          "Sus padres lo abrazaron. Le dijeron que estaba a salvo y que él no tenía la culpa de nada.",
+          "Al día siguiente, no lo enviaron solo. Fueron directamente a presentar una denuncia formal.",
+          "{nombre} descubrió que su hogar era un refugio real.",
+        ],
+        dato: "Un entorno familiar basado en la confianza y el apoyo incondicional es el factor principal para que un adolescente logre verbalizar el trauma y reciba ayuda a tiempo.",
+        sublabelDato: "Dato de Contexto",
+        fuenteDato: "Echeburúa, E., & Guerricaechevarría, C. (2006). Especial consideración de algunos ámbitos de victimación. Cuadernos de Medicina Forense, 12(43–44), 75–82. https://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1135-76062006000100006",
+        pregunta: "No hay monstruo escolar que pueda contra una familia unida. ¿Cómo construimos en casa la confianza suficiente para que nuestros hijos corran hacia nosotros cuando sientan miedo?",
+      },
+      cb: {
+        titulo: "Capítulo 3: El secreto que lo consumió",
+        descripcion: [
+          "{nombre} le dijo a su mamá que se sentía mal del estómago. Se encerró en su cuarto y apagó el celular.",
+          "Las mentiras se acumularon con los días. Fingía ir a la escuela, pero se escondía en parques cercanos. Eventualmente, la escuela llamó a sus padres por las faltas. Reprobó todas las materias.",
+          "El trauma sin atención y el aislamiento lo consumieron por dentro. Y en la escuela, al ver que {nombre} ya no regresaba, el grupo de agresores simplemente buscó a otro alumno tímido para empezar de nuevo.",
+        ],
+        dato: "La deserción escolar es una de las consecuencias más invisibles de la violencia sexual no atendida entre compañeros, truncando el futuro de la víctima mientras los agresores quedan impunes.",
+        sublabelDato: "Dato de Contexto",
+        fuenteDato: "UNESCO. (s.f.). Entornos de aprendizaje seguros: Prevención y tratamiento de la violencia escolar. https://www.unesco.org/es/health-education/safe-learning-environments",
+        pregunta: "Huir protege el cuerpo, pero ¿qué le pasa al alma cuando el secreto se guarda para siempre?",
+      },
+    },
+  },
+},
   hogar: {
     infancia: {
       capitulo1: {
