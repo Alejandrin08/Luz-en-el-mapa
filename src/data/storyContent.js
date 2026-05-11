@@ -285,6 +285,7 @@ export const stories = {
           ],
           dato: "Según UNICEF (2024), las consecuencias del abuso sexual se agravan aún más cuando los niños y niñas retrasan el momento de revelar sus experiencias, a veces durante largos periodos de tiempo. Las supervivientes suelen arrastrar el trauma hasta la edad adulta, con mayor riesgo de enfermedades de transmisión sexual, abuso de sustancias, aislamiento social y trastornos mentales como ansiedad y depresión, además de dificultades para forjar relaciones sanas. ",
           sublabelDato: "Dato de Contexto Nacional",
+          fuenteDato: "UNICEF. (2024, octubre). Más de 370 millones de niñas y mujeres en el mundo han sido sometidas a violaciones o abusos sexuales en la infancia [Comunicado de prensa]. https://www.unicef.org/es/comunicados-prensa/mas-370-millones-ninas-mujeres-mundo-sometidas-violaciones-abusos-sexuales-infancia",
           pregunta: "A veces, la persona que más necesitamos no es un héroe. Es alguien que sabe escuchar y que decide actuar. ¿Cuántos personas esperan que alguien dé ese paso?",
 
         },
@@ -298,6 +299,7 @@ export const stories = {
           ],
           dato: "En un artículo publicado en Tribuna Noticias, Antonio (2026) señala que el miedo, la culpa, la dependencia económica y la manipulación emocional son factores que inhiben la denuncia. Además, menciona que la revictimización institucional, los procesos largos y la falta de personal capacitado también dificultan que las víctimas denuncien.",
           sublabelDato: "Dato de Contexto Nacional",
+          fuenteDato: "Tribuna Noticias. (2026, abril). ¿Por qué no se denuncia el abuso sexual infantil en México? https://tribunanoticias.mx/por-que-no-se-denuncia-el-abuso-sexual-infantil-en-mexico/", 
           pregunta: "No creerle a un niño no es neutralidad: es una decisión. Y esa decisión también tiene consecuencias. ¿Cuántas veces se confunde 'no involucrarse' con 'proteger'?",
 
         },
@@ -313,6 +315,7 @@ export const stories = {
           ],
           dato: "La OMS recomienda específicamente servicios de respuesta y apoyo para detectar los casos a tiempo, y atención continua a los niños maltratados y a sus familias para evitar que el maltrato se reproduzca y para paliar sus consecuencias. ",
           sublabelDato: "Dato de Contexto Nacional",
+          fuenteDato: "Organización Mundial de la Salud. (2022). Maltrato infantil [Nota descriptiva]. https://www.who.int/es/news-room/fact-sheets/detail/child-maltreatment",
           pregunta: "Hablar es difícil. Pero el silencio tiene un costo que no siempre se ve desde afuera. A veces la valentía no se parece a lo que imaginamos: a veces es solo encontrar las palabras y decirlas en voz baja.",
 
         },
@@ -327,6 +330,8 @@ export const stories = {
           ],
           dato: "La OMS recomienda específicamente servicios de respuesta y apoyo para detectar los casos a tiempo, y atención continua a los niños maltratados y a sus familias para evitar que el maltrato se reproduzca y para paliar sus consecuencias. ",
           sublabelDato: "Dato de Contexto Nacional",
+          fuenteDato: "Organización Mundial de la Salud. (2022). Maltrato infantil [Nota descriptiva]. https://www.who.int/es/news-room/fact-sheets/detail/child-maltreatment",
+         
           pregunta: "A veces los niños no pueden pedir ayuda porque nadie les enseñó cómo. Pero los adultos alrededor sí pueden aprender a ver. ¿Estamos mirando con suficiente atención?",
 
         },
@@ -340,8 +345,9 @@ export const stories = {
             "Meses después, {nombre} vuelve a correr en el recreo. Vuelve a hacer preguntas en clase. Y cuando suena el timbre de salida, ya no busca razones para quedarse.",
 
           ],
-          dato: "UNICEF también destaca que la atención temprana debe incluir escucha, protección, atención médica, apoyo psicológico y denuncia, ya que una intervención adecuada puede disminuir el impacto emocional y prevenir nuevas agresiones.",
+          dato: "UNICEF destaca que la atención temprana debe incluir escucha, protección, atención médica, apoyo psicológico y denuncia, ya que una intervención adecuada puede disminuir el impacto emocional y prevenir nuevas agresiones.",
           sublabelDato: "Dato de Contexto Nacional",
+          fuenteDato: "UNICEF México. (s.f.). Violencia sexual contra la infancia. https://www.unicef.org/mexico/violencia-sexual-contra-la-infancia",
           pregunta: "No hace falta ser el adulto perfecto para hacer lo correcto. A veces basta con escuchar a un niño, creerle, y no quedarse quieto. ¿Qué pasaría si todos actuáramos así?",
 
         },
@@ -365,86 +371,78 @@ export const stories = {
 
     adolescencia: {
       capitulo1: {
-        titulo: "Capítulo 1:  DOLESCENCIA Lo que nadie quiere ver",
+        titulo: "Capítulo 1: Un día común que se siente diferente",
         descripcion: [
-          "{nombre} últimamente, cuando suena el timbre de salida en la escuela, algo en él se resiste. Se queda haciendo preguntas que no necesita preguntar, borrando el pizarrón sin que nadie se lo pida, acomodando su mochila despacio. Sus maestros piensan que es curioso o responsable. {nombre} sabe que solo está demorando lo inevitable: llegar a casa.",
-          "No podría explicar por qué. Su casa se supone que es un lugar seguro. Y sin embargo, algo ahí lo incomoda de una manera que no sabe nombrar.",
-          "Esa noche, mientras cena, la televisión muestra una nota sobre delitos cometidos contra niños y adolescentes en el país.",
+          "{nombre} suele ser una persona muy ocupada: por la mañana va a clases, después regresa a casa a comer, y debe salir corriendo a su clase de natación. El resto del día lo ocupa para tareas y demás pendientes del hogar. Sin embargo, {nombre} no se caracteriza por ser muy organizado/a tiende a dejar cosas tiradas, mal acomodadas o sucias fuera de su lugar. No lo ve como un gran problema; tiene muchas cosas que hacer y simplemente no le alcanza el tiempo. ",
+          "Sin embargo, en los últimos días, alguien en su casa ha estado ayudándole con todo lo que suele dejar mal puesto, evitándole regaños y peleas. Además, esa persona ha estado dándole masajes cuando {nombre} regresa de natación.",
+          "Al principio le gustó, era relajante y poco frecuente. Solo que con el tiempo, {nombre} empezó a notar que los masajes se volvían más recurrentes e 'intensos'. Poco a poco fue sintiendo cada vez más incomodidad.",
 
           { tipo: "dato", delito: ["Abuso sexual", "Hostigamiento sexual"], sublabel: "Dato de Contexto" },
 
-          "{nombre} no dice nada. Pero esa noche tarda mucho en dormirse."
+          "La información que leyó, hizo que se cuestionará su situación. "
         ],
 
         pregunta: "¿Qué debería hacer {nombre}?",
         opciones: [
-          { id: "a", titulo: "Pedir ayuda a un profesor para investigar más", desc: "Busca a su maestro favorito para entender lo que vio en las noticias." },
-          { id: "b", titulo: "Seguir guardando silencio", desc: "Decide no decir nada y seguir cargando con lo que siente." },
-          { id: "c", titulo: "Hablar con su mejor amigo", desc: "Le dice a su amigo que no quiere ir a casa. Su amigo lo invita a la suya." },
+          { id: "a", titulo: "Pedir consejo a su mejor amigo", desc: "Quizás una perspectiva externa le ayude a identificar si algo está mal." },
+          { id: "b", titulo: "Ignorar el hecho, y tratar de llegar más tarde", desc: "Si llega tarde, ya no habrá masajes y no tendrá que estar rechazándolos constantemente. " },
+          { id: "c", titulo: "Decirle a su familiar que se detenga: ", desc: "Ir directo al grano, al final de cuentas son familia, no pasa nada." },
         ],
       },
 
       capitulo2: {
         a: {
-          titulo: "Capítulo 2: DOLESCENCIAPedir ayuda a un profesor para investigar más",
+          titulo: "Capítulo 2: Pedir consejo a su mejor amigo",
           descripcion: [
-            "Al día siguiente, {nombre} busca a su maestro/a favorito/a. No sabe bien cómo empezar, así que pregunta por lo más fácil: si lo que vio en la televisión es verdad.",
-            "El maestro/a lo invita a sentarse. Le dice que sí, que desafortunadamente es real, y que hay cosas importantes que los niños deben saber para protegerse. Le explica con calma:",
-            "El abuso sexual es cualquier contacto o comportamiento sexual hacia una persona sin su consentimiento. Cuando la víctima es un menor, el agresor casi siempre es alguien cercano: un familiar, un conocido, alguien de confianza. ",
-
+            "{nombre} busca a su amigo Toño y le platica cómo han sido los últimos días al llegar a casa. Le dice que ya no tiene ganas de estar ahí si sabe que ese familiar se encuentra presente.",
+            "Toño siente que la situación suena extraña, así que deciden investigar juntos sobre delitos sexuales. En internet encuentran información sobre hostigamiento y abuso sexual.",
             { tipo: "dato", delito: ["Abuso sexual"], sublabel: "Dato de Contexto" },
-
-            "El hostigamiento sexual incluye comentarios, gestos, roces o conductas de naturaleza sexual que generan incomodidad o miedo. No necesita ser violento para ser un delito. ",
 
             { tipo: "dato", delito: ["Hostigamiento sexual"], sublabel: "Dato de Contexto" },
 
-            "{nombre} escucha. El maestro/a habla con calma, sin alarmarlo. Y algo en esa conversación hace que {nombre} sienta, por primera vez, que lo que le pasa en casa podría tener nombre.",
-            "Se queda callado un momento. Luego dice, despacio, que en su casa lo acarician de una manera que se siente rara. Que pensó que era una nueva forma de mostrarle cariño. Pero que algo no se siente bien.",
-            "El maestro/a lo escucha sin interrumpirlo."
-
-
+            "Toño y {nombre} se dan cuenta de que lo que está viviendo {nombre} podría encajar en algo parecido. Aun así, los dos dudan, se trata de un familiar, quizás sea solo un comportamiento peculiar, sin ninguna intención mala. {nombre} se convence de que es algo normal y que con el tiempo pasará.",
+            " Toño no piensa igual.",
           ],
-          dato: "Cponer cosas sobre las personas que buscan ayuda",
-          sublabelDato: "Dato de Contexto Nacional",
 
-          pregunta: "¿Qué debería hacer el maestro?",
+          pregunta: "¿Qué debería hacer Toño?",
           opciones: [
-            { id: "a", titulo: "Buscar ayuda", desc: "Activa el protocolo escolar y busca apoyo con las autoridades correspondientes." },
-            { id: "b", titulo: "Decidir ignorarlo", desc: "Prefiere no involucrarse, pensando que quizás es solo la imaginación del niño." },
+            { id: "a", titulo: "Buscar un adulto de confianza para consultarlo", desc: "Que alguien con más experiencia les ayude a identificar si lo que vive su amigo realmente puede considerarse un delito." },
+            { id: "b", titulo: "Olvidar la conversación", desc: "Parece una situación extraña, pero no es su asunto cada quien resuelve sus cosas." },
           ],
         },
         b: {
-          titulo: "Capítulo 2:DOLESCENCIA Permanecer callado",
+          titulo: "Capítulo 2:Ignorar el hecho y tratar de llegar más tarde",
           descripcion: [
-            "{nombre} no le dice nada a nadie. Los días pasan y él los deja pasar. Sus amigos notan que algo está diferente: ya no quiere jugar en el recreo, contesta con monosílabos, a veces se queda mirando la nada. Le dicen que si le duele algo. {nombre} dice que no. Le dicen que si está enojado. {nombre} dice que tampoco.",
-            "Sus amigos, sin saber exactamente qué hacer, le comentan a un maestro que {nombre} 'se ve raro'.",
-            "El maestro se acerca a {nombre} con cuidado. Le habla sobre la importancia de expresar lo que uno siente. Le cuenta que hay situaciones en la vida que pesan tanto que la gente tarda años en hablar de ellas. Que existen delitos como la violación y el incesto que sus víctimas carga solas durante mucho tiempo, convencidas de que nadie las va a creer. ",
-            { tipo: "dato", texto: " en [ESTADO] datos sobre ese tipo de delito en el estado", sublabel: "Dato de Contexto Nacional" },
+            "Wendy, la maestra de natación de {nombre}, empieza a notar que {nombre} se queda cada vez más tarde en la unidad deportiva y que su estado de ánimo ha cambiado: pasó de ser una persona alegre a llegar sin ánimos. Decide preguntarle directamente si todo está bien. Al hacerlo, le toca el hombro para que la conversación se sienta más cercana pero {nombre} reacciona alejándose, y no logran hablar.",
+            "Pasan los días. Wendy vuelve a intentarlo, pero esta vez no pregunta directamente. En cambio, le habla sobre situaciones que lamentablemente algunos adolescentes viven, y menciona delitos como la corrupción, retención o sustracción de menores.",
+            
+            { tipo: "dato", delito: ["Corrupción de menores", "Retención o sustracción de menores e incapaces"], sublabel: "Dato de Contexto Nacional" },
+
+            "{nombre} siente incomodidad al escuchar esa información, pero también impotencia por no saber qué hacer. Aunque Wendy le parece una buena persona, {nombre} siente que hablar significaría admitir algo que le da vergüenza y miedo.",
+            
           ],
-          dato: "Cponer cosas sobre las personas que guardan silencio",
+          dato: "poner algo sobre el miedo, la vergüenza y la culpa que sienten las víctimas de delitos sexuales, y cómo eso afecta su disposición a hablar.",
           sublabelDato: "Dato de Contexto Nacional",
-          pregunta: "¿Cómo debería reaccionar {nombre}?",
+          pregunta: "¿Cómo debería hacer {nombre}?",
           opciones: [
-            { id: "a", titulo: "{nombre} decide hablar con el maestro", desc: "Se anima a contarle al maestro lo que ha estado viviendo en casa." },
-            { id: "b", titulo: "{nombre} decide seguir callado", desc: "No tiene energía para hablar. Asiente con la cabeza y sigue igual" },
+            { id: "a", titulo: "Confiar en su maestra", desc: "Hablar sobre lo que ha estado pasando en casa." },
+            { id: "b", titulo: " Seguir guardando silencio", desc: "Si se evita, en algún punto todo se va a solucionar solo." },
           ],
         },
         c: {
-          titulo: "Capítulo 2:DOLESCENCIA Habla con su mejor amigo",
+          titulo: "Capítulo 2:Decirle al familiar que se detenga",
           descripcion: [
-            "{nombre} no sabe cómo hablar con un adulto. Pero sí sabe hablar con su mejor amigo. Le dice que no quiere irse a su casa.",
-            "Su amigo, sin preguntar demasiado, lo invita a la suya. La mamá les hace de comer. Hacen la tarea en la misma mesa. Juegan en el patio hasta que oscurece. Es una tarde ordinaria y perfecta, el tipo de tarde que {nombre} había olvidado que existía.",
-            "Al final del día, mientras recogen los juguetes, {nombre} le cuenta a su amigo sobre las cosas que pasan en su casa. No sabe bien cómo llamarlas. Solo sabe que se sienten raras.",
-            "Su amigo lo escucha. Y aunque es solo un niño, algo en él reconoce que eso no suena normal. Esa noche, le cuenta a sus papás.",
-            "Sus papás se quedan en silencio. Escuchar que algo así puede estarle pasando a alguien cercano es diferente a verlo en las noticias. El papá decide investigar sobre la  Corrupción de menores y Retención o sustracción ",
+            "{nombre} habla con su familiar. Este le hace caso y se disculpa. Todo parece ir bien por un par de días... pero después el familiar empieza a dar regalos sin motivo aparente, y a reclamar que le ha estado ayudando a recoger su desorden. Poco a poco, vuelven las ofertas de masajes. Como {nombre} no quiere otro conflicto y siente que los regalos crean una deuda, termina aceptando de nuevo.",
+            "{nombre} se siente fatal. Siente culpa, confusión y vergüenza: ¿cómo va a hablar mal de alguien a quien su familia respeta? Decide buscar en internet esos comportamientos que su familiar tiene hacia él/ella.",
+            "Encuentra mucha información alarmante.",
+            { tipo: "dato", delito: ["Violación"], sublabel: "Dato de Contexto Nacional" },
+            { tipo: "dato", delito: ["Incesto"], sublabel: "Dato de Contexto Nacional" },
 
           ],
-          dato: "Caddato sobre eso.",
-          sublabelDato: "Dato de Contexto Nacional",
-          pregunta: "¿Cómo deberían actuar los papas del amigo de {nombre}?",
+          pregunta: "¿Qué debería hacer {nombre} con lo que acaba de encontrar?",
           opciones: [
-            { id: "a", titulo: "Deciden tomar acción", desc: "Buscan orientación y hacen lo posible por ayudar, aunque no sepan bien cómo." },
-            { id: "b", titulo: "Fingir que no saben nada", desc: "Le dicen a su hijo que se aleje. No es su problema y no quieren complicaciones." },
+            { id: "a", titulo: "Buscar ayuda fuera de casa", desc: "Acercarse a algún maestro o servicio de orientación que le ayude." },
+            { id: "b", titulo: "Confiar en que su familiar dijo que no va a volver a pasar", desc: "Quizás esta vez sí cumpla su palabra." },
           ],
         },
       },
@@ -452,93 +450,87 @@ export const stories = {
       capitulo3: {
         // flujos de cap2.a
         aa: {
-          titulo: "Capítulo 3: EDOLESCENCIAl maestro/a decide buscar ayuda",
+          titulo: "Capítulo 3: Buscar un adulto de confianza para consultarlo",
           descripcion: [
-            "El maestro/a sabe que lo que {nombre} acaba de decir no puede quedarse en esa conversación. No es fácil. Hay que hablar con el director, con trabajo social, con la familia. Hay momentos incómodos y preguntas difíciles. {nombre} tiene que repetir cosas que le cuesta decir.",
-            "Pero también hay momentos distintos: una trabajadora social que lo escucha sin juzgarlo, una psicóloga que le dice que lo que siente tiene sentido, y el lento, gradual alivio de no cargar algo tan pesado solo.",
-            "Semanas después, {nombre} sigue llegando tarde a casa. Pero ya no por miedo: ahora porque de verdad le gusta quedarse a platicar con su maestro/a.",
+            "Toño decide no quedarse callado. Habla con un adulto de confianza (un maestro de su escuela) y le describe la situación de {nombre}. El adulto los escucha con seriedad y le explica que los límites del cuerpo no dependen de quien los cruce, y que incomodidad persistente nunca debe ignorarse. ",
+            "Juntos encuentran la forma de apoyar a {nombre} para dar el siguiente paso. El maestro se acerca a {nombre} y le dice que ha estado pensando en lo que le contó su amigo, y que aunque no es fácil de hablar, él está ahí para escucharlo si alguna vez quiere contarle más. {nombre} se queda callado, pero algo en esa invitación hace que se sienta un poco más seguro.",
+            
 
           ],
-          dato: "En México,datoooo 3 a 7 años. Solo el 1% termina en condena.",
+          dato: "UNICEF señala que es necesario cuestionar y cambiar las normas sociales y culturales que permiten que ocurra la violencia sexual y que disuaden a los niños y niñas de pedir ayuda. Solo una parte de los niños que son víctimas de maltrato cuenta alguna vez lo que les ha ocurrido, y muy pocos reciben el apoyo que necesitan.",
           sublabelDato: "Dato de Contexto Nacional",
-          pregunta: "A veces, la persona que más necesitamos no es un héroe. Es alguien que sabe escuchar y que decide actuar. ¿Cuántos personas esperan que alguien dé ese paso?",
+          fuenteDato: "UNICEF. (2024, 29 de noviembre). Más de 370 millones de niñas y mujeres en todo el mundo se ven sometidas a violaciones y abusos sexuales en la infancia. https://www.unicef.org/argentina/comunicados-prensa/370-millones-ninas-mujeres-violencia. Organización Mundial de la Salud & UNICEF. (2022). Directrices de la OMS sobre intervenciones parentales para prevenir el maltrato infantil. National Center for Biotechnology Information. https://www.ncbi.nlm.nih.gov/books/NBK601635/",
+          pregunta: "A veces la valentía no es enfrentar algo solo, sino saber a quién pedir ayuda. Un amigo que actúa puede cambiar una historia completa.",
 
         },
         ab: {
-          titulo: "Capítulo 3: DOLESCENCIADOLESCENCIAEl maestro/a decide ignorarlo",
+          titulo: "Capítulo 3: Olvidar la conversación",
           descripcion: [
-            "El maestro/a escucha a {nombre}. Pero lo que el niño describe suena vago, confuso. ¿Acaso no podría ser solo la imaginación de un niño sensible? Decide no involucrarse: no es su responsabilidad, no quiere malinterpretar, no quiere causar un problema donde quizás no lo hay.",
-            "{nombre} nota el cambio en la mirada del maestro/a. Entiende que habló de más. Guarda todo de nuevo.",
-            "Las semanas siguientes, el maestro/a observa que {nombre} está cada vez más apático. Menos participativo. Llega tarde, se va rápido, no ríe. Algo en él empieza a dudar: ¿y si sí era verdad? Pero aceptar eso significaría aceptar que tuvo la oportunidad de actuar y no lo hizo.",
-            "Cuando finalmente se atreve a acercarse a {nombre} de nuevo, el niño lo mira un segundo y baja la vista. Ya no confía.",
-          ],
-          dato: "Las familias acompañadas por organizaciones civiles especializadas tienen 3 vece algooooos más probabilidades de sostener una denuncia hasta su resolución.",
+            "Toño decide no intervenir. Los días pasan, {nombre} sigue llegando tarde a casa tratando de evitar la situación, y la incomodidad crece sin que nadie más lo sepa. Sin un apoyo externo, {nombre} carga solo/a con algo que no debería cargar nadie en silencio",
+            "Toño se siente mal por no haber hecho nada, pero también se convence de que no era su asunto. A veces, piensa, la gente tiene problemas y no es necesario involucrarse. Además, él también tiene sus propios problemas y responsabilidades.",
+            ],
+          dato: "De acuerdo con una publicación de Milenio (2021), en México se registran aproximadamente 5.4 millones de casos de abuso sexual infantil al año, de los cuales más del 98% no son denunciados, es decir, al menos 9 de cada 10 casos permanecen en silencio.",
           sublabelDato: "Dato de Contexto Nacional",
-          pregunta: "No creerle a un niño no es neutralidad: es una decisión. Y esa decisión también tiene consecuencias. ¿Cuántas veces se confunde 'no involucrarse' con 'proteger'?",
+          fuenteDato: "Milenio. (2021, 24 de noviembre). Abuso sexual infantil en México: incidencia y denuncias. https://www.milenio.com/policia/abuso-sexual-infantil-mexico-incidencia-denuncias",
+          pregunta: "Quedarse callado frente al malestar de alguien que queremos no es respetar su privacidad, es dejarlo/a solo/a. A veces la amistad más importante es la que se atreve a preguntar una vez más.",
 
         },
         // flujos de cap2.b
         ba: {
-          titulo: "Capítulo 3: DOLESCENCIAHablar cambia el rumbo",
+          titulo: "Capítulo 3: Confiar en su maestra",
           descripcion: [
-            "{nombre} escucha al maestro. Respira. Y empieza a contar, despacio, sin saber bien si las palabras van a salir bien formadas",
-            "No salen perfectas. Pero salen.",
-            "El maestro lo escucha hasta el final. Luego le dice que hizo algo muy valiente. Que a partir de ese momento, no está solo.",
-            "Lo que sigue no es sencillo: hay adultos involucrados, conversaciones incómodas, noches difíciles. Pero también hay un proceso que empieza a moverse. Y {nombre}, lentamente, empieza a entender que lo que le pasaba no era normal, y que él no tuvo la culpa.",
-
+            "{nombre} decide quedarse un momento más después del entrenamiento y, poco a poco, le cuenta a Wendy lo que ha vivido. Wendy la/lo escucha sin interrumpir, sin juzgar. Le explica que lo que describe tiene un nombre, que no es su culpa, y que hay personas capacitadas para ayudar.",
+            "{nombre} siente un alivio enorme al poder hablar de algo que ha estado guardando por tanto tiempo. Siente que por primera vez alguien lo entiende",
+            "Wendy le dice que lo que sigue no es fácil, pero que él no está solo. Le ofrece acompañarlo a hablar con un orientador escolar, y le asegura que lo va a apoyar en cada paso del proceso.",
           ],
-          dato: "Solo el 22% de las denuncias ante supervisiDATOOOO tigación formal ante la Secretaría de Educación.",
+          dato: "De acuerdo con una publicación de Milenio (2021), en México el 75% de los casos el agresor era una persona conocida por la niña y de confianza para sus padres. El 70% de los casos ocurrió en el hogar.",
           sublabelDato: "Dato de Contexto Nacional",
-          pregunta: "Hablar es difícil. Pero el silencio tiene un costo que no siempre se ve desde afuera. A veces la valentía no se parece a lo que imaginamos: a veces es solo encontrar las palabras y decirlas en voz baja.",
+          fuenteDato: "Milenio. (2021, 24 de noviembre). Abuso sexual infantil en México: incidencia y denuncias. https://www.milenio.com/policia/abuso-sexual-infantil-mexico-incidencia-denuncias",
+          pregunta: "Hablar de algo que duele o da miedo es uno de los actos más valientes que existen. Y la persona correcta, en el momento correcto, puede convertirse en el ancla que necesita alguien. ",
 
         },
         bb: {
-          titulo: "Capítulo 3: DOLESCENCIA Seguir callado hasta que alguien actue ",
+          titulo: "Capítulo 3: Seguir guardando silencio",
           descripcion: [
-            "{nombre} ni siquiera escucha del todo lo que el maestro le dice. Está demasiado cansado. Hablar requeriría un esfuerzo que no tiene. Asiente con la cabeza para que lo dejen en paz, y sigue igual.",
-            "Pero los maestros no lo dejan en paz. En silencio y sin que {nombre} lo sepa, empiezan a documentar lo que observan: su apatía, sus llegadas tarde, su desconexión. La escuela activa un protocolo de atención a alumnos en situación de riesgo.",
-            "Una trabajadora social empieza a visitarlo con regularidad. No le hace preguntas directas. Solo habla con él. Le pregunta cómo estuvo su día. Qué comió. Si le gusta el fútbol.",
-            "Semanas después, en una de esas conversaciones ordinarias, {nombre} dice algo que no planeaba decir. Algo pequeño, casi de pasada. Pero suficiente.",
-            "La trabajadora social anota. Y el proceso empieza.",
+            "{nombre} sigue callado/a. Los días en la unidad deportiva se alargan, pero el problema en casa no desaparece. La situación sigue, y {nombre} carga cada vez con más peso emocional sin tener a nadie que lo sostenga.",
+            "Pero Wendy seguía al tanto. {nombre} no cooperaba , pero aun así Wendy busco ayuda con la dirección de la unidad deportiva y con la escuela. ",
+            "Tardo un poco pero {nombre} finalmente acepta la ayuda.",
+           
           ],
-          dato: "En México, solo 1 de cada 5 niñas y niDATOOO izada tras el evento.",
+          dato: "Según datos de la Red por los Derechos de la Infancia en México (REDIM) y proyecciones del INEGI para 2025, una víctima de abuso sexual infantil tarda en promedio entre 15 y 22 años en hablar por primera vez del suceso.",
           sublabelDato: "Dato de Contexto Nacional",
-          pregunta: "A veces los niños no pueden pedir ayuda porque nadie les enseñó cómo. Pero los adultos alrededor sí pueden aprender a ver. ¿Estamos mirando con suficiente atención?",
+          fuenteDato: "Yo Influyo. (2026, 11 de marzo). Las víctimas de abuso infantil pueden denunciar siempre. https://www.yoinfluyo.com/mexico/analisis-social/las-victimas-de-abuso-infantil-pueden-denunciar-siempre/",
+          pregunta: "El silencio puede sentirse como protección, pero con el tiempo se convierte en una trampa. Las situaciones que dañan raramente se resuelven solas, necesitan ser nombradas.",
 
         },
         // flujos de cap2.c
         ca: {
-          titulo: "Capítulo 3: DOLESCENCIA Los papás del amigo deciden actuar",
+          titulo: "Capítulo 3:  Buscar ayuda fuera de casa",
           descripcion: [
-            "Los papás del amigo no son expertos. No saben exactamente qué pasos seguir. Pero saben que no pueden quedarse sin hacer nada.",
-            "Buscan orientación: llaman al DIF, a una línea de apoyo, preguntan en la escuela. El proceso es más lento y burocrático de lo que esperaban, pero no se detienen.",
-            "{nombre}, que nunca imaginó que alguien más iba a luchar por él, ve cómo adultos que ni siquiera son su familia mueven cielo y tierra para que esté bien.",
-            "Meses después, {nombre} vuelve a correr en el recreo. Vuelve a hacer preguntas en clase. Y cuando suena el timbre de salida, ya no busca razones para quedarse.",
-
+            "{nombre} imprime o guarda lo que encontró y decide acercarse a alguien fuera del núcleo familiar: el orientador de la escuela. Esa persona le ayuda a entender que los regalos no crean deudas del cuerpo, que el vínculo familiar no justifica ningún tipo de abuso, y que pedir ayuda no es traicionar a nadie.",
+            " Juntos buscan ayuda profesional. El proceso no es fácil, hay momentos de incertidumbre, de miedo, de frustración.  {nombre} empieza a entender que lo que le pasó no es su culpa, y que merece estar bien.",
           ],
-          dato: "En el 60% de los casos de abus DAOTOO",
+          dato: "Según UNICEF, los niños, niñas y adolescentes víctimas de abuso sexual con frecuencia callan por miedo, culpa, impotencia, desvalimiento o vergüenza. En el 80% de los casos los agresores son miembros de la familia o entorno cercano.",
           sublabelDato: "Dato de Contexto Nacional",
-          pregunta: "No hace falta ser el adulto perfecto para hacer lo correcto. A veces basta con escuchar a un niño, creerle, y no quedarse quieto. ¿Qué pasaría si todos actuáramos así?",
+          fuenteDato: "UNICEF Argentina. (2016). Abuso sexual infantil: Hablar es empezar a prevenir. Serie Las Violencias, N°5. https://www.unicef.org/argentina/media/1156/file/SerieLasViolencias5.pdf",
+          pregunta: "Nadie merece sentir que su cuerpo es un pago. Buscar ayuda es proteger a la persona más importante en ella: tú.",
 
         },
         cb: {
-          titulo: "Capítulo 3: DOLESCENCIA Ignorar es el camino más fácil",
+          titulo: "Capítulo 3:  Confiar en que su familiar dijo que no va a volver a pasar",
           descripcion: [
-            "Los papás del amigo están asustados. Lo que escucharon es demasiado grande, demasiado complicado. Deciden que no es su problema involucrarse: bastante tienen con cuidar a su propio hijo. Le dicen que ya no juegue con {nombre}. Que se meta en lo suyo.",
-            "El amigo obedece, aunque no entiende del todo por qué.",
-            "{nombre} nota que su amigo lo evita. No sabe qué hizo mal. El silencio que ya cargaba se vuelve más pesado.",
-            "Las semanas siguientes, {nombre} se aisla más. Come solo. No responde en clase. Pero hay algo que los papás del amigo no calcularon: que la escuela también observa. Y que los protocolos existen precisamente para los casos en que los adultos cercanos fallan.",
-            "Eventualmente, la red escolar llega hasta {nombre}. Tarde, con más cicatrices de las necesarias. Pero llega.",
+            "{nombre} decide creerle una vez más. Guarda la información que encontró y espera. Los regalos siguen llegando, la presión también. Sin un apoyo externo, {nombre} queda atrapado/a en un ciclo donde los límites se borran cada vez más.",
+            "Los dias pasan, la cantidad de mentiras aumentan, no solo las que le dice su familiar, sino también las que se dice a sí mismo/a para justificar lo que está viviendo. Siente que no tiene otra opción que seguir aceptando, aunque cada vez se sienta peor.",
+            "Quizás algun día alguien lo ayude o quizás no, {nombre} se queda esperando.",
           ],
-          dato: "La sobre cuaanas veces llega tarde la ayuda ",
+          dato: "De acuerdo con REDIM (2025), alrededor de 4 de cada 5 casos de violencia sexual atendidos en México corresponden a personas de entre 12 y 17 años, y el 92.8% de las víctimas son mujeres. ",
           sublabelDato: "Dato de Contexto Nacional",
-          pregunta: "Alejarse de un niño que pide ayuda no es proteger a los propios: es abandonar a alguien que ya estaba solo. Los datos nos dicen que esto pasa más de lo que queremos creer. ¿Qué tipo de comunidad queremos ser?",
+          fuenteDato: "REDIM. (2025, 14 de agosto). Violencia sexual contra la niñez y la adolescencia en México (2010-2024). Blog de Datos e Incidencia Política de REDIM. https://blog.derechosinfancia.org.mx/2025/08/14/violencia-sexual-contra-la-ninez-y-la-adolescencia-en-mexico-2010-2024/",
+          pregunta: "Había personas alrededor que notaron que algo no estaba bien, y no dijeron nada. El abuso no solo ocurre por quienes lo cometen, también por quienes voltean la vista. Los datos muestran que la mayoría de los casos ocurren en el entorno cercano. ¿Cuántos de esos casos pudieron haberse detenido con una sola conversación?",
 
         },
       },
     }
-
-
   },
 
 };

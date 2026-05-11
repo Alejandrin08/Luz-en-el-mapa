@@ -68,6 +68,12 @@ export default function HistoriaTres() {
               <p className="mt-1 text-xs text-foreground/80 leading-relaxed">
                 {data.dato}
               </p>
+
+              {data?.fuenteDato && (
+                <p className="mt-2 text-[10px] text-foreground/40 leading-relaxed">
+                  {data.fuenteDato}
+                </p>
+              )}
             </div>
           </div>
         )}
