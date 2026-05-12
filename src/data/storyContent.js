@@ -687,8 +687,124 @@ export const stories = {
         },
       }
     },
+    adolescencia: {
+      capitulo1: {
+        titulo: "¿Ya oyeron lo de…?",
+        descripcion:[
+          "Sofía, Valeria, Miranda y Mar. Tienen dieciséis años y llevan juntas desde la secundaria. Hay una serie puesta en la tele que nadie está viendo porque todas están en su celular.",
+          "Miranda les pregunta a sus amigas: “¿Ya oyeron lo de {nombre}?”",
+          "Valeria bajó su celular y Mar también.",
+          "Miranda dijo que saliendo de la fiesta del sábado pasado, una persona había seguido a {nombre} como a tres cuadras. Que le decía cosas, que le bloqueó el paso dos veces y que la tocó. Alguien la vio y lo contó todo al grupo del salón de la prepa.",
+          "Sofía siguió mirando su teléfono. Pero ya no estaba leyendo nada.",
+          "Valeria abrió el grupo de la prepa. Ya había cuarenta y dos mensajes. Alguien preguntaba dónde había sido exactamente. Alguien más decía que {nombre} iba sola a esa hora y que qué podría esperar con eso. ",
+          "Sofía dejó el teléfono sobre su rodilla. Miró al techo un momento. Y dijo: “No fue solo eso”",
+          "Las tres levantaron la vista al mismo tiempo.",
+          "Sofía llevaba cuatro días sabiendo lo de {nombre}, pues ella le había llamado esa misma noche llorando. Le dijo que el tipo no solo la siguió. Que en un momento en que no había nadie en la calle la jaló hacia un callejón. Que le tapó la boca. No terminó de contarlo todo esa noche, no era necesario.",
+          "Le pidió a Sofía que no dijera nada pues tenía miedo de que no le creyeran. Que si lo contaba, empezarían a decir que ella había buscado a esa persona, que ya era muy tarde paa estar en la calle. Sofía había visto ya lo que estaban diciendo en el grupo. {nombre} tenía razón en no tener que contar nada.",
+          "Valeria no dijo nada, Mar tampoco y Miranda miraba sus manos.  Sofía le había dicho a {nombre} que le creía, que no fue su culpa. Pero también le había dicho que eso no podía quedarse así. {nombre} se había enojado y  desde el domingo no le hablaba.",
+          "Sofía lleva cuatro días cargando el secreto de su amiga. El grupo acaba de enterarse."
+        ],
+        pregunta: "¿Qué debería hacer?",
+        opciones: [
+          {id: "a", titulo: "Respetar lo que pidió", desc: "Si no quiere que se sepa, hay que callarse."},
+          {id: "b", titulo: "Buscar la forma de acompañar.", desc:"Buscar la forma de acompañar a {nombre} sin traicionarla, aunque sea difícil."}
+        ],
+      },
+      capitulo2:{
+        a:{
+          titulo: "Respetar lo que pidió",
+          descripcion:[
+            "Mar fue la primera en decir: “si {nombre} no quería decir nada, esa era su decisión. Nadie podía obligarla.” Y tenían razón, nadie puede.",
+            "Pero hay una diferencia entre respetar los tiempos de alguien y desaparecer. Pues solo la deja más sola con algo que ya pesa demasiado. Y la persona que la agredió sigue en la calle sin que nadie sepa quién es.",
+            "Sofía lo entendió mientras Mar hablaba. Respetar a {nombre} no significaba desaparecer. Significaba quedarse, aunque {nombre} estuviera enojada.",
+            "Miranda había seguido leyendo el grupo de la prepa. Encontró un mensaje de alguien que decía conocer a una chica de otra escuela a quien le había pasado algo parecido el año anterior en la misma zona.",
+            "Si era cierto, esa persona no había aparecido el sábado por primera vez. Llevaba tiempo. Y nadie lo había detenido porque nadie había hablado.",
+            "“¿Y si le está pasando a alguien más ahorita?”, preguntó Valeria.",
+            "Saben que esa persona ya lo hizo antes. Que puede volver a hacerlo. {nombre} sigue sin querer denunciar." 
+          ],
+          pregunta: "¿Qué hace el grupo?",
+          opciones: [
+            {id: "a", titulo: "Esperar a que decida.", desc: "Esperar a que {nombre} decida. No es decisión de ellas."},
+            {id: "a", titulo: "Buscar orientación.", desc: "Buscar orientación con un adulto de confianza para saber cómo ayudarla sin exponerla."}
+          ],
+        },
+        b:{
+          titulo: "Buscar la forma de acompañar.",
+          descripcion:[
+            "Valeria preguntó cómo, si {nombre} estaba enojada y no quería hablar. Era la pregunta correcta. Acompañar no es lo mismo que presionar. Lo que podía hacer el grupo no era decidir por ella. Era no dejarla cargar esto sola mientras ella decidía.",
+            "Sofía asintió despacio. No le iba a contar a nadie sin permiso de {nombre}. Pero tampoco iba a dejarla sola.",
+            "Miranda había seguido leyendo el grupo de la prepa. Encontró un mensaje de alguien que decía conocer a una chica de otra escuela a quien le había pasado algo parecido el año anterior en la misma zona.",
+            "Si era cierto, esa persona no había aparecido el sábado por primera vez. Llevaba tiempo. Y nadie lo había detenido porque nadie había hablado.",
+            "“¿Y si le está pasando a alguien más ahorita?”, preguntó Valeria.",
+            "Saben que esa persona ya lo hizo antes. Que puede volver a hacerlo. {nombre} sigue sin querer denunciar." 
+          ],
+          pregunta: "¿Qué hace el grupo?",
+          opciones: [
+            {id: "a", titulo: "Esperar a que decida.", desc: "Esperar a que {nombre} decida. No es decisión de ellas."},
+            {id: "b", titulo: "Buscar orientación.", desc: "Buscar orientación con un adulto de confianza para saber cómo ayudarla sin exponerla."}
+          ],
+        }
+      },
+      capitulo3:{
+        aa:{
+          titulo: "Esperar a que decida.",
+          descripcion:[
+            "Era una posición comprensible, nadie quería “traicionar” a {nombre}",
+            "Sofía dijo en voz alta: “no podía hacer que {nombre} denunciara”. Pero sí podía hablar con alguien que supiera cómo ayudarla. Solo para saber qué hacer.",
+            "Sofía llamó al día siguiente con un profesor de confianza. No dijo el nombre de {nombre}. Solo preguntó qué hace alguien cuando su amiga vivió algo así y todavía no quiere hablar.",
+            "Le explicó tres cosas: que no estaba obligada a decidir por {nombre}, que podía seguir acompañándola sin presionarla, y que cuando {nombre} estuviera lista habría personas preparadas para recibirla sin juzgarla.",
+            "Sofía le mandó esa información a {nombre} por mensaje, números para recibir apoyo y un texto de amistad “cuando quieras, estoy aquí para apoyarte en lo que necesites”.",
+            "{nombre} no respondió ese día. Ni el siguiente. Pero al pasar de la semana se animó y le pidió de favor a Sofia que la acompañara a denunciar.",
+            "{nombre} no es un personaje. Es el nombre que le pusimos a algo que tiene muchos nombres reales, en cualquier ciudad donde una chica o chico de diéciseis años salió a una fiesta un sábado.",
+            "Detrás de cada número hubo una Sofía que cargó con algo que no sabía cómo sobrellevarlo. Una Miranda que sin querer convirtió una persona en chisme. Una Valeria que no supo qué decir pero se quedó. Una Mar que supo que algo estaba mal aunque no supiera nombrarlo.",
+            "Y una {nombre} que necesitaba que alguien, cualquiera, le dijera sin presionarla, sin desaparecer: cuando quieras, estoy aquí."
+          ],
+        },
+        ab:{
+          titulo:"Buscar orientación.",
+          descripcion:[
+            "Buscar orientación no es lo mismo que denunciar sin permiso. Hay líneas de apoyo que pueden decirte cómo acompañar a alguien que vivió una agresión, qué decirle, qué no decirle, cuándo y cómo animarla a dar el siguiente paso cuando esté lista.",
+            "No tenían que resolver esto solas. Nadie debería.",
+            "Sofía llamó al día siguiente con un profesor de confianza. No dijo el nombre de {nombre}. Solo preguntó qué hace alguien cuando su amiga vivió algo así y todavía no quiere hablar.",
+            "Le explicó tres cosas: que no estaba obligada a decidir por {nombre}, que podía seguir acompañándola sin presionarla, y que cuando {nombre} estuviera lista habría personas preparadas para recibirla sin juzgarla.",
+            "Sofía le mandó esa información a {nombre} por mensaje, números para recibir apoyo y un texto de amistad “cuando quieras, estoy aquí para apoyarte en lo que necesites”.",
+            "{nombre} no respondió ese día. Ni el siguiente. Pero al pasar de la semana se animó y le pidió de favor a Sofia que la acompañara a denunciar.",
+            "{nombre} no es un personaje. Es el nombre que le pusimos a algo que tiene muchos nombres reales, en cualquier ciudad donde una chica o chico de diéciseis años salió a una fiesta un sábado.",
+            "Detrás de cada número hubo una Sofía que cargó con algo que no sabía cómo sobrellevarlo. Una Miranda que sin querer convirtió una persona en chisme. Una Valeria que no supo qué decir pero se quedó. Una Mar que supo que algo estaba mal aunque no supiera nombrarlo.",
+            "Y una {nombre} que necesitaba que alguien, cualquiera, le dijera sin presionarla, sin desaparecer: cuando quieras, estoy aquí."
+          ],
+        },
+        ba:{
+          titulo: "Esperar a que decida.",
+          descripcion:[
+            "Era una posición comprensible, nadie quería “traicionar” a {nombre}",
+            "Sofía dijo en voz alta: “no podía hacer que {nombre} denunciara”. Pero sí podía hablar con alguien que supiera cómo ayudarla. Solo para saber qué hacer.",
+            "Sofía llamó al día siguiente con un profesor de confianza. No dijo el nombre de {nombre}. Solo preguntó qué hace alguien cuando su amiga vivió algo así y todavía no quiere hablar.",
+            "Le explicó tres cosas: que no estaba obligada a decidir por {nombre}, que podía seguir acompañándola sin presionarla, y que cuando {nombre} estuviera lista habría personas preparadas para recibirla sin juzgarla.",
+            "Sofía le mandó esa información a {nombre} por mensaje, números para recibir apoyo y un texto de amistad “cuando quieras, estoy aquí para apoyarte en lo que necesites”.",
+            "{nombre} no respondió ese día. Ni el siguiente. Pero al pasar de la semana se animó y le pidió de favor a Sofia que la acompañara a denunciar.",
+            "{nombre} no es un personaje. Es el nombre que le pusimos a algo que tiene muchos nombres reales, en cualquier ciudad donde una chica o chico de diéciseis años salió a una fiesta un sábado.",
+            "Detrás de cada número hubo una Sofía que cargó con algo que no sabía cómo sobrellevarlo. Una Miranda que sin querer convirtió una persona en chisme. Una Valeria que no supo qué decir pero se quedó. Una Mar que supo que algo estaba mal aunque no supiera nombrarlo.",
+            "Y una {nombre} que necesitaba que alguien, cualquiera, le dijera sin presionarla, sin desaparecer: cuando quieras, estoy aquí."
+          ],
+        },
+        bb:{
+          titulo: "Buscar orientación.",
+          descripcion:[
+            "Buscar orientación no es lo mismo que denunciar sin permiso. Hay líneas de apoyo que pueden decirte cómo acompañar a alguien que vivió una agresión, qué decirle, qué no decirle, cuándo y cómo animarla a dar el siguiente paso cuando esté lista.",
+            "No tenían que resolver esto solas. Nadie debería.",
+            "Sofía llamó al día siguiente con un profesor de confianza. No dijo el nombre de {nombre}. Solo preguntó qué hace alguien cuando su amiga vivió algo así y todavía no quiere hablar.",
+            "Le explicó tres cosas: que no estaba obligada a decidir por {nombre}, que podía seguir acompañándola sin presionarla, y que cuando {nombre} estuviera lista habría personas preparadas para recibirla sin juzgarla.",
+            "Sofía le mandó esa información a {nombre} por mensaje, números para recibir apoyo y un texto de amistad “cuando quieras, estoy aquí para apoyarte en lo que necesites”.",
+            "{nombre} no respondió ese día. Ni el siguiente. Pero al pasar de la semana se animó y le pidió de favor a Sofia que la acompañara a denunciar.",
+            "{nombre} no es un personaje. Es el nombre que le pusimos a algo que tiene muchos nombres reales, en cualquier ciudad donde una chica o chico de diéciseis años salió a una fiesta un sábado.",
+            "Detrás de cada número hubo una Sofía que cargó con algo que no sabía cómo sobrellevarlo. Una Miranda que sin querer convirtió una persona en chisme. Una Valeria que no supo qué decir pero se quedó. Una Mar que supo que algo estaba mal aunque no supiera nombrarlo.",
+            "Y una {nombre} que necesitaba que alguien, cualquiera, le dijera sin presionarla, sin desaparecer: cuando quieras, estoy aquí."
+          ],
+        }
+      }
+    }
   },
-
 };
 
 export function getCap3Key(decisionCap1, decisionCap2) {
