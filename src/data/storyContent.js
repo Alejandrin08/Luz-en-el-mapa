@@ -143,6 +143,204 @@ export const stories = {
         pregunta: "Proteger a los nuestros es un instinto natural. Pero, ¿qué responsabilidad tenemos con los niños que se quedan atrás?",
       },
     },
+
+    capitulo4: {
+      // flujos de cap3.a (docente fue imputado)
+      aaa: {
+        titulo: "Capítulo 4: El costo de la verdad",
+        descripcion: [
+          "El docente fue imputado. Habrá juicio. La escuela emitió un comunicado insuficiente. En el recreo, algunos compañeros de la víctima la señalan: 'por tu culpa nos tienen a todos asustados'. Otros la protegen. La comunidad se partió.",
+          "La familia celebra la imputación, pero la victoria es agria. {nombre} siente el peso de las miradas. La escuela que debió protegerla desde el inicio ahora la trata como si ella fuera el problema.",
+          "Meses después, durante el juicio, {nombre} tiene que revivir lo ocurrido en una sala repleta. Los abogados defensores cuestionan cada detalle. La presión es abrumadora.",
+        ],
+        pregunta: "¿Qué necesita {nombre} para continuar?",
+        opciones: [
+          { id: "a", titulo: "Acompañamiento especializado", desc: "La familia gestiona una psicóloga que trabaje específicamente con víctimas de abuso durante procesos judiciales." },
+          { id: "b", titulo: "Cambio de escuela", desc: "Deciden que {nombre} merece un nuevo ambiente donde no sea identificada por lo que le pasó." },
+          { id: "c", titulo: "Convertir el dolor en acción", desc: "{nombre} solicita participar en talleres de prevención en su escuela para que otros sepan qué hizo mal el sistema." },
+        ],
+      },
+
+      aab: {
+        titulo: "Capítulo 4: Cuando la institución reconoce",
+        descripcion: [
+          "La Secretaría de Educación sancionó a la directora por omisión. La escuela fue obligada a implementar un protocolo actualizado. Se ofreció una disculpa pública hacia {nombre}.",
+          "Pero las disculpas no borran meses de negligencia. La familia ve esto como un primer paso, no como una solución completa. El daño a {nombre} sigue siendo real, independientemente de los cambios institucionales.",
+          "Lo importante ahora es que otros casos puedan identificarse a tiempo. La experiencia de {nombre} se convirtió en lección para toda la región educativa.",
+        ],
+        pregunta: "¿Cómo la familia convierte esta experiencia en prevención?",
+        opciones: [
+          { id: "a", titulo: "Asesoría a otras familias", desc: "La familia comienza a aconsejar a otras familias que enfrentan situaciones similares con base en lo aprendido." },
+          { id: "b", titulo: "Capacitación docente", desc: "Trabajan con la SEP para diseñar un taller sobre señales de alerta y protocolo correcto de denuncia." },
+          { id: "c", titulo: "Red de monitoreo comunitario", desc: "Organizan a padres de familia para crear un sistema de vigilancia que detecte comportamientos sospechosos." },
+        ],
+      },
+
+      aac: {
+        titulo: "Capítulo 4: Del activismo al agotamiento",
+        descripcion: [
+          "{nombre} habló en conferencias de prensa. Participó en campañas de prevención. Se convirtió en la cara de un movimiento que exige justicia.",
+          "Pero a los 14 años, quería simplemente ser una adolescente. La carga de representar a todas las víctimas es enorme. Los medios la llaman para cada nota sobre abuso. La actividad que comenzó como sanación se convirtió en otra forma de exposición.",
+          "Su familia se da cuenta: la están usando. Y {nombre} está pagando otro precio por un sistema que debió protegerla desde el inicio.",
+        ],
+        pregunta: "¿Qué hace la familia para proteger a {nombre} de nuevamente ser victimizada?",
+        opciones: [
+          { id: "a", titulo: "Pausar la visibilidad pública", desc: "Deciden que {nombre} merece privacidad. Dejan de participar en eventos públicos y se enfocan en su recuperación personal." },
+          { id: "b", titulo: "Tomar control del mensaje", desc: "Negocia directamente qué entrevistas hace, cuándo, y bajo qué condiciones. Su voz, su cronograma." },
+          { id: "c", titulo: "Transicionar a liderazgo juvenil", desc: "{nombre} elige continuar, pero ahora con un rol de decisión real en las políticas, no solo como testigo." },
+        ],
+      },
+
+      aba: {
+        titulo: "Capítulo 4: La otra cara del apoyo",
+        descripcion: [
+          "La organización civil asignó a una abogada excelente. Excelente, pero ausente. Siempre ocupada, deltas de comunicación lentas. La familia se siente como un número más en el expediente.",
+          "Cuando finalmente hay movimiento, es rápido pero sin explicación. {nombre} recibe una citación para una entrevista forense sin preparación previa. Se supone que 'el protocolo lo maneja'.",
+          "La familia comienza a cuestionarse: ¿el apoyo real, o solo el apoyo que cabe en la agenda de quien promete ayudar?",
+        ],
+        pregunta: "¿Cómo la familia se empodera en su propio caso?",
+        opciones: [
+          { id: "a", titulo: "Exigir transparencia", desc: "Solicitan reuniones regulares y un cronograma claro de pasos legales que puedan anticiparse." },
+          { id: "b", titulo: "Buscar segundo abogado", desc: "Contratan a su propio abogado en paralelo para verificar que sus derechos se respeten." },
+          { id: "c", titulo: "Documentación propia", desc: "Mantienen su propio registro de cada comunicación, reunión y promesa hecha durante el proceso." },
+        ],
+      },
+
+      abb: {
+        titulo: "Capítulo 4: La escuela que aprende",
+        descripcion: [
+          "Con asesoría de la organización civil, la escuela cambió. El protocolo se implementó correctamente. Los docentes recibieron formación. Los directivos comprenden sus responsabilidades.",
+          "Lo único que no cambió es lo que le sucedió a {nombre}. Pero ahora, el siguiente niño o niña que muestre señales de alerta no tendrá que esperar meses. El sistema los encontrará.",
+          "Ese es el tipo de victoria que es dura de celebrar cuando eres quien sufrió, pero que cuesta caro olvidar cuando eres quien pasará después.",
+        ],
+        pregunta: "¿De qué manera {nombre} participa en asegurar que el cambio sea real?",
+        opciones: [
+          { id: "a", titulo: "Auditorías periódicas", desc: "{nombre} forma parte de un comité que verifica que la escuela cumpla con el protocolo cada semestre." },
+          { id: "b", titulo: "Educación de pares", desc: "Participa en charlas dirigidas a estudiantes, normalizando la idea de pedir ayuda si algo no es correcto." },
+          { id: "c", titulo: "Documento de lecciones aprendidas", desc: "Colabora en un informe que documenta qué salió mal y qué se hizo para corregirlo, modelo para otras escuelas." },
+        ],
+      },
+
+      abc: {
+        titulo: "Capítulo 4: Cuando el apoyo no fue suficiente",
+        descripcion: [
+          "El docente sigue en la cárcel esperando juicio. La organización civil movió cielos y tierra. Pero los traumas no respetan los tiempos judiciales.",
+          "{nombre} desarrolló fobia social. Cambió de escuela, pero carga la experiencia. La terapia que la organización proporciona es grupal, genérica. Lo que {nombre} necesita es atención muy especializada.",
+          "La organización hizo su trabajo. Pero hay una grieta entre lo que las instituciones pueden hacer y lo que una víctima realmente necesita para sanar.",
+        ],
+        pregunta: "¿Cómo la familia cierra esa grieta?",
+        opciones: [
+          { id: "a", titulo: "Terapia privada de largo plazo", desc: "Buscan recursos para pagar terapia especializada en trauma, aunque sea una carga económica significativa." },
+          { id: "b", titulo: "Comunidades de sanación", desc: "Se unen a redes de otros sobrevivientes donde encuentran comprensión que los profesionales no siempre dan." },
+          { id: "c", titulo: "Reconstrucción desde la base", desc: "Toda la familia entra en proceso terapéutico para entender cómo el trauma de {nombre} les afectó a todos." },
+        ],
+      },
+
+      aca: {
+        titulo: "Capítulo 4: La caja negra institucional",
+        descripcion: [
+          "Pasó un año. El caso cerró sin resolución. El docente fue reubicado 'administrativamente'. La familia solicitó acceso a los expedientes y le dijeron que están 'bajo secreto de investigación'.",
+          "Nunca sabrán exactamente qué pasó en las puertas cerradas de la escuela. La justicia es opaca. El cierre no es un verdadero cierre.",
+          "{nombre} creció en ese año, pero creció dentro de una pregunta sin respuesta. A veces eso es más pesado que la culpa o la ira.",
+        ],
+        pregunta: "¿Cómo la familia busca respuestas cuando las instituciones cierran filas?",
+        opciones: [
+          { id: "a", titulo: "Amparo legal", desc: "Presentan un amparo para obligar a revelar documentos públicos que les pertenecen por derecho." },
+          { id: "b", titulo: "Queja ante CNDH", desc: "Documentan la falta de transparencia y presenta una queja ante la Comisión Nacional de Derechos Humanos." },
+          { id: "c", titulo: "Aceptar la incertidumbre", desc: "Deciden cerrar este capítulo sin respuestas completas y enfocan su energía en sanar sin esperar justicia." },
+        ],
+      },
+
+      baa: {
+        titulo: "Capítulo 4: La nueva escuela como refugio",
+        descripcion: [
+          "{nombre} tiene una directora nueva. Una que lee los protocolos en serio. Una que pregunta: '¿cómo está?' y espera la respuesta real.",
+          "Los compañeros no saben lo que pasó. Eso es importante. {nombre} puede ser simplemente un estudiante, no 'la víctima'. Puede tener un mal día sin que todo el mundo especule.",
+          "La cicatriz sigue ahí, pero el ambiente es diferente. Menos tóxico. Casi sanador.",
+        ],
+        pregunta: "¿Cómo {nombre} reconstruye su identidad como estudiante?",
+        opciones: [
+          { id: "a", titulo: "Volviendo a lo que ama", desc: "{nombre} se suma a actividades: deporte, arte, clubs. Lugares donde puede sentir competencia, no vulnerabilidad." },
+          { id: "b", titulo: "Amistades auténticas", desc: "Poco a poco, construye amistades genuinas basadas en quién es ahora, no en lo que le pasó." },
+          { id: "c", titulo: "Mentoría de pares", desc: "Busca a un estudiante de años mayores que haya vivido algo similar y que pueda entender sin juzgar." },
+        ],
+      },
+
+      bab: {
+        titulo: "Capítulo 4: Esperanza frágil",
+        descripcion: [
+          "La escuela fue sancionada. Se implementó un protocolo. {nombre} ve cambios. No los que hubiera querido hace un año, pero cambios.",
+          "A veces pasa por la oficina de la directora antigua y siente rabia. A veces se pregunta por qué le tomó tanto al sistema actuar. Pero también nota que hay estudiantes nuevos a quienes sí detectaron rápido. Para los que vienen después, hay una red.",
+          "Eso no lo hace menos víctima. Pero lo hace menos sola.",
+        ],
+        pregunta: "¿Cómo {nombre} trasforma su experiencia sin negar el daño?",
+        opciones: [
+          { id: "a", titulo: "Escribir su propia historia", desc: "{nombre} comienza a journaling, no como terapia impuesta, sino como narrativa que ella controla." },
+          { id: "b", titulo: "Voluntariado en prevención", desc: "Se ofrece a colaborar en talleres de prevención, pero solo cuando siente que tiene la energía emocional." },
+          { id: "c", titulo: "Reclamar normalidad", desc: "Decide que su vida no girará alrededor del trauma. Busca metas personales: universidad, viajes, sueños propios." },
+        ],
+      },
+
+      bac: {
+        titulo: "Capítulo 4: El costo de esperar",
+        descripcion: [
+          "Si hubiera protocolo desde el inicio, si la escuela hubiera actuado en los primeros meses, si los adultos hubieran hablado entre ellos, si... La familia vive en los 'si'.",
+          "{nombre} está en tratamiento psicológico intensivo. Perdió casi un año académico. Sus relaciones sociales fueron impactadas. El costo de la negligencia institucional es incalculable.",
+          "Ahora la pregunta no es si el sistema falló, sino qué sistema se necesita para que nadie más pague ese precio.",
+        ],
+        pregunta: "¿Cómo la familia convierte el aprendizaje en acción colectiva?",
+        opciones: [
+          { id: "a", titulo: "Capacitación a docentes", desc: "Trabaja con la escuela para que todos los maestros sepan identificar señales desde el primer día." },
+          { id: "b", titulo: "Manual de protocolos", desc: "Documenta todo lo que salió mal y propone un manual que sea realmente accesible para escuelas de la región." },
+          { id: "c", titulo: "Política pública", desc: "Busca contacto con diputados para proponer cambios legislativos que hagan los protocolos obligatorios y verificables." },
+        ],
+      },
+
+      caa: {
+        titulo: "Capítulo 4: La grieta que se abre",
+        descripcion: [
+          "Otras dos familias salieron a hablar. Ahora son tres casos documentados contra el mismo docente. La fiscalía reabrió el caso. La presión pública es inevitable.",
+          "Pero para {nombre}, esto es complicado. Cada nueva víctima que sale a hablar es valiente, pero también reactiva lo suyo. El número de víctimas no es un triunfo, es un síntoma de un sistema que falló a múltiples personas.",
+          "La justicia que llega tarde para todos es mejor que no llegar para nadie, pero sigue siendo tarde.",
+        ],
+        pregunta: "¿Cómo las tres familias trabajan juntas sin retraumatizarse?",
+        opciones: [
+          { id: "a", titulo: "Coordinación con expertos", desc: "Trabajan con una organización especializada que maneja el caso colectivo sin exponer excesivamente a las víctimas." },
+          { id: "b", titulo: "Roles diferenciados", desc: "Cada familia elige cuánto participa en lo público. Algunos aportan desde el anonimato, otros aceptan visibilidad." },
+          { id: "c", titulo: "Autocuidado colectivo", desc: "Las familias se reúnen solo para apoyarse mutuamente, no para estrategia legal que queda en manos de abogados." },
+        ],
+      },
+
+      cab: {
+        titulo: "Capítulo 4: El poder de la presión pública",
+        descripcion: [
+          "La fiscalía actuó rápido. La Secretaría de Educación intervino. El docente fue separado del cargo. Pero la presión que forzó todo esto fue mediática, no institucional.",
+          "Eso muestra una verdad incómoda: el sistema protege mejor a quienes pueden hacer ruido en público que a quienes sufren en silencio.",
+          "Para {nombre} y sus compañeras, la visibilidad fue necesaria. Pero también fue un nuevo peso: ahora sus historias están en archivos públicos para siempre.",
+        ],
+        pregunta: "¿Cómo las familias navegan la visibilidad permanente?",
+        opciones: [
+          { id: "a", titulo: "Retomar el control narrativo", desc: "Publican su propio documento explicando su caso en sus propios términos, no en los que los medios deciden." },
+          { id: "b", titulo: "Privacidad deliberada", desc: "Deciden no hacer más declaraciones públicas. El caso sigue en justiciales, pero sin su participación directa." },
+          { id: "c", titulo: "Transformar el trauma en educación", desc: "Aceptan que la historia es pública, pero aseguran que sea usada para prevención, no para sensacionalismo." },
+        ],
+      },
+
+      cac: {
+        titulo: "Capítulo 4: La estudiante que convocó un movimiento",
+        descripcion: [
+          "Sin prensa, sin abogados famosos, sin estrategia política. Solo una estudiante que decidió hablar. La orientadora que la escuchó. Una red de compañeros que la creyeron. Y poco a poco, como en efecto dominó, otras voces se sumaron.",
+          "La asamblea que convocó {nombre} fue a la escuela completa. Padres, docentes, autoridades municipales. Habló de lo que vio, lo que sufrió, y lo que necesitaba: un sistema que realmente proteja.",
+          "No fue activismo. Fue simplemente nombrar lo que pasó.",
+        ],
+        pregunta: "¿Cuál es el legado que {nombre} deja en su escuela?",
+        opciones: [
+          { id: "a", titulo: "Protocolo vivo", desc: "La escuela adopta el protocolo que {nombre} propuso. La estudiante se convierte en referente para futuras víctimas." },
+          { id: "b", titulo: "Cultura de confianza", desc: "El ambiente cambia. Los estudiantes entienden que denunciar no es ser delatón, es cuidarse entre sí." },
+          { id: "c", titulo: "Recurso comunitario", desc: "{nombre} sigue en la escuela como símbolo vivo de que el cambio es posible cuando se habla." },
+        ],
+      },
+    },
   },
   adolescencia: {
     capitulo1: {
@@ -919,4 +1117,8 @@ export const stories = {
 
 export function getCap3Key(decisionCap1, decisionCap2) {
   return `${decisionCap1}${decisionCap2}`;
+}
+
+export function getCap4Key(decisionCap1, decisionCap2, decisionCap3) {
+  return `${decisionCap1}${decisionCap2}${decisionCap3}`;
 }
