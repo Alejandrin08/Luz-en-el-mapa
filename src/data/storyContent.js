@@ -651,6 +651,270 @@ export const stories = {
     }
   },
 
+  publico: {
+    infancia: {
+      capitulo1:{
+        titulo: "La historia",
+        descripcion: [
+          "Son las 9:00 a.m., y la maestra Estela todavía no llega, así que el ruido creció como crece siempre que no hay adultos entre los pequeños alumnos de un salón de una escuela primaria.",
+          "El chisme empezó con Daniela, que le susurró algo a Fernanda, que se lo dijo a tres más, y así hasta que la mitad del salón sabía que Jimena, no había llegado hoy. Y que supuestamente algo le había pasado el viernes de camino a su casa.",
+          "“Dicen que un señor la siguió”, dijo alguien.",
+          "“Dicen que gritó”, dijo otro.",
+          "“Dicen que…”",
+          "Pero la puerta se abrió, la maestra Estela entró, dejó su bolsa sobre el escritorio y se quedó parada mirando al grupo. No dijo nada todavía. Solo escuchó. Se acercó al pizarrón y en lugar de escribir la fecha, escribió una sola palabra: {nombre}.",
+          "Maestra: “Les voy a contar una historia. Es sobre una personita que se llama {nombre}. Vive cerca de un mercado, posiblemente igual que muchos de ustedes. Y un martes por la tarde, {nombre} salió a comprar tortillas.” ",
+          "El mercado a las cinco de la tarde es un lugar lleno de gente, muy concurrido. {nombre} conocía cada puesto de memoria, el de las verduras, el de los jugos, el de la señora que vende chicharrón prensado.",
+          "Iba caminando con su bolsa cuando un señor la miró. No fue un vistazo normal. Fue el tipo de mirada que se queda, que sigue y que espera.",
+          "Nadie habla y la maestra continua:",
+          "Maestra: “El señor se le acercó. Le dijo cosas que no se le dicen a una personita de diez años. Le tocó el brazo. Luego el hombro. {nombre} solo se quedó quieta porque cuando el miedo es muy grande, el cuerpo a veces simplemente no sabe qué hacer.”",
+          "Lo que vivió {nombre} tiene nombre legal: acoso sexual", 
+          {tipo:"dato", delito:["Acoso sexual"], sublabel: "Dato de contexto nacional"},
+          "Maestra: “Cuando alguien más pasó cerca, el señor se fue. Y {nombre} se quedó junto al puesto de verduras, temblando, y sintiendo algo que no tenía nombre pero que iba a tener en su mente durante mucho tiempo.”",
+          "La maestra se detiene un momento y pregunta: "
+        ],
+        pregunta: "“Si {nombre} fuera su amiga y ese mismo día les contara lo que pasó… ¿qué le dirían?”",
+        opciones: [
+          {id: "a", titulo: "Interpretó mal", desc: "Le diría que quizás interpretó mal, que seguro el señor no quería hacerle nada."},
+          {id: "b", titulo: "Le creería", desc:"Le creería y  le diría que se lo contara a un adulto de confianza."}
+        ],
+      },
+
+      capitulo2:{
+        a: {
+          titulo: "Le diría que quizás interpretó mal, que seguro el señor no quería hacerle nada.",
+          descripcion: [
+            "Fernanda: “Yo creo que, a lo mejor el señor solo estaba siendo amable y {nombre} se asustó de más.”",
+            "Maestra: “Eso que acabas de decir, aunque lo dijiste con buena intención, se llama minimizar. Y es una de las cosas más dañinas que le podemos decir a alguien que vivió algo así. Cuando alguien nos cuenta que un adulto la tocó sin permiso y le dijo cosas que la hicieron sentir mal, la respuesta nunca puede ser 'seguro interpretaste mal'. Porque eso le enseña a dudar de lo que sintió. Y si duda, no habla. Y si no habla, el señor sigue libre.”",
+            "Maestra: “Eso fue exactamente lo que pensó {nombre}. Que quizás interpretó mal. Que no era para tanto. Y por eso no dijo nada. Y el señor volvió. {nombre} llegó a su casa. Su mamá estaba en la cocina. Le preguntó cómo le había ido. {nombre} dijo 'bien'. Se sentó a hacer la tarea. Se comió la cena. Se lavó los dientes. Y no dijo nada. No porque no quisiera. Sino porque tenía miedo de que no le creyeran. Porque una parte de ella pensaba que quizás había hecho algo mal, aunque no supiera qué”",
+            "Daniela: “Pero ella no hizo nada malo, maestra.”",
+            "Maestra: “No, no hizo nada malo. Pero cuando algo así pasa, el miedo revuelve todo. El problema es que ese señor sabía eso. Sabía que {nombre} no iba a decir nada. Y el jueves siguiente volvió al mercado. Esta vez fue peor. Esta vez no solo fueron palabras ni un toque en el brazo. Y antes de irse le dijo: 'Si dices algo, nadie te va a creer. Y si me buscas, sé dónde vives.'”",
+            "Lo que vivió {nombre} tiene nombre legal: abuso sexual", {tipo:"dato", delito:["Abuso sexual"], sublabel: "Dato de contexto nacional"},
+            "{nombre} dejó de ir al mercado. Luego dejó de salir sola. Sus calificaciones bajaron. Su mamá pensaba que estaba enferma. Nadie sabía por qué.",
+            "Tres semanas después, el señor la esperó afuera de esta escuela. Tenía un coche. Le dijo que subiera. Que la llevaría con sus papás. Que era amigo de su papá.",
+            "{nombre} está afuera de la escuela. Están sus compañeros por todos lados, pero ninguno la está mirando. El señor está parado junto al coche con la puerta abierta. Le dice que no le va a pasar nada, que su papá manda a saludar, que nomás es un rato.",
+          ],
+          dato: "“Si me buscas, sé dónde vives.” Esa amenaza también es un delito. En México, 268 casos de privación ilegal de la libertad contra menores fueron registrados en lo que va del 2026. ",
+          sublabelDato: "Dato de Contexto Nacional",
+          pregunta: "¿Qué debería hacer {nombre} en este momento?",
+          opciones: [
+            {id: "a", titulo: "Subirse.", desc: "Si dice que es amigo de su papá, puede que sí lo sea."},
+            {id: "b", titulo: "No subirse.", desc:"Alejarse rápido y buscar a alguien conocido de inmediato."}
+          ],
+        },
+        b: {
+          titulo:"Le creería y  le diría que se lo contara a un adulto de confianza.",
+          descripcion: [
+            "Fernanda: “Yo le creería y le diría que se lo contara a su mamá o a usted, maestra.”",
+            "Maestra: “Eso es exactamente lo correcto. Creerle. Sin preguntar por qué no se fue antes, sin decir que quizás exageró. Solo creerle. Porque cuando alguien se atreve a contar algo así, ya le costó muchísimo. Lo que necesita en ese momento no es que le expliquen lo que pasó, ella ya lo sabe,. Necesita saber que no está sola.”",
+            "“No, no hizo nada malo. Pero cuando algo así pasa, el miedo revuelve todo. El problema es que ese señor sabía eso. Sabía que Sol no iba a decir nada. Y el jueves siguiente volvió al mercado. Esta vez fue peor. Esta vez no solo fueron palabras ni un toque en el brazo. Y antes de irse le dijo: 'Si dices algo, nadie te va a creer. Y si me buscas, sé dónde vives.'”",
+            "Lo que vivió {nombre} tiene nombre legal: abuso sexual", {tipo:"dato", delito:["Abuso sexual"], sublabel: "Dato de contexto nacional"},
+            "{nombre} dejó de ir al mercado. Luego dejó de salir sola. Sus calificaciones bajaron. Su mamá pensaba que estaba enferma. Nadie sabía por qué.",
+            "Tres semanas después, el señor la esperó afuera de esta escuela. Tenía un coche. Le dijo que subiera. Que la llevaría con sus papás. Que era amigo de su papá.",
+            "{nombre} está afuera de la escuela. Están sus compañeros por todos lados, pero ninguno la está mirando. El señor está parado junto al coche con la puerta abierta. Le dice que no le va a pasar nada, que su papá manda a saludar, que nomás es un rato.",
+          ],
+          dato: "“Si me buscas, sé dónde vives.” Esa amenaza también es un delito. En México, 268 casos de privación ilegal de la libertad contra menores fueron registrados en lo que va del 2026. ",
+          sublabelDato: "Dato de Contexto Nacional",
+          pregunta: "¿Qué debería hacer {nombre} en este momento?",
+          opciones: [
+            {id: "a", titulo: "Subirse.", desc: "Si dice que es amigo de su papá, puede que sí lo sea."},
+            {id: "b", titulo: "No subirse.", desc:"Alejarse rápido y buscar a alguien conocido de inmediato."}
+          ],
+        },
+      },
+
+      capitulo3:{
+        aa:{
+          titulo: "Subirse. Si dice que es amigo de su papá, puede que sí lo sea.",
+          descripcion:[
+            "Diego: “Pues, si dice que la lleva con sus papás, capaz que sí. No sé.”",
+            "Maestra: “Entiendo la duda. Parece lógico, pero hay algo que deben saber: los adultos que quieren hacerle daño a un niño o niña casi nunca parecen peligrosos. Dicen exactamente lo que uno necesita escuchar para bajar la guardia.”, 'Soy amigo de tu papá.' 'No te va a pasar nada.' 'Es un momento.' Esas frases tienen un nombre, se llaman tácticas de manipulación. Y los agresores las usan precisamente porque funcionan.",
+            "Maestra: “Niños, si un adulto que no conoces bien, o que te ha hecho sentir mal antes, te pide que te subas a su coche, la respuesta es no. Siempre. Sin importar lo que diga. Y hay que alejarse y buscar a alguien conocido de inmediato. Por suerte, {nombre} no accedió”",
+            "“{nombre} no subió al coche. Dio un paso atrás y en ese momento vio, al final de la calle, a la señora de los jugos del mercado, la que la conocía de toda la vida, la del chicharrón prensado, la que siempre le regalaba un trocito y corrió hacia ella.”",
+            "Daniela: “¿Y la señora qué hizo?”",
+            "Maestra:“Lo primero que hizo fue creerle. Sin preguntar qué hacía sola, sin decir que quizás exageró, sin decir que ya pasó y a olvidarlo. Solo dijo: ‘Yo me quedo contigo.’ Y llamaron a su mamá”",
+            "“Fueron a denunciar. El proceso no fue sencillo, tuvieron que esperar, contar lo mismo varias veces, llenar formularios. Pero también dejaron un registro. Tres semanas después, las cámaras del mercado identificaron al hombre. Tenía reportes similares en otros municipios. Sin la denuncia, nadie los habría conectado.”",
+            "La maestra se quedó callada. El salón también. Afuera se escuchaba el ruido de los demás niños. En eso se rompe el silencia con una pregunta: ",
+            "Obed: “Maestra… ¿Jimena es {nombre}?”",
+            "Maestra:“No sé si Jimena es {nombre}. Lo que sí sé es que {nombre} es real. Que tiene muchos nombres. Que vive en muchas colonias de todo México. Y que la mayoría de las veces, nadie en su salón sabe lo que está pasando.”",
+            "“Cada niño o niña con nombre, con edad, con una tarde ordinaria que dejó de serlo. Y detrás de cada uno hay un número, y que hay muchos más que nunca llegaron a ningún registro, porque alguien tuvo miedo, o vergüenza, o simplemente no sabía que podía pedir ayuda. Ustedes ya saben la historia de {nombre}. Eso los hace diferentes. Ahora saben reconocer algo cuando lo ven. Y saben que lo primero que hay que hacer siempre es creerle a quien se atreve a contarlo.”",
+          ],
+          dato: "En México se registraron 2 casos de rapto de menores en espacio público en lo que va del 2026, solo los que llegaron a denuncia. Y 46 casos de trata de personas de menores. Casi todos comenzaron igual: un adulto desconocido, una promesa tranquilizadora, un momento en que el niño o la niña estaba solo/a.",
+          sublabelDato: "Dato de Contexto Nacional",
+        },
+        ab: {
+          titulo: "No subirse. Alejarse rápido y buscar a alguien conocido de inmediato.",
+          descripcion:[
+            "Diego: “No subirse y correr a donde haya gente.”",
+            "Maestra: “Exacto. Y hay algo importante en lo que dijiste: no solo alejarse, sino buscar a alguien conocido. No a cualquier adulto. A alguien que reconozcan, una maestra, una vecina, el señor del puesto de jugos que siempre está ahí. Ese instinto, alejarse y buscar a alguien de confianza, puede ser la diferencia entre lo que pasa y lo que no pasa.”",
+            "“Niños, si un adulto que no conoces bien, o que te ha hecho sentir mal antes, te pide que te subas a su coche, la respuesta es no. Siempre. Sin importar lo que diga. Y hay que alejarse y buscar a alguien conocido de inmediato. Por suerte, {nombre} no accedió”",
+            "“{nombre} no subió al coche. Dio un paso atrás y en ese momento vio, al final de la calle, a la señora de los jugos del mercado, la que la conocía de toda la vida, la del chicharrón prensado, la que siempre le regalaba un trocito y corrió hacia ella.”",
+            "Daniela: “¿Y la señora qué hizo?”",
+            "Maestra:“Lo primero que hizo fue creerle. Sin preguntar qué hacía, sin decir que quizás exageró, sin decir que ya pasó y a olvidarlo. Solo dijo: ‘Yo me quedo contigo.’ Y llamaron a su mamá”",
+            "“Fueron a denunciar. El proceso no fue sencillo, tuvieron que esperar, contar lo mismo varias veces, llenar formularios. Pero también dejaron un registro. Tres semanas después, las cámaras del mercado identificaron al hombre. Tenía reportes similares en otros municipios. Sin la denuncia, nadie los habría conectado.”",
+            "La maestra se quedó callada. El salón también. Afuera se escuchaba el ruido de los demás niños. En eso se rompe el silencia con una pregunta: ",
+            "Obed: “Maestra… ¿Jimena es {nombre}?”",
+            "Maestra:“No sé si Jimena es {nombre}. Lo que sí sé es que {nombre} es real. Que tiene muchos nombres. Que vive en muchas colonias de todo México. Y que la mayoría de las veces, nadie en su salón sabe lo que está pasando.”",
+            "“Cada niño o niña con nombre, con edad, con una tarde ordinaria que dejó de serlo. Y detrás de cada uno hay un número, y que hay muchos más que nunca llegaron a ningún registro, porque alguien tuvo miedo, o vergüenza, o simplemente no sabía que podía pedir ayuda. Ustedes ya saben la historia de {nombre}. Eso los hace diferentes. Ahora saben reconocer algo cuando lo ven. Y saben que lo primero que hay que hacer siempre es creerle a quien se atreve a contarlo.”",
+          ],
+          dato: "En México se registraron 2 casos de rapto de menores en espacio público en lo que va del 2026, solo los que llegaron a denuncia. Y 46 casos de trata de personas de menores. Casi todos comenzaron igual: un adulto desconocido, una promesa tranquilizadora, un momento en que el niño o la niña estaba solo/a.",
+          sublabelDato: "Dato de Contexto Nacional",
+        },
+        ba:{
+          titulo: "Subirse. Si dice que es amigo de su papá, puede que sí lo sea.",
+          descripcion:[
+            "Diego: “Pues, si dice que la lleva con sus papás, capaz que sí. No sé.”",
+            "Maestra: “Entiendo la duda. Parece lógico, pero hay algo que deben saber: los adultos que quieren hacerle daño a un niño o niña casi nunca parecen peligrosos. Dicen exactamente lo que uno necesita escuchar para bajar la guardia.”, 'Soy amigo de tu papá.' 'No te va a pasar nada.' 'Es un momento.' Esas frases tienen un nombre, se llaman tácticas de manipulación. Y los agresores las usan precisamente porque funcionan.",
+            "Maestra: “Niños, si un adulto que no conoces bien, o que te ha hecho sentir mal antes, te pide que te subas a su coche, la respuesta es no. Siempre. Sin importar lo que diga. Y hay que alejarse y buscar a alguien conocido de inmediato. Por suerte, {nombre} no accedió”",
+            "“{nombre} no subió al coche. Dio un paso atrás y en ese momento vio, al final de la calle, a la señora de los jugos del mercado, la que la conocía de toda la vida, la del chicharrón prensado, la que siempre le regalaba un trocito y corrió hacia ella.”",
+            "Daniela: “¿Y la señora qué hizo?”",
+            "Maestra:“Lo primero que hizo fue creerle. Sin preguntar qué hacía sola, sin decir que quizás exageró, sin decir que ya pasó y a olvidarlo. Solo dijo: ‘Yo me quedo contigo.’ Y llamaron a su mamá”",
+            "“Fueron a denunciar. El proceso no fue sencillo, tuvieron que esperar, contar lo mismo varias veces, llenar formularios. Pero también dejaron un registro. Tres semanas después, las cámaras del mercado identificaron al hombre. Tenía reportes similares en otros municipios. Sin la denuncia, nadie los habría conectado.”",
+            "La maestra se quedó callada. El salón también. Afuera se escuchaba el ruido de los demás niños. En eso se rompe el silencia con una pregunta: ",
+            "Obed: “Maestra… ¿Jimena es {nombre}?”",
+            "Maestra:“No sé si Jimena es {nombre}. Lo que sí sé es que {nombre} es real. Que tiene muchos nombres. Que vive en muchas colonias de todo México. Y que la mayoría de las veces, nadie en su salón sabe lo que está pasando.”",
+            "“Cada niño o niña con nombre, con edad, con una tarde ordinaria que dejó de serlo. Y detrás de cada uno hay un número, y que hay muchos más que nunca llegaron a ningún registro, porque alguien tuvo miedo, o vergüenza, o simplemente no sabía que podía pedir ayuda. Ustedes ya saben la historia de {nombre}. Eso los hace diferentes. Ahora saben reconocer algo cuando lo ven. Y saben que lo primero que hay que hacer siempre es creerle a quien se atreve a contarlo.”",
+          ],
+          dato: "En México se registraron 2 casos de rapto de menores en espacio público en lo que va del 2026, solo los que llegaron a denuncia. Y 46 casos de trata de personas de menores. Casi todos comenzaron igual: un adulto desconocido, una promesa tranquilizadora, un momento en que el niño o la niña estaba solo/a.",
+          sublabelDato: "Dato de Contexto Nacional",
+        },
+        bb: {
+          titulo: "No subirse. Alejarse rápido y buscar a alguien conocido de inmediato.",
+          descripcion:[
+            "Diego: “No subirse y correr a donde haya gente.”",
+            "Maestra: “Exacto. Y hay algo importante en lo que dijiste: no solo alejarse, sino buscar a alguien conocido. No a cualquier adulto. A alguien que reconozcan, una maestra, una vecina, el señor del puesto de jugos que siempre está ahí. Ese instinto, alejarse y buscar a alguien de confianza, puede ser la diferencia entre lo que pasa y lo que no pasa.”",
+            "“Niños, si un adulto que no conoces bien, o que te ha hecho sentir mal antes, te pide que te subas a su coche, la respuesta es no. Siempre. Sin importar lo que diga. Y hay que alejarse y buscar a alguien conocido de inmediato. Por suerte, {nombre} no accedió”",
+            "“{nombre} no subió al coche. Dio un paso atrás y en ese momento vio, al final de la calle, a la señora de los jugos del mercado, la que la conocía de toda la vida, la del chicharrón prensado, la que siempre le regalaba un trocito y corrió hacia ella.”",
+            "Daniela: “¿Y la señora qué hizo?”",
+            "Maestra:“Lo primero que hizo fue creerle. Sin preguntar qué hacía, sin decir que quizás exageró, sin decir que ya pasó y a olvidarlo. Solo dijo: ‘Yo me quedo contigo.’ Y llamaron a su mamá”",
+            "“Fueron a denunciar. El proceso no fue sencillo, tuvieron que esperar, contar lo mismo varias veces, llenar formularios. Pero también dejaron un registro. Tres semanas después, las cámaras del mercado identificaron al hombre. Tenía reportes similares en otros municipios. Sin la denuncia, nadie los habría conectado.”",
+            "La maestra se quedó callada. El salón también. Afuera se escuchaba el ruido de los demás niños. En eso se rompe el silencia con una pregunta: ",
+            "Obed: “Maestra… ¿Jimena es {nombre}?”",
+            "Maestra:“No sé si Jimena es {nombre}. Lo que sí sé es que {nombre} es real. Que tiene muchos nombres. Que vive en muchas colonias de todo México. Y que la mayoría de las veces, nadie en su salón sabe lo que está pasando.”",
+            "“Cada niño o niña con nombre, con edad, con una tarde ordinaria que dejó de serlo. Y detrás de cada uno hay un número, y que hay muchos más que nunca llegaron a ningún registro, porque alguien tuvo miedo, o vergüenza, o simplemente no sabía que podía pedir ayuda. Ustedes ya saben la historia de {nombre}. Eso los hace diferentes. Ahora saben reconocer algo cuando lo ven. Y saben que lo primero que hay que hacer siempre es creerle a quien se atreve a contarlo.”",
+          ],
+          dato: "En México se registraron 2 casos de rapto de menores en espacio público en lo que va del 2026, solo los que llegaron a denuncia. Y 46 casos de trata de personas de menores. Casi todos comenzaron igual: un adulto desconocido, una promesa tranquilizadora, un momento en que el niño o la niña estaba solo/a.",
+          sublabelDato: "Dato de Contexto Nacional",
+        },
+      }
+    },
+    adolescencia: {
+      capitulo1: {
+        titulo: "¿Ya oyeron lo de…?",
+        descripcion:[
+          "Sofía, Valeria, Miranda y Mar. Tienen dieciséis años y llevan juntas desde la secundaria. Hay una serie puesta en la tele que nadie está viendo porque todas están en su celular.",
+          "Miranda les pregunta a sus amigas: “¿Ya oyeron lo de {nombre}?”",
+          "Valeria bajó su celular y Mar también.",
+          "Miranda dijo que saliendo de la fiesta del sábado pasado, una persona había seguido a {nombre} como a tres cuadras. Que le decía cosas, que le bloqueó el paso dos veces y que la tocó. Alguien la vio y lo contó todo al grupo del salón de la prepa.",
+          "Sofía siguió mirando su teléfono. Pero ya no estaba leyendo nada.",
+          "Valeria abrió el grupo de la prepa. Ya había cuarenta y dos mensajes. Alguien preguntaba dónde había sido exactamente. Alguien más decía que {nombre} iba sola a esa hora y que qué podría esperar con eso. ",
+          "Sofía dejó el teléfono sobre su rodilla. Miró al techo un momento. Y dijo: “No fue solo eso”",
+          "Las tres levantaron la vista al mismo tiempo.",
+          "Sofía llevaba cuatro días sabiendo lo de {nombre}, pues ella le había llamado esa misma noche llorando. Le dijo que el tipo no solo la siguió. Que en un momento en que no había nadie en la calle la jaló hacia un callejón. Que le tapó la boca. No terminó de contarlo todo esa noche, no era necesario.",
+          "Le pidió a Sofía que no dijera nada pues tenía miedo de que no le creyeran. Que si lo contaba, empezarían a decir que ella había buscado a esa persona, que ya era muy tarde paa estar en la calle. Sofía había visto ya lo que estaban diciendo en el grupo. {nombre} tenía razón en no tener que contar nada.",
+          "Valeria no dijo nada, Mar tampoco y Miranda miraba sus manos.  Sofía le había dicho a {nombre} que le creía, que no fue su culpa. Pero también le había dicho que eso no podía quedarse así. {nombre} se había enojado y  desde el domingo no le hablaba.",
+          "Sofía lleva cuatro días cargando el secreto de su amiga. El grupo acaba de enterarse."
+        ],
+        pregunta: "¿Qué debería hacer?",
+        opciones: [
+          {id: "a", titulo: "Respetar lo que pidió", desc: "Si no quiere que se sepa, hay que callarse."},
+          {id: "b", titulo: "Buscar la forma de acompañar.", desc:"Buscar la forma de acompañar a {nombre} sin traicionarla, aunque sea difícil."}
+        ],
+      },
+      capitulo2:{
+        a:{
+          titulo: "Respetar lo que pidió",
+          descripcion:[
+            "Mar fue la primera en decir: “si {nombre} no quería decir nada, esa era su decisión. Nadie podía obligarla.” Y tenían razón, nadie puede.",
+            "Pero hay una diferencia entre respetar los tiempos de alguien y desaparecer. Pues solo la deja más sola con algo que ya pesa demasiado. Y la persona que la agredió sigue en la calle sin que nadie sepa quién es.",
+            "Sofía lo entendió mientras Mar hablaba. Respetar a {nombre} no significaba desaparecer. Significaba quedarse, aunque {nombre} estuviera enojada.",
+            "Miranda había seguido leyendo el grupo de la prepa. Encontró un mensaje de alguien que decía conocer a una chica de otra escuela a quien le había pasado algo parecido el año anterior en la misma zona.",
+            "Si era cierto, esa persona no había aparecido el sábado por primera vez. Llevaba tiempo. Y nadie lo había detenido porque nadie había hablado.",
+            "“¿Y si le está pasando a alguien más ahorita?”, preguntó Valeria.",
+            "Saben que esa persona ya lo hizo antes. Que puede volver a hacerlo. {nombre} sigue sin querer denunciar." 
+          ],
+          pregunta: "¿Qué hace el grupo?",
+          opciones: [
+            {id: "a", titulo: "Esperar a que decida.", desc: "Esperar a que {nombre} decida. No es decisión de ellas."},
+            {id: "a", titulo: "Buscar orientación.", desc: "Buscar orientación con un adulto de confianza para saber cómo ayudarla sin exponerla."}
+          ],
+        },
+        b:{
+          titulo: "Buscar la forma de acompañar.",
+          descripcion:[
+            "Valeria preguntó cómo, si {nombre} estaba enojada y no quería hablar. Era la pregunta correcta. Acompañar no es lo mismo que presionar. Lo que podía hacer el grupo no era decidir por ella. Era no dejarla cargar esto sola mientras ella decidía.",
+            "Sofía asintió despacio. No le iba a contar a nadie sin permiso de {nombre}. Pero tampoco iba a dejarla sola.",
+            "Miranda había seguido leyendo el grupo de la prepa. Encontró un mensaje de alguien que decía conocer a una chica de otra escuela a quien le había pasado algo parecido el año anterior en la misma zona.",
+            "Si era cierto, esa persona no había aparecido el sábado por primera vez. Llevaba tiempo. Y nadie lo había detenido porque nadie había hablado.",
+            "“¿Y si le está pasando a alguien más ahorita?”, preguntó Valeria.",
+            "Saben que esa persona ya lo hizo antes. Que puede volver a hacerlo. {nombre} sigue sin querer denunciar." 
+          ],
+          pregunta: "¿Qué hace el grupo?",
+          opciones: [
+            {id: "a", titulo: "Esperar a que decida.", desc: "Esperar a que {nombre} decida. No es decisión de ellas."},
+            {id: "b", titulo: "Buscar orientación.", desc: "Buscar orientación con un adulto de confianza para saber cómo ayudarla sin exponerla."}
+          ],
+        }
+      },
+      capitulo3:{
+        aa:{
+          titulo: "Esperar a que decida.",
+          descripcion:[
+            "Era una posición comprensible, nadie quería “traicionar” a {nombre}",
+            "Sofía dijo en voz alta: “no podía hacer que {nombre} denunciara”. Pero sí podía hablar con alguien que supiera cómo ayudarla. Solo para saber qué hacer.",
+            "Sofía llamó al día siguiente con un profesor de confianza. No dijo el nombre de {nombre}. Solo preguntó qué hace alguien cuando su amiga vivió algo así y todavía no quiere hablar.",
+            "Le explicó tres cosas: que no estaba obligada a decidir por {nombre}, que podía seguir acompañándola sin presionarla, y que cuando {nombre} estuviera lista habría personas preparadas para recibirla sin juzgarla.",
+            "Sofía le mandó esa información a {nombre} por mensaje, números para recibir apoyo y un texto de amistad “cuando quieras, estoy aquí para apoyarte en lo que necesites”.",
+            "{nombre} no respondió ese día. Ni el siguiente. Pero al pasar de la semana se animó y le pidió de favor a Sofia que la acompañara a denunciar.",
+            "{nombre} no es un personaje. Es el nombre que le pusimos a algo que tiene muchos nombres reales, en cualquier ciudad donde una chica o chico de diéciseis años salió a una fiesta un sábado.",
+            "Detrás de cada número hubo una Sofía que cargó con algo que no sabía cómo sobrellevarlo. Una Miranda que sin querer convirtió una persona en chisme. Una Valeria que no supo qué decir pero se quedó. Una Mar que supo que algo estaba mal aunque no supiera nombrarlo.",
+            "Y una {nombre} que necesitaba que alguien, cualquiera, le dijera sin presionarla, sin desaparecer: cuando quieras, estoy aquí."
+          ],
+        },
+        ab:{
+          titulo:"Buscar orientación.",
+          descripcion:[
+            "Buscar orientación no es lo mismo que denunciar sin permiso. Hay líneas de apoyo que pueden decirte cómo acompañar a alguien que vivió una agresión, qué decirle, qué no decirle, cuándo y cómo animarla a dar el siguiente paso cuando esté lista.",
+            "No tenían que resolver esto solas. Nadie debería.",
+            "Sofía llamó al día siguiente con un profesor de confianza. No dijo el nombre de {nombre}. Solo preguntó qué hace alguien cuando su amiga vivió algo así y todavía no quiere hablar.",
+            "Le explicó tres cosas: que no estaba obligada a decidir por {nombre}, que podía seguir acompañándola sin presionarla, y que cuando {nombre} estuviera lista habría personas preparadas para recibirla sin juzgarla.",
+            "Sofía le mandó esa información a {nombre} por mensaje, números para recibir apoyo y un texto de amistad “cuando quieras, estoy aquí para apoyarte en lo que necesites”.",
+            "{nombre} no respondió ese día. Ni el siguiente. Pero al pasar de la semana se animó y le pidió de favor a Sofia que la acompañara a denunciar.",
+            "{nombre} no es un personaje. Es el nombre que le pusimos a algo que tiene muchos nombres reales, en cualquier ciudad donde una chica o chico de diéciseis años salió a una fiesta un sábado.",
+            "Detrás de cada número hubo una Sofía que cargó con algo que no sabía cómo sobrellevarlo. Una Miranda que sin querer convirtió una persona en chisme. Una Valeria que no supo qué decir pero se quedó. Una Mar que supo que algo estaba mal aunque no supiera nombrarlo.",
+            "Y una {nombre} que necesitaba que alguien, cualquiera, le dijera sin presionarla, sin desaparecer: cuando quieras, estoy aquí."
+          ],
+        },
+        ba:{
+          titulo: "Esperar a que decida.",
+          descripcion:[
+            "Era una posición comprensible, nadie quería “traicionar” a {nombre}",
+            "Sofía dijo en voz alta: “no podía hacer que {nombre} denunciara”. Pero sí podía hablar con alguien que supiera cómo ayudarla. Solo para saber qué hacer.",
+            "Sofía llamó al día siguiente con un profesor de confianza. No dijo el nombre de {nombre}. Solo preguntó qué hace alguien cuando su amiga vivió algo así y todavía no quiere hablar.",
+            "Le explicó tres cosas: que no estaba obligada a decidir por {nombre}, que podía seguir acompañándola sin presionarla, y que cuando {nombre} estuviera lista habría personas preparadas para recibirla sin juzgarla.",
+            "Sofía le mandó esa información a {nombre} por mensaje, números para recibir apoyo y un texto de amistad “cuando quieras, estoy aquí para apoyarte en lo que necesites”.",
+            "{nombre} no respondió ese día. Ni el siguiente. Pero al pasar de la semana se animó y le pidió de favor a Sofia que la acompañara a denunciar.",
+            "{nombre} no es un personaje. Es el nombre que le pusimos a algo que tiene muchos nombres reales, en cualquier ciudad donde una chica o chico de diéciseis años salió a una fiesta un sábado.",
+            "Detrás de cada número hubo una Sofía que cargó con algo que no sabía cómo sobrellevarlo. Una Miranda que sin querer convirtió una persona en chisme. Una Valeria que no supo qué decir pero se quedó. Una Mar que supo que algo estaba mal aunque no supiera nombrarlo.",
+            "Y una {nombre} que necesitaba que alguien, cualquiera, le dijera sin presionarla, sin desaparecer: cuando quieras, estoy aquí."
+          ],
+        },
+        bb:{
+          titulo: "Buscar orientación.",
+          descripcion:[
+            "Buscar orientación no es lo mismo que denunciar sin permiso. Hay líneas de apoyo que pueden decirte cómo acompañar a alguien que vivió una agresión, qué decirle, qué no decirle, cuándo y cómo animarla a dar el siguiente paso cuando esté lista.",
+            "No tenían que resolver esto solas. Nadie debería.",
+            "Sofía llamó al día siguiente con un profesor de confianza. No dijo el nombre de {nombre}. Solo preguntó qué hace alguien cuando su amiga vivió algo así y todavía no quiere hablar.",
+            "Le explicó tres cosas: que no estaba obligada a decidir por {nombre}, que podía seguir acompañándola sin presionarla, y que cuando {nombre} estuviera lista habría personas preparadas para recibirla sin juzgarla.",
+            "Sofía le mandó esa información a {nombre} por mensaje, números para recibir apoyo y un texto de amistad “cuando quieras, estoy aquí para apoyarte en lo que necesites”.",
+            "{nombre} no respondió ese día. Ni el siguiente. Pero al pasar de la semana se animó y le pidió de favor a Sofia que la acompañara a denunciar.",
+            "{nombre} no es un personaje. Es el nombre que le pusimos a algo que tiene muchos nombres reales, en cualquier ciudad donde una chica o chico de diéciseis años salió a una fiesta un sábado.",
+            "Detrás de cada número hubo una Sofía que cargó con algo que no sabía cómo sobrellevarlo. Una Miranda que sin querer convirtió una persona en chisme. Una Valeria que no supo qué decir pero se quedó. Una Mar que supo que algo estaba mal aunque no supiera nombrarlo.",
+            "Y una {nombre} que necesitaba que alguien, cualquiera, le dijera sin presionarla, sin desaparecer: cuando quieras, estoy aquí."
+          ],
+        }
+      }
+    }
+  },
 };
 
 export function getCap3Key(decisionCap1, decisionCap2) {
